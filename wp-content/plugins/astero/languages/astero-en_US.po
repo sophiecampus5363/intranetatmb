@@ -1,0 +1,754 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Astero WordPress Weather Widget\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/astero\n"
+"POT-Creation-Date: 2018-06-16 11:57+0800\n"
+"PO-Revision-Date: 2018-06-16 11:57+0800\n"
+"Last-Translator: MYF Web Design\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.12\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n;_x;_nx;_nx_noop;"
+"esc_attr__\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: admin/astero-admin.php:48
+msgid "Insert Image"
+msgstr ""
+
+#: admin/astero-admin.php:49
+msgid "Add image"
+msgstr ""
+
+#: admin/astero-admin.php:65
+msgid "Settings"
+msgstr ""
+
+#: admin/astero-admin.php:91
+msgid "Astero Weather"
+msgstr ""
+
+#: admin/astero-admin.php:92
+msgid "Weather"
+msgstr ""
+
+#: admin/astero-admin.php:93 admin/astero-admin.php:94
+msgid "Add New Weather"
+msgstr ""
+
+#: admin/astero-admin.php:95
+msgid "Edit Weather"
+msgstr ""
+
+#: admin/astero-admin.php:96
+msgid "New Weather"
+msgstr ""
+
+#: admin/astero-admin.php:97
+msgid "View Weather"
+msgstr ""
+
+#: admin/astero-admin.php:98
+msgid "Search Weather"
+msgstr ""
+
+#: admin/astero-admin.php:99
+msgid "No weather found"
+msgstr ""
+
+#: admin/astero-admin.php:100
+msgid "No weather found in trash"
+msgstr ""
+
+#: admin/astero-admin.php:162
+msgid "Geolocation"
+msgstr ""
+
+#: admin/astero-admin.php:249
+msgid "Clear Sky"
+msgstr ""
+
+#: admin/astero-admin.php:250
+msgid "Clear Night"
+msgstr ""
+
+#: admin/astero-admin.php:251
+msgid "Cloudy"
+msgstr ""
+
+#: admin/astero-admin.php:252
+msgid "Rain"
+msgstr ""
+
+#: admin/astero-admin.php:253
+msgid "Thunderstorm"
+msgstr ""
+
+#: admin/astero-admin.php:254
+msgid "Foggy"
+msgstr ""
+
+#: admin/astero-admin.php:255
+msgid "Snow"
+msgstr ""
+
+#: admin/astero-admin.php:259
+msgid "Arabic"
+msgstr ""
+
+#: admin/astero-admin.php:260
+msgid "Azerbaijani"
+msgstr ""
+
+#: admin/astero-admin.php:261
+msgid "Belarusian"
+msgstr ""
+
+#: admin/astero-admin.php:262
+msgid "Bulgarian"
+msgstr ""
+
+#: admin/astero-admin.php:263
+msgid "Bosnian"
+msgstr ""
+
+#: admin/astero-admin.php:264
+msgid "Catalan"
+msgstr ""
+
+#: admin/astero-admin.php:265
+msgid "Czech"
+msgstr ""
+
+#: admin/astero-admin.php:266
+msgid "Danish"
+msgstr ""
+
+#: admin/astero-admin.php:267
+msgid "German"
+msgstr ""
+
+#: admin/astero-admin.php:268
+msgid "Greek"
+msgstr ""
+
+#: admin/astero-admin.php:269
+msgid "English"
+msgstr ""
+
+#: admin/astero-admin.php:270
+msgid "Spanish"
+msgstr ""
+
+#: admin/astero-admin.php:271
+msgid "Estonian"
+msgstr ""
+
+#: admin/astero-admin.php:272
+msgid "Finnish"
+msgstr ""
+
+#: admin/astero-admin.php:273
+msgid "French"
+msgstr ""
+
+#: admin/astero-admin.php:274
+msgid "Croatian"
+msgstr ""
+
+#: admin/astero-admin.php:275
+msgid "Hungarian"
+msgstr ""
+
+#: admin/astero-admin.php:276
+msgid "Indonesian"
+msgstr ""
+
+#: admin/astero-admin.php:277
+msgid "Icelandic"
+msgstr ""
+
+#: admin/astero-admin.php:278
+msgid "Italian"
+msgstr ""
+
+#: admin/astero-admin.php:279
+msgid "Georgian"
+msgstr ""
+
+#: admin/astero-admin.php:280
+msgid "Korean"
+msgstr ""
+
+#: admin/astero-admin.php:281
+msgid "Cornish"
+msgstr ""
+
+#: admin/astero-admin.php:282
+msgid "Norwegian Bokmål"
+msgstr ""
+
+#: admin/astero-admin.php:283
+msgid "Dutch"
+msgstr ""
+
+#: admin/astero-admin.php:284
+msgid "Polish"
+msgstr ""
+
+#: admin/astero-admin.php:285
+msgid "Portuguese"
+msgstr ""
+
+#: admin/astero-admin.php:286
+msgid "Romanian"
+msgstr ""
+
+#: admin/astero-admin.php:287
+msgid "Russian"
+msgstr ""
+
+#: admin/astero-admin.php:288
+msgid "Slovak"
+msgstr ""
+
+#: admin/astero-admin.php:289
+msgid "Slovenian"
+msgstr ""
+
+#: admin/astero-admin.php:290
+msgid "Serbian"
+msgstr ""
+
+#: admin/astero-admin.php:291
+msgid "Swedish"
+msgstr ""
+
+#: admin/astero-admin.php:292
+msgid "Tetum"
+msgstr ""
+
+#: admin/astero-admin.php:293
+msgid "Turkish"
+msgstr ""
+
+#: admin/astero-admin.php:294
+msgid "Ukrainian"
+msgstr ""
+
+#: admin/astero-admin.php:295
+msgid "Igpay Atinlay"
+msgstr ""
+
+#: admin/astero-admin.php:296
+msgid "Simplified Chinese"
+msgstr ""
+
+#: admin/astero-admin.php:297
+msgid "Traditional Chinese"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:4
+msgid "Location"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:9
+msgid "Html5 Geolocation with IP fallback (HTTPS Sites Only)"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:13
+msgid "IP Detection Only"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:18
+msgid "Default Location"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:20
+msgid "City and Optional Country"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:33
+msgid "Latitude*"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:34
+#: admin/partials/astero-admin-metabox-display.php:44
+msgid ""
+"Required. Address to Latitude and Longitude: <a href=\"https://www.latlong."
+"net/\" target=\"_blank\">https://www.latlong.net/</a>"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:38
+msgid "In decimal places. E.g. 40.730610"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:43
+msgid "Longitude*"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:48
+msgid "In decimal places. E.g. -73.935242"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:53
+msgid "Units"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:54
+msgid "Metric units: &degC | m/s<br />Imperial units: &degF | MPH"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:59
+msgid "Metric"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:63
+msgid "Imperial"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:69
+msgid "Temperature Unit Style"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:74
+#: public/astero-public.php:159 public/astero-public.php:160
+msgid "&deg;"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:78
+msgid "&deg;C | &deg;F"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:84
+msgid "Layout"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:89
+msgid "Simple Layout + Fullscreen Overlay"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:93
+msgid "Full Forecast Layout"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:99
+msgid "Language"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:111
+msgid "Search"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:119
+msgid "Border"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:126
+msgid "Select Border Style"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:128
+#: admin/partials/astero-admin-metabox-display.php:227
+msgid "px"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:130
+msgid "Border style"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:131
+msgid "Dotted"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:132
+msgid "Dashed"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:133
+msgid "Solid"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:134
+msgid "Double"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:135
+msgid "Groove"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:136
+msgid "Ridge"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:137
+msgid "Inset"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:138
+msgid "Outset"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:149
+msgid "Rounded Corners"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:158
+msgid "Font"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:162
+msgid "Font Family"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:223
+msgid "Base Font Size"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:224
+msgid "Adjust this value to change the overall font size."
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:232
+msgid "Temperature Font Size"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:233
+msgid "Adjust this value to change the temperature font size only."
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:236
+msgid "em"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:241
+msgid "Background Style"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:247
+msgid "Color Background"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:249
+msgid "Color"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:259
+msgid "Image Background"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:261
+msgid "Weather Images"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:278
+msgid "Default"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:289
+msgid "Custom Image"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:299
+#: admin/partials/astero-admin-metabox-display.php:350
+#: admin/partials/astero-admin-metabox-display.php:377
+msgid "Upload"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:315
+#: admin/partials/astero-admin-metabox-display.php:317
+msgid "Video Background"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:321
+msgid "Type"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:326
+msgid "Html5 Video"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:331
+msgid "YouTube Embed"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:339
+msgid "Source"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:341
+msgid ".webm and .mp4 formats are recommended for cross browser support."
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:361
+msgid "Placeholder Image"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:363
+msgid "Fallback image for unsupported browsers."
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:385
+msgid "YouTube Video ID"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:390
+msgid ""
+"E.g. For http://www.youtube.com/watch?v=<strong>pfqNykQgaOa</"
+"strong>&key=value, enter <strong>pfqNykQgaOa</strong>"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:396
+msgid "Aspect Ratio"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:400
+msgid "16:9"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:401
+msgid "4:3"
+msgstr ""
+
+#: admin/partials/astero-admin-metabox-display.php:402
+msgid "Custom Ratio"
+msgstr ""
+
+#: admin/partials/astero-admin-settings-display.php:2
+msgid "Astero Weather Plugin Settings"
+msgstr ""
+
+#: admin/partials/astero-admin-settings-display.php:7
+msgid "Dark Sky (Forecast.io) API Key"
+msgstr ""
+
+#: admin/partials/astero-admin-settings-display.php:9
+msgid ""
+"Sign up for a free or paid Dark Sky (Forecast.io) key <a href=\"https://"
+"darksky.net/dev/register\" target=\"_blank\">here</a> and enter the API key "
+"above."
+msgstr ""
+
+#: admin/partials/astero-admin-settings-display.php:13
+msgid "Google Map API Key"
+msgstr ""
+
+#: admin/partials/astero-admin-settings-display.php:15
+msgid ""
+"Required for weather search on the frontend. Please sign up for a Google Map "
+"API Key <a href=\"https://developers.google.com/maps/documentation/"
+"javascript/get-api-key#key\" target=\"_blank\">here</a> and enter the API "
+"key above."
+msgstr ""
+
+#: admin/partials/astero-admin-settings-display.php:18
+msgid "Skip Load Google Map"
+msgstr ""
+
+#: admin/partials/astero-admin-settings-display.php:20
+msgid ""
+"If Google Map is already loaded from your theme or other plugins, check this "
+"option to skip loading Google Map."
+msgstr ""
+
+#: public/astero-public.php:26
+msgid "N/A"
+msgstr ""
+
+#: public/astero-public.php:27
+msgid "N"
+msgstr ""
+
+#: public/astero-public.php:28
+msgid "NNE"
+msgstr ""
+
+#: public/astero-public.php:29
+msgid "NE"
+msgstr ""
+
+#: public/astero-public.php:30
+msgid "ENE"
+msgstr ""
+
+#: public/astero-public.php:31
+msgid "E"
+msgstr ""
+
+#: public/astero-public.php:32
+msgid "ESE"
+msgstr ""
+
+#: public/astero-public.php:33
+msgid "SE"
+msgstr ""
+
+#: public/astero-public.php:34
+msgid "SSE"
+msgstr ""
+
+#: public/astero-public.php:35
+msgid "S"
+msgstr ""
+
+#: public/astero-public.php:36
+msgid "SSW"
+msgstr ""
+
+#: public/astero-public.php:37
+msgid "SW"
+msgstr ""
+
+#: public/astero-public.php:38
+msgid "WSW"
+msgstr ""
+
+#: public/astero-public.php:39
+msgid "W"
+msgstr ""
+
+#: public/astero-public.php:40
+msgid "WNW"
+msgstr ""
+
+#: public/astero-public.php:41
+msgid "NW"
+msgstr ""
+
+#: public/astero-public.php:42
+msgid "NNW"
+msgstr ""
+
+#: public/astero-public.php:43
+msgid "am"
+msgstr ""
+
+#: public/astero-public.php:44
+msgid "pm"
+msgstr ""
+
+#: public/astero-public.php:148
+msgid ""
+"Powered by <a href=\"https://darksky.net/poweredby/\" target=\"_blank\">Dark "
+"Sky</a>"
+msgstr ""
+
+#: public/astero-public.php:155 public/astero-public.php:157
+#: public/partials/astero-public-full-display.php:86
+#: public/partials/astero-public-simple-display.php:113
+msgid "&deg;F"
+msgstr ""
+
+#: public/astero-public.php:155 public/astero-public.php:156
+#: public/partials/astero-public-full-display.php:86
+#: public/partials/astero-public-simple-display.php:113
+msgid "&deg;C"
+msgstr ""
+
+#: public/astero-public.php:181
+msgid "The video tag is not supported for your browser."
+msgstr ""
+
+#: public/astero-public.php:231
+msgid "Astero WordPress Weather Widget"
+msgstr ""
+
+#: public/astero-public.php:232
+msgid "Displays weather forecast in the sidebar"
+msgstr ""
+
+#: public/astero-public.php:280
+msgid "Astero Weather:"
+msgstr ""
+
+#: public/astero-public.php:282
+msgid "Choose weather"
+msgstr ""
+
+#: public/astero-public.php:289
+msgid "Add new weather"
+msgstr ""
+
+#: public/partials/astero-public-full-display.php:23
+#: public/partials/astero-public-simple-display.php:55
+msgid "TEMPERATURE"
+msgstr ""
+
+#: public/partials/astero-public-full-display.php:29
+#: public/partials/astero-public-simple-display.php:61
+msgid "HUMIDITY"
+msgstr ""
+
+#: public/partials/astero-public-full-display.php:35
+#: public/partials/astero-public-simple-display.php:67
+msgid "WIND"
+msgstr ""
+
+#: public/partials/astero-public-full-display.php:41
+#: public/partials/astero-public-simple-display.php:73
+msgid "CLOUDINESS"
+msgstr ""
+
+#: public/partials/astero-public-full-display.php:47
+#: public/partials/astero-public-simple-display.php:79
+msgid "SUNRISE"
+msgstr ""
+
+#: public/partials/astero-public-full-display.php:53
+#: public/partials/astero-public-simple-display.php:85
+msgid "SUNSET"
+msgstr ""
+
+#: public/partials/astero-public-full-display.php:66
+#: public/partials/astero-public-simple-display.php:98
+msgid "Cloudiness"
+msgstr ""
+
+#: public/partials/astero-public-full-display.php:67
+#: public/partials/astero-public-simple-display.php:99
+msgid "Humidity"
+msgstr ""
+
+#: public/partials/astero-public-full-display.php:85
+#: public/partials/astero-public-simple-display.php:112
+msgid "a city or zip code"
+msgstr ""
+
+#: public/partials/astero-public-full-display.php:90
+#: public/partials/astero-public-simple-display.php:117
+msgid "I want to find the weather for %1$s in %2$s ."
+msgstr ""
+
+#: public/partials/astero-public-simple-display.php:23
+msgid "Low Temp."
+msgstr ""
+
+#: public/partials/astero-public-simple-display.php:24
+msgid "High Temp."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Astero WordPress Weather Plugin"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://archtheme.com/astero"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Weather Widget Plugin."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "ArchTheme"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://archtheme.com/"
+msgstr ""
