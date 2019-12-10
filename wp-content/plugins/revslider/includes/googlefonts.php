@@ -1,16 +1,18 @@
 <?php
 /**
  * @author    ThemePunch <info@themepunch.com>
- * @link      http://www.themepunch.com/
- * @copyright 2018 ThemePunch
+ * @link      https://www.themepunch.com/
+ * @copyright 2019 ThemePunch
  * @since 	  5.1.0
- * @lastfetch 16.03.2018
+ * @lastfetch 10.10.2019
  */
  
-if( !defined( 'ABSPATH') ) exit();
+if(!defined('ABSPATH')) exit();
 
 /**
 *** CREATED WITH SCRIPT SNIPPET AND DATA TAKEN FROM https://www.googleapis.com/webfonts/v1/webfonts?sort=popularity&fields=items(family%2Csubsets%2Cvariants%2Ccategory)&key={YOUR_API_KEY}
+
+$list_raw = file_get_contents('https://www.googleapis.com/webfonts/v1/webfonts?sort=popularity&fields=items(family%2Csubsets%2Cvariants%2Ccategory)&key={YOUR_API_KEY}');
 
 $list = json_decode($list_raw, true);
 $list = $list['items'];
@@ -40,232 +42,272 @@ echo '</pre>';
 $googlefonts = array(
 'Roboto' => array(
 'variants' => array('100', '100italic', '300', '300italic', '400', 'italic', '500', '500italic', '700', '700italic', '900', '900italic'),
-'subsets' => array('latin', 'greek-ext', 'vietnamese', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
 'category' => 'sans-serif'
 ),
 'Open Sans' => array(
 'variants' => array('300', '300italic', '400', 'italic', '600', '600italic', '700', '700italic', '800', '800italic'),
-'subsets' => array('latin', 'greek-ext', 'vietnamese', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
 'category' => 'sans-serif'
 ),
 'Lato' => array(
 'variants' => array('100', '100italic', '300', '300italic', '400', 'italic', '700', '700italic', '900', '900italic'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
 'Montserrat' => array(
 'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
 'category' => 'sans-serif'
 ),
 'Roboto Condensed' => array(
 'variants' => array('300', '300italic', '400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'greek-ext', 'vietnamese', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
-'category' => 'sans-serif'
-),
-'Oswald' => array(
-'variants' => array('200', '300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
 'category' => 'sans-serif'
 ),
 'Source Sans Pro' => array(
 'variants' => array('200', '200italic', '300', '300italic', '400', 'italic', '600', '600italic', '700', '700italic', '900', '900italic'),
-'subsets' => array('latin', 'greek-ext', 'vietnamese', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
 'category' => 'sans-serif'
 ),
-'Slabo 27px' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
+'Oswald' => array(
+'variants' => array('200', '300', '400', '500', '600', '700'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'sans-serif'
 ),
 'Raleway' => array(
 'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'PT Sans' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
-'category' => 'sans-serif'
-),
-'Roboto Slab' => array(
-'variants' => array('100', '300', '400', '700'),
-'subsets' => array('latin', 'greek-ext', 'vietnamese', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
-'category' => 'serif'
+'Roboto Mono' => array(
+'variants' => array('100', '100italic', '300', '300italic', '400', 'italic', '500', '500italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
+'category' => 'monospace'
 ),
 'Merriweather' => array(
 'variants' => array('300', '300italic', '400', 'italic', '700', '700italic', '900', '900italic'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
 'category' => 'serif'
 ),
-'Open Sans Condensed' => array(
-'variants' => array('300', '300italic', '700'),
-'subsets' => array('latin', 'greek-ext', 'vietnamese', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
-'category' => 'sans-serif'
-),
-'Ubuntu' => array(
-'variants' => array('300', '300italic', '400', 'italic', '500', '500italic', '700', '700italic'),
-'subsets' => array('latin', 'greek-ext', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
-'category' => 'sans-serif'
-),
-'Noto Sans' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'greek-ext', 'vietnamese', 'cyrillic', 'latin-ext', 'greek', 'devanagari', 'cyrillic-ext'),
-'category' => 'sans-serif'
-),
-'Playfair Display' => array(
-'variants' => array('400', 'italic', '700', '700italic', '900', '900italic'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext'),
-'category' => 'serif'
-),
-'Lora' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
+'Roboto Slab' => array(
+'variants' => array('100', '300', '400', '700'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
 'category' => 'serif'
 ),
 'Poppins' => array(
 'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
 'category' => 'sans-serif'
 ),
-'PT Serif' => array(
+'Noto Sans' => array(
 'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'devanagari', 'greek-ext', 'cyrillic-ext'),
+'category' => 'sans-serif'
+),
+'PT Sans' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'sans-serif'
+),
+'Ubuntu' => array(
+'variants' => array('300', '300italic', '400', 'italic', '500', '500italic', '700', '700italic'),
+'subsets' => array('cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
+'category' => 'sans-serif'
+),
+'Playfair Display' => array(
+'variants' => array('400', 'italic', '700', '700italic', '900', '900italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin'),
 'category' => 'serif'
 ),
-'Roboto Mono' => array(
-'variants' => array('100', '100italic', '300', '300italic', '400', 'italic', '500', '500italic', '700', '700italic'),
-'subsets' => array('latin', 'greek-ext', 'vietnamese', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
-'category' => 'monospace'
-),
-'Arimo' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'greek-ext', 'vietnamese', 'hebrew', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
-'category' => 'sans-serif'
-),
-'Titillium Web' => array(
-'variants' => array('200', '200italic', '300', '300italic', '400', 'italic', '600', '600italic', '700', '700italic', '900'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Nunito' => array(
-'variants' => array('200', '200italic', '300', '300italic', '400', 'italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
+'Open Sans Condensed' => array(
+'variants' => array('300', '300italic', '700'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
 'category' => 'sans-serif'
 ),
 'Muli' => array(
 'variants' => array('200', '200italic', '300', '300italic', '400', 'italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'PT Sans Narrow' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
+'PT Serif' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'serif'
+),
+'Lora' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'serif'
+),
+'Slabo 27px' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Nunito' => array(
+'variants' => array('200', '200italic', '300', '300italic', '400', 'italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Titillium Web' => array(
+'variants' => array('200', '200italic', '300', '300italic', '400', 'italic', '600', '600italic', '700', '700italic', '900'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Fira Sans' => array(
+'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
+'category' => 'sans-serif'
+),
+'Rubik' => array(
+'variants' => array('300', '300italic', '400', 'italic', '500', '500italic', '700', '700italic', '900', '900italic'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin', 'hebrew'),
 'category' => 'sans-serif'
 ),
 'Noto Serif' => array(
 'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'greek-ext', 'vietnamese', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
 'category' => 'serif'
 ),
-'Indie Flower' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
+'Noto Sans JP' => array(
+'variants' => array('100', '300', '400', '500', '700', '900'),
+'subsets' => array('japanese', 'latin'),
+'category' => 'sans-serif'
+),
+'Work Sans' => array(
+'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Quicksand' => array(
+'variants' => array('300', '400', '500', '600', '700'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'PT Sans Narrow' => array(
+'variants' => array('400', '700'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'sans-serif'
+),
+'Arimo' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'hebrew', 'cyrillic-ext'),
+'category' => 'sans-serif'
 ),
 'Inconsolata' => array(
 'variants' => array('400', '700'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'monospace'
 ),
-'Fira Sans' => array(
-'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'greek-ext', 'vietnamese', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
+'Nanum Gothic' => array(
+'variants' => array('400', '700', '800'),
+'subsets' => array('latin', 'korean'),
+'category' => 'sans-serif'
+),
+'Nunito Sans' => array(
+'variants' => array('200', '200italic', '300', '300italic', '400', 'italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Noto Sans KR' => array(
+'variants' => array('100', '300', '400', '500', '700', '900'),
+'subsets' => array('latin', 'korean'),
 'category' => 'sans-serif'
 ),
 'Dosis' => array(
 'variants' => array('200', '300', '400', '500', '600', '700', '800'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'Anton' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
+'Oxygen' => array(
+'variants' => array('300', '400', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Libre Franklin' => array(
+'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
 'Bitter' => array(
 'variants' => array('400', 'italic', '700'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'serif'
+),
+'Heebo' => array(
+'variants' => array('100', '300', '400', '500', '700', '800', '900'),
+'subsets' => array('latin', 'hebrew'),
+'category' => 'sans-serif'
+),
+'Libre Baskerville' => array(
+'variants' => array('400', 'italic', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Karla' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Cabin' => array(
+'variants' => array('400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Hind' => array(
+'variants' => array('300', '400', '500', '600', '700'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'sans-serif'
 ),
 'Crimson Text' => array(
 'variants' => array('400', 'italic', '600', '600italic', '700', '700italic'),
 'subsets' => array('latin'),
 'category' => 'serif'
 ),
-'Oxygen' => array(
-'variants' => array('300', '400', '700'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Cabin' => array(
-'variants' => array('400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Nanum Gothic' => array(
-'variants' => array('400', '700', '800'),
-'subsets' => array('korean', 'latin'),
-'category' => 'sans-serif'
-),
-'Lobster' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
-'category' => 'display'
-),
-'Arvo' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
 'Josefin Sans' => array(
 'variants' => array('100', '100italic', '300', '300italic', '400', 'italic', '600', '600italic', '700', '700italic'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'Libre Baskerville' => array(
-'variants' => array('400', 'italic', '700'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
+'Indie Flower' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
 ),
 'Fjalla One' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'Work Sans' => array(
-'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
-'subsets' => array('latin', 'latin-ext'),
+'Anton' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'Exo 2' => array(
+'Source Code Pro' => array(
+'variants' => array('200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '900', '900italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'monospace'
+),
+'Lobster' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'display'
+),
+'Noto Sans TC' => array(
+'variants' => array('100', '300', '400', '500', '700', '900'),
+'subsets' => array('chinese-traditional', 'latin'),
+'category' => 'sans-serif'
+),
+'Mukta' => array(
+'variants' => array('200', '300', '400', '500', '600', '700', '800'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'sans-serif'
+),
+'Barlow' => array(
 'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Quicksand' => array(
-'variants' => array('300', '400', '500', '700'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Hind' => array(
-'variants' => array('300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'sans-serif'
-),
-'Yanone Kaffeesatz' => array(
-'variants' => array('200', '300', '400', '700'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
 'Abel' => array(
@@ -273,29 +315,44 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'sans-serif'
 ),
-'Rubik' => array(
-'variants' => array('300', '300italic', '400', 'italic', '500', '500italic', '700', '700italic', '900', '900italic'),
-'subsets' => array('latin', 'hebrew', 'cyrillic', 'latin-ext'),
-'category' => 'sans-serif'
+'Dancing Script' => array(
+'variants' => array('400', '700'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'handwriting'
 ),
-'Abril Fatface' => array(
+'Source Serif Pro' => array(
+'variants' => array('400', '600', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Varela Round' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Karla' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'hebrew'),
 'category' => 'sans-serif'
+),
+'Arvo' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('latin'),
+'category' => 'serif'
 ),
 'Pacifico' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
 'category' => 'handwriting'
 ),
-'Libre Franklin' => array(
+'Exo 2' => array(
 'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'sans-serif'
+),
+'Merriweather Sans' => array(
+'variants' => array('300', '300italic', '400', 'italic', '700', '700italic', '800', '800italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Hind Siliguri' => array(
+'variants' => array('300', '400', '500', '600', '700'),
+'subsets' => array('bengali', 'latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
 'Shadows Into Light' => array(
@@ -303,284 +360,204 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'handwriting'
 ),
-'Merriweather Sans' => array(
-'variants' => array('300', '300italic', '400', 'italic', '700', '700italic', '800', '800italic'),
-'subsets' => array('latin', 'latin-ext'),
+'Cairo' => array(
+'variants' => array('200', '300', '400', '600', '700', '900'),
+'subsets' => array('latin-ext', 'latin', 'arabic'),
 'category' => 'sans-serif'
 ),
-'Varela Round' => array(
+'Abril Fatface' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'hebrew', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Nunito Sans' => array(
-'variants' => array('200', '200italic', '300', '300italic', '400', 'italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Ubuntu Condensed' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'greek-ext', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
-'category' => 'sans-serif'
-),
-'Cormorant Garamond' => array(
-'variants' => array('300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
-'category' => 'serif'
-),
-'Asap' => array(
-'variants' => array('400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Bree Serif' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
 ),
 'Acme' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'sans-serif'
 ),
-'Gloria Hallelujah' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Signika' => array(
-'variants' => array('300', '400', '600', '700'),
-'subsets' => array('latin', 'latin-ext'),
+'Asap' => array(
+'variants' => array('400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
 'Archivo Narrow' => array(
 'variants' => array('400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'Dancing Script' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'handwriting'
+'Overpass' => array(
+'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
 ),
 'Questrial' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'sans-serif'
 ),
-'Source Code Pro' => array(
-'variants' => array('200', '300', '400', '500', '600', '700', '900'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'monospace'
+'Teko' => array(
+'variants' => array('300', '400', '500', '600', '700'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'sans-serif'
 ),
-'Kanit' => array(
+'Bree Serif' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Yanone Kaffeesatz' => array(
+'variants' => array('200', '300', '400', '700'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'EB Garamond' => array(
+'variants' => array('400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
+'category' => 'serif'
+),
+'Barlow Condensed' => array(
 'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'vietnamese', 'thai', 'latin-ext'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
 'Exo' => array(
 'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'sans-serif'
+),
+'Kanit' => array(
+'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
+'category' => 'sans-serif'
+),
+'Comfortaa' => array(
+'variants' => array('300', '400', '500', '600', '700'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'display'
+),
+'IBM Plex Sans' => array(
+'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'sans-serif'
+),
+'Signika' => array(
+'variants' => array('300', '400', '600', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Maven Pro' => array(
+'variants' => array('400', '500', '700', '900'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Fira Sans Condensed' => array(
+'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
+'category' => 'sans-serif'
+),
+'Amatic SC' => array(
+'variants' => array('400', '700'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'hebrew'),
+'category' => 'handwriting'
+),
+'Righteous' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Catamaran' => array(
+'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
+'subsets' => array('latin-ext', 'latin', 'tamil'),
+'category' => 'sans-serif'
+),
+'Ubuntu Condensed' => array(
+'variants' => array('400'),
+'subsets' => array('cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
+'category' => 'sans-serif'
+),
+'PT Sans Caption' => array(
+'variants' => array('400', '700'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'sans-serif'
+),
+'Domine' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Play' => array(
+'variants' => array('400', '700'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'sans-serif'
+),
+'Cinzel' => array(
+'variants' => array('400', '700', '900'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Monda' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Assistant' => array(
+'variants' => array('200', '300', '400', '600', '700', '800'),
+'subsets' => array('latin', 'hebrew'),
+'category' => 'sans-serif'
+),
+'Ropa Sans' => array(
+'variants' => array('400', 'italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Vollkorn' => array(
+'variants' => array('400', 'italic', '600', '600italic', '700', '700italic', '900', '900italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'serif'
 ),
 'Patua One' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Amatic SC' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'vietnamese', 'hebrew', 'cyrillic', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Play' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
-'category' => 'sans-serif'
-),
-'Source Serif Pro' => array(
-'variants' => array('400', '600', '700'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Francois One' => array(
+'Satisfy' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Maven Pro' => array(
-'variants' => array('400', '500', '700', '900'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'EB Garamond' => array(
-'variants' => array('400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic'),
-'subsets' => array('latin', 'greek-ext', 'vietnamese', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
-'category' => 'serif'
+'subsets' => array('latin'),
+'category' => 'handwriting'
 ),
 'Crete Round' => array(
 'variants' => array('400', 'italic'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'serif'
 ),
-'Hind Siliguri' => array(
-'variants' => array('300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'bengali', 'latin-ext'),
+'Prompt' => array(
+'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
 'category' => 'sans-serif'
 ),
-'PT Sans Caption' => array(
+'News Cycle' => array(
 'variants' => array('400', '700'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'sans-serif'
-),
-'Berkshire Swash' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Comfortaa' => array(
-'variants' => array('300', '400', '700'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
-'category' => 'display'
-),
-'Rokkitt' => array(
-'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'serif'
-),
-'Rajdhani' => array(
-'variants' => array('300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'sans-serif'
-),
-'Cairo' => array(
-'variants' => array('200', '300', '400', '600', '700', '900'),
-'subsets' => array('latin', 'latin-ext', 'arabic'),
-'category' => 'sans-serif'
-),
-'Cuprum' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
-'category' => 'sans-serif'
-),
-'Shrikhand' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'gujarati', 'latin-ext'),
-'category' => 'display'
-),
-'Cinzel' => array(
-'variants' => array('400', '700', '900'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Vollkorn' => array(
-'variants' => array('400', 'italic', '600', '600italic', '700', '700italic', '900', '900italic'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
-'category' => 'serif'
-),
-'Catamaran' => array(
-'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
-'subsets' => array('tamil', 'latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Heebo' => array(
-'variants' => array('100', '300', '400', '500', '700', '800', '900'),
-'subsets' => array('latin', 'hebrew'),
-'category' => 'sans-serif'
-),
-'Passion One' => array(
-'variants' => array('400', '700', '900'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Poiret One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext'),
-'category' => 'display'
-),
-'Pathway Gothic One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Alegreya' => array(
-'variants' => array('400', 'italic', '500', '500italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'greek-ext', 'vietnamese', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
-'category' => 'serif'
-),
-'Courgette' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
 ),
 'Permanent Marker' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'handwriting'
 ),
-'Ropa Sans' => array(
-'variants' => array('400', 'italic'),
-'subsets' => array('latin', 'latin-ext'),
+'Francois One' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'Great Vibes' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Russo One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Noticia Text' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'serif'
-),
-'Old Standard TT' => array(
-'variants' => array('400', 'italic', '700'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
-'category' => 'serif'
-),
-'Quattrocento Sans' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Kaushan Script' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Righteous' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Yantramanav' => array(
-'variants' => array('100', '300', '400', '500', '700', '900'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'sans-serif'
-),
-'Teko' => array(
+'Rajdhani' => array(
 'variants' => array('300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
 'category' => 'sans-serif'
 ),
-'Cookie' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Satisfy' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Philosopher' => array(
+'Cuprum' => array(
 'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'cyrillic-ext'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
 'category' => 'sans-serif'
 ),
 'ABeeZee' => array(
@@ -588,19 +565,139 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'sans-serif'
 ),
-'Josefin Slab' => array(
-'variants' => array('100', '100italic', '300', '300italic', '400', 'italic', '600', '600italic', '700', '700italic'),
-'subsets' => array('latin'),
-'category' => 'serif'
+'Caveat' => array(
+'variants' => array('400', '700'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'handwriting'
+),
+'Hind Madurai' => array(
+'variants' => array('300', '400', '500', '600', '700'),
+'subsets' => array('latin-ext', 'latin', 'tamil'),
+'category' => 'sans-serif'
 ),
 'Alegreya Sans' => array(
 'variants' => array('100', '100italic', '300', '300italic', '400', 'italic', '500', '500italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'greek-ext', 'vietnamese', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
 'category' => 'sans-serif'
+),
+'Noticia Text' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Courgette' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Cormorant Garamond' => array(
+'variants' => array('300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'serif'
+),
+'Fira Sans Extra Condensed' => array(
+'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
+'category' => 'sans-serif'
+),
+'Kalam' => array(
+'variants' => array('300', '400', '700'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'handwriting'
+),
+'Rokkitt' => array(
+'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Noto Sans SC' => array(
+'variants' => array('100', '300', '400', '500', '700', '900'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin', 'chinese-simplified'),
+'category' => 'sans-serif'
+),
+'Martel' => array(
+'variants' => array('200', '300', '400', '600', '700', '800', '900'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'serif'
+),
+'Amiri' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('latin-ext', 'latin', 'arabic'),
+'category' => 'serif'
+),
+'Pathway Gothic One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Alegreya' => array(
+'variants' => array('400', 'italic', '500', '500italic', '700', '700italic', '800', '800italic', '900', '900italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
+'category' => 'serif'
+),
+'Zilla Slab' => array(
+'variants' => array('300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Cardo' => array(
+'variants' => array('400', 'italic', '700'),
+'subsets' => array('greek', 'latin-ext', 'latin', 'greek-ext'),
+'category' => 'serif'
+),
+'Alfa Slab One' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'display'
+),
+'Tinos' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'hebrew', 'cyrillic-ext'),
+'category' => 'serif'
+),
+'Barlow Semi Condensed' => array(
+'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Kaushan Script' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Great Vibes' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Old Standard TT' => array(
+'variants' => array('400', 'italic', '700'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'serif'
+),
+'Quattrocento Sans' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Fredoka One' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
 ),
 'Archivo Black' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Tajawal' => array(
+'variants' => array('200', '300', '400', '500', '700', '800', '900'),
+'subsets' => array('latin', 'arabic'),
+'category' => 'sans-serif'
+),
+'Advent Pro' => array(
+'variants' => array('100', '200', '300', '400', '500', '600', '700'),
+'subsets' => array('greek', 'latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
 'Orbitron' => array(
@@ -608,625 +705,505 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'sans-serif'
 ),
-'Quattrocento' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
+'Cookie' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
 ),
 'Istok Web' => array(
 'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
-'category' => 'sans-serif'
-),
-'News Cycle' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Domine' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Lobster Two' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Amaranth' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'Monda' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Cardo' => array(
-'variants' => array('400', 'italic', '700'),
-'subsets' => array('latin', 'greek-ext', 'latin-ext', 'greek'),
-'category' => 'serif'
-),
-'Gudea' => array(
-'variants' => array('400', 'italic', '700'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Tinos' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'greek-ext', 'vietnamese', 'hebrew', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
-'category' => 'serif'
-),
-'Economica' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
 'category' => 'sans-serif'
 ),
 'Didact Gothic' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'greek-ext', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
+'subsets' => array('cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
 'category' => 'sans-serif'
-),
-'Playfair Display SC' => array(
-'variants' => array('400', 'italic', '700', '700italic', '900', '900italic'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext'),
-'category' => 'serif'
-),
-'Prompt' => array(
-'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'vietnamese', 'thai', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Alfa Slab One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'display'
-),
-'Assistant' => array(
-'variants' => array('200', '300', '400', '600', '700', '800'),
-'subsets' => array('latin', 'hebrew'),
-'category' => 'sans-serif'
-),
-'Jura' => array(
-'variants' => array('300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'greek-ext', 'vietnamese', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
-'category' => 'sans-serif'
-),
-'Amiri' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'latin-ext', 'arabic'),
-'category' => 'serif'
-),
-'Sacramento' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Tangerine' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Fira Sans Condensed' => array(
-'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'greek-ext', 'vietnamese', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
-'category' => 'sans-serif'
-),
-'Sanchez' => array(
-'variants' => array('400', 'italic'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Armata' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Pontano Sans' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Concert One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Handlee' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Kalam' => array(
-'variants' => array('300', '400', '700'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'handwriting'
-),
-'Cabin Condensed' => array(
-'variants' => array('400', '500', '600', '700'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Volkhov' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Bangers' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'display'
-),
-'Fredoka One' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Arapey' => array(
-'variants' => array('400', 'italic'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Hammersmith One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'BenchNine' => array(
-'variants' => array('300', '400', '700'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Fira Sans Extra Condensed' => array(
-'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'greek-ext', 'vietnamese', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
-'category' => 'sans-serif'
-),
-'Neuton' => array(
-'variants' => array('200', '300', '400', 'italic', '700', '800'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Caveat' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext'),
-'category' => 'handwriting'
 ),
 'Cantarell' => array(
 'variants' => array('400', 'italic', '700', '700italic'),
 'subsets' => array('latin'),
 'category' => 'sans-serif'
 ),
-'Ruda' => array(
-'variants' => array('400', '700', '900'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Boogaloo' => array(
+'Luckiest Guy' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Audiowide' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'Lobster Two' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('latin'),
 'category' => 'display'
+),
+'Gloria Hallelujah' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
 ),
 'Nanum Myeongjo' => array(
 'variants' => array('400', '700', '800'),
-'subsets' => array('korean', 'latin'),
+'subsets' => array('latin', 'korean'),
 'category' => 'serif'
 ),
-'Hind Madurai' => array(
-'variants' => array('300', '400', '500', '600', '700'),
-'subsets' => array('tamil', 'latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Khand' => array(
-'variants' => array('300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'sans-serif'
-),
-'Architects Daughter' => array(
+'Concert One' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Shadows Into Light Two' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Marck Script' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Glegoo' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'serif'
-),
-'Monoton' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'VT323' => array(
+'Patrick Hand' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'monospace'
-),
-'Limelight' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Arima Madurai' => array(
-'variants' => array('100', '200', '300', '400', '500', '700', '800', '900'),
-'subsets' => array('tamil', 'latin', 'vietnamese', 'latin-ext'),
-'category' => 'display'
-),
-'Yellowtail' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'handwriting'
 ),
-'Forum' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
-'category' => 'display'
-),
-'Neucha' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic'),
-'category' => 'handwriting'
-),
-'Antic Slab' => array(
-'variants' => array('400'),
+'Volkhov' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
 'subsets' => array('latin'),
 'category' => 'serif'
-),
-'Pragati Narrow' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'sans-serif'
-),
-'Actor' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'Unica One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Prosto One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext'),
-'category' => 'display'
 ),
 'Changa' => array(
 'variants' => array('200', '300', '400', '500', '600', '700', '800'),
-'subsets' => array('latin', 'latin-ext', 'arabic'),
+'subsets' => array('latin-ext', 'latin', 'arabic'),
 'category' => 'sans-serif'
 ),
-'Special Elite' => array(
+'Sacramento' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Ultra' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Kreon' => array(
-'variants' => array('300', '400', '700'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Hind Vadodara' => array(
-'variants' => array('300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'gujarati', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Gentium Basic' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
 ),
 'Vidaloka' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'serif'
 ),
-'Enriqueta' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext'),
+'Frank Ruhl Libre' => array(
+'variants' => array('300', '400', '500', '700', '900'),
+'subsets' => array('latin-ext', 'latin', 'hebrew'),
 'category' => 'serif'
 ),
-'PT Mono' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
-'category' => 'monospace'
+'Quattrocento' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
 ),
-'Arsenal' => array(
+'M PLUS 1p' => array(
+'variants' => array('100', '300', '400', '500', '700', '800', '900'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'japanese', 'latin', 'greek-ext', 'hebrew', 'cyrillic-ext'),
+'category' => 'sans-serif'
+),
+'IBM Plex Serif' => array(
+'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'serif'
+),
+'Gothic A1' => array(
+'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
+'subsets' => array('latin', 'korean'),
+'category' => 'sans-serif'
+),
+'Poiret One' => array(
+'variants' => array('400'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin'),
+'category' => 'display'
+),
+'Economica' => array(
 'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'Patrick Hand' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'handwriting'
+'Passion One' => array(
+'variants' => array('400', '700', '900'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
 ),
-'Sorts Mill Goudy' => array(
-'variants' => array('400', 'italic'),
-'subsets' => array('latin', 'latin-ext'),
+'Lalezar' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'arabic'),
+'category' => 'display'
+),
+'Neuton' => array(
+'variants' => array('200', '300', '400', 'italic', '700', '800'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'serif'
 ),
-'Magra' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext'),
+'BenchNine' => array(
+'variants' => array('300', '400', '700'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'Yrsa' => array(
-'variants' => array('300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Signika Negative' => array(
-'variants' => array('300', '400', '600', '700'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Homemade Apple' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Julius Sans One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'Yantramanav' => array(
+'variants' => array('100', '300', '400', '500', '700', '900'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
 'category' => 'sans-serif'
 ),
 'Prata' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'cyrillic-ext'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin', 'cyrillic-ext'),
 'category' => 'serif'
 ),
-'Sintony' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext'),
+'Hind Guntur' => array(
+'variants' => array('300', '400', '500', '600', '700'),
+'subsets' => array('latin-ext', 'latin', 'telugu'),
 'category' => 'sans-serif'
 ),
-'Scada' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
+'Noto Serif JP' => array(
+'variants' => array('200', '300', '400', '500', '600', '700', '900'),
+'subsets' => array('japanese', 'latin'),
+'category' => 'serif'
+),
+'Special Elite' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Hind Vadodara' => array(
+'variants' => array('300', '400', '500', '600', '700'),
+'subsets' => array('latin-ext', 'latin', 'gujarati'),
 'category' => 'sans-serif'
 ),
-'Covered By Your Grace' => array(
+'Russo One' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Bevan' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'display'
-),
-'Alice' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic', 'cyrillic-ext'),
-'category' => 'serif'
-),
-'Rancho' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Playball' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Cabin Sketch' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Aldrich' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'Martel' => array(
-'variants' => array('200', '300', '400', '600', '700', '800', '900'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'serif'
+'Gudea' => array(
+'variants' => array('400', 'italic', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
 ),
-'Rock Salt' => array(
+'Handlee' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'handwriting'
 ),
-'Bad Script' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic'),
-'category' => 'handwriting'
-),
-'Gentium Book Basic' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'latin-ext'),
+'Playfair Display SC' => array(
+'variants' => array('400', 'italic', '700', '700italic', '900', '900italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin'),
 'category' => 'serif'
 ),
-'Adamina' => array(
+'Bangers' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Frank Ruhl Libre' => array(
-'variants' => array('300', '400', '500', '700', '900'),
-'subsets' => array('latin', 'hebrew', 'latin-ext'),
-'category' => 'serif'
-),
-'Luckiest Guy' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Damion' => array(
-'variants' => array('400'),
+'Josefin Slab' => array(
+'variants' => array('100', '100italic', '300', '300italic', '400', 'italic', '600', '600italic', '700', '700italic'),
 'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Neucha' => array(
+'variants' => array('400'),
+'subsets' => array('cyrillic', 'latin'),
 'category' => 'handwriting'
 ),
-'Barlow Condensed' => array(
+'Sanchez' => array(
+'variants' => array('400', 'italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Ruda' => array(
+'variants' => array('400', '700', '900'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Yrsa' => array(
+'variants' => array('300', '400', '500', '600', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Montserrat Alternates' => array(
 'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
 'category' => 'sans-serif'
-),
-'Basic' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Chewy' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Caveat Brush' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Rufina' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Contrail One' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Varela' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Alex Brush' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Sigmar One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'display'
-),
-'Paytone One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Arbutus Slab' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Advent Pro' => array(
-'variants' => array('100', '200', '300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'latin-ext', 'greek'),
-'category' => 'sans-serif'
-),
-'Nothing You Could Do' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Alegreya Sans SC' => array(
-'variants' => array('100', '100italic', '300', '300italic', '400', 'italic', '500', '500italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'greek-ext', 'vietnamese', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
-'category' => 'sans-serif'
-),
-'Lusitana' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Rambla' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Coustard' => array(
-'variants' => array('400', '900'),
-'subsets' => array('latin'),
-'category' => 'serif'
 ),
 'Chivo' => array(
 'variants' => array('300', '300italic', '400', 'italic', '700', '700italic', '900', '900italic'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'Share' => array(
+'Amaranth' => array(
 'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Bad Script' => array(
+'variants' => array('400'),
+'subsets' => array('cyrillic', 'latin'),
+'category' => 'handwriting'
+),
+'Philosopher' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin', 'cyrillic-ext'),
+'category' => 'sans-serif'
+),
+'Ultra' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Viga' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Saira Extra Condensed' => array(
+'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Arapey' => array(
+'variants' => array('400', 'italic'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Sunflower' => array(
+'variants' => array('300', '500', '700'),
+'subsets' => array('latin', 'korean'),
+'category' => 'sans-serif'
+),
+'Pontano Sans' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Paytone One' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Cabin Condensed' => array(
+'variants' => array('400', '500', '600', '700'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Archivo' => array(
+'variants' => array('400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Marck Script' => array(
+'variants' => array('400'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Baloo' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'devanagari'),
 'category' => 'display'
 ),
-'Press Start 2P' => array(
+'Sawarabi Mincho' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
+'subsets' => array('latin-ext', 'japanese', 'latin'),
+'category' => 'sans-serif'
+),
+'Armata' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'PT Mono' => array(
+'variants' => array('400'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'monospace'
+),
+'Yellowtail' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Monoton' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
 'category' => 'display'
+),
+'Architects Daughter' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Khand' => array(
+'variants' => array('300', '400', '500', '600', '700'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'sans-serif'
+),
+'Unica One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'M PLUS Rounded 1c' => array(
+'variants' => array('100', '300', '400', '500', '700', '800', '900'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'japanese', 'latin', 'greek-ext', 'hebrew', 'cyrillic-ext'),
+'category' => 'sans-serif'
+),
+'Tangerine' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Hammersmith One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Parisienne' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Spectral' => array(
+'variants' => array('200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin'),
+'category' => 'serif'
 ),
 'Gochi Hand' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'handwriting'
 ),
-'Coda' => array(
-'variants' => array('400', '800'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Montserrat Alternates' => array(
-'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
-'category' => 'sans-serif'
-),
-'Ubuntu Mono' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'greek-ext', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
-'category' => 'monospace'
-),
-'Saira Extra Condensed' => array(
+'Saira' => array(
 'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'Just Another Hand' => array(
+'Varela' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Alice' => array(
+'variants' => array('400'),
+'subsets' => array('cyrillic', 'latin', 'cyrillic-ext'),
+'category' => 'serif'
+),
+'Asap Condensed' => array(
+'variants' => array('400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Enriqueta' => array(
+'variants' => array('400', '500', '600', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Gentium Basic' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Schoolbell' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'handwriting'
 ),
-'PT Serif Caption' => array(
-'variants' => array('400', 'italic'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
+'Taviraj' => array(
+'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
 'category' => 'serif'
 ),
-'Ovo' => array(
+'Sigmar One' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'display'
+),
+'Scada' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'sans-serif'
+),
+'Audiowide' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Signika Negative' => array(
+'variants' => array('300', '400', '600', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Gentium Book Basic' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Shadows Into Light Two' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Actor' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Adamina' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'serif'
 ),
-'Barlow' => array(
-'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'latin-ext'),
+'Pragati Narrow' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
 'category' => 'sans-serif'
+),
+'Staatliches' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'El Messiri' => array(
+'variants' => array('400', '500', '600', '700'),
+'subsets' => array('cyrillic', 'latin', 'arabic'),
+'category' => 'sans-serif'
+),
+'Julius Sans One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Rock Salt' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Pridi' => array(
+'variants' => array('200', '300', '400', '500', '600', '700'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
+'category' => 'serif'
+),
+'Homemade Apple' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Playball' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Karma' => array(
+'variants' => array('300', '400', '500', '600', '700'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'serif'
+),
+'Ubuntu Mono' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
+'category' => 'monospace'
+),
+'Kreon' => array(
+'variants' => array('300', '400', '500', '600', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Sorts Mill Goudy' => array(
+'variants' => array('400', 'italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Nanum Pen Script' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'korean'),
+'category' => 'handwriting'
 ),
 'Fugaz One' => array(
 'variants' => array('400'),
@@ -1235,107 +1212,47 @@ $googlefonts = array(
 ),
 'Allura' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'handwriting'
 ),
-'Oleo Script' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext'),
+'Press Start 2P' => array(
+'variants' => array('400'),
+'subsets' => array('cyrillic', 'greek', 'latin-ext', 'latin', 'cyrillic-ext'),
 'category' => 'display'
 ),
-'Lustria' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
+'Glegoo' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
 'category' => 'serif'
+),
+'Yeseva One' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'display'
 ),
 'Merienda' => array(
 'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'handwriting'
 ),
-'Kameron' => array(
+'Sintony' => array(
 'variants' => array('400', '700'),
-'subsets' => array('latin'),
-'category' => 'serif'
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
 ),
-'Overlock' => array(
-'variants' => array('400', 'italic', '700', '700italic', '900', '900italic'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Marmelad' => array(
+'Damion' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Saira Condensed' => array(
-'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'sans-serif'
+'subsets' => array('latin'),
+'category' => 'handwriting'
 ),
 'Cantata One' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'serif'
 ),
-'Syncopate' => array(
+'Lusitana' => array(
 'variants' => array('400', '700'),
 'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'Slabo 13px' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Rammetto One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Marcellus' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Electrolize' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'Itim' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'thai', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Overpass' => array(
-'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Sarala' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'sans-serif'
-),
-'Viga' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Spinnaker' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Nobile' => array(
-'variants' => array('400', 'italic', '500', '500italic', '700', '700italic'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Marcellus SC' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
 'category' => 'serif'
 ),
 'Carter One' => array(
@@ -1343,90 +1260,200 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'display'
 ),
+'Oleo Script' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Sarala' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'sans-serif'
+),
+'Allerta' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Mitr' => array(
+'variants' => array('200', '300', '400', '500', '600', '700'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
+'category' => 'sans-serif'
+),
+'Rasa' => array(
+'variants' => array('300', '400', '500', '600', '700'),
+'subsets' => array('latin-ext', 'latin', 'gujarati'),
+'category' => 'serif'
+),
+'Alegreya Sans SC' => array(
+'variants' => array('100', '100italic', '300', '300italic', '400', 'italic', '500', '500italic', '700', '700italic', '800', '800italic', '900', '900italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
+'category' => 'sans-serif'
+),
+'Bowlby One SC' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Nothing You Could Do' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Cormorant' => array(
+'variants' => array('300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'serif'
+),
 'Cousine' => array(
 'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'greek-ext', 'vietnamese', 'hebrew', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'hebrew', 'cyrillic-ext'),
 'category' => 'monospace'
 ),
-'Molengo' => array(
+'Antic Slab' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Jura' => array(
+'variants' => array('300', '400', '500', '600', '700'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
 'category' => 'sans-serif'
 ),
-'Michroma' => array(
+'Covered By Your Grace' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'PT Serif Caption' => array(
+'variants' => array('400', 'italic'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'serif'
+),
+'Arbutus Slab' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Forum' => array(
+'variants' => array('400'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'display'
+),
+'Marcellus' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Electrolize' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'sans-serif'
 ),
-'Niconne' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Coming Soon' => array(
+'Boogaloo' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
-'category' => 'handwriting'
+'category' => 'display'
 ),
 'Pinyon Script' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'handwriting'
 ),
-'Barlow Semi Condensed' => array(
-'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Carme' => array(
+'Mr Dafoe' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'Parisienne' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'handwriting'
 ),
-'Kurale' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext', 'devanagari', 'cyrillic-ext'),
+'Abhaya Libre' => array(
+'variants' => array('400', '500', '600', '700', '800'),
+'subsets' => array('sinhala', 'latin-ext', 'latin'),
 'category' => 'serif'
 ),
-'Ceviche One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Quantico' => array(
+'Unna' => array(
 'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'Khula' => array(
-'variants' => array('300', '400', '600', '700', '800'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'sans-serif'
-),
-'Oranienbaum' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'serif'
 ),
-'Leckerli One' => array(
+'Rambla' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Palanquin' => array(
+'variants' => array('100', '200', '300', '400', '500', '600', '700'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'sans-serif'
+),
+'Sarabun' => array(
+'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
+'category' => 'sans-serif'
+),
+'Coda' => array(
+'variants' => array('400', '800'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Alex Brush' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Basic' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Bevan' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'display'
+),
+'Marmelad' => array(
+'variants' => array('400'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Tenor Sans' => array(
+'variants' => array('400'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Lustria' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Spinnaker' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Rubik Mono One' => array(
+'variants' => array('400'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Rancho' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'handwriting'
 ),
-'Copse' => array(
+'Antic' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
-'category' => 'serif'
+'category' => 'sans-serif'
 ),
-'Black Ops One' => array(
+'Chewy' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin'),
 'category' => 'display'
+),
+'Chakra Petch' => array(
+'variants' => array('300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
+'category' => 'sans-serif'
 ),
 'Squada One' => array(
 'variants' => array('400'),
@@ -1438,49 +1465,414 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'handwriting'
 ),
-'Rasa' => array(
-'variants' => array('300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'gujarati', 'latin-ext'),
-'category' => 'serif'
+'Saira Semi Condensed' => array(
+'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Caveat Brush' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Share Tech Mono' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'monospace'
+),
+'Leckerli One' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Khula' => array(
+'variants' => array('300', '400', '600', '700', '800'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'sans-serif'
+),
+'Saira Condensed' => array(
+'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Michroma' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Candal' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Nanum Gothic Coding' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin', 'korean'),
+'category' => 'monospace'
+),
+'Aclonica' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Sawarabi Gothic' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'japanese', 'latin'),
+'category' => 'sans-serif'
+),
+'Fredericka the Great' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Niconne' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
 ),
 'Marvel' => array(
 'variants' => array('400', 'italic', '700', '700italic'),
 'subsets' => array('latin'),
 'category' => 'sans-serif'
 ),
-'Norican' => array(
+'Magra' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Molengo' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Alef' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin', 'hebrew'),
+'category' => 'sans-serif'
+),
+'Black Ops One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'VT323' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'monospace'
+),
+'Reem Kufi' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'arabic'),
+'category' => 'sans-serif'
+),
+'Average' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Lateef' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'arabic'),
+'category' => 'handwriting'
+),
+'Markazi Text' => array(
+'variants' => array('400', '500', '600', '700'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'arabic'),
+'category' => 'serif'
+),
+'Aldrich' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Days One' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Nobile' => array(
+'variants' => array('400', 'italic', '500', '500italic', '700', '700italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Allerta Stencil' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Quantico' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Itim' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
+'category' => 'handwriting'
+),
+'Fira Mono' => array(
+'variants' => array('400', '500', '700'),
+'subsets' => array('cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
+'category' => 'monospace'
+),
+'Rufina' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Lilita One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Coming Soon' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Biryani' => array(
+'variants' => array('200', '300', '400', '600', '700', '800', '900'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'sans-serif'
+),
+'IBM Plex Mono' => array(
+'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'monospace'
+),
+'Rochester' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Italianno' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Cabin Sketch' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Jaldi' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'sans-serif'
+),
+'Syncopate' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Just Another Hand' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Overlock' => array(
+'variants' => array('400', 'italic', '700', '700italic', '900', '900italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Love Ya Like A Sister' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Telex' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Space Mono' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'monospace'
+),
+'Fauna One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Pangolin' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'handwriting'
+),
+'DM Sans' => array(
+'variants' => array('400', 'italic', '500', '500italic', '700', '700italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Scheherazade' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin', 'arabic'),
+'category' => 'serif'
+),
+'Mukta Malar' => array(
+'variants' => array('200', '300', '400', '500', '600', '700', '800'),
+'subsets' => array('latin-ext', 'latin', 'tamil'),
+'category' => 'sans-serif'
+),
+'Knewave' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Encode Sans' => array(
+'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Cinzel Decorative' => array(
+'variants' => array('400', '700', '900'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Kameron' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Gruppo' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Oranienbaum' => array(
+'variants' => array('400'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'serif'
+),
+'Arima Madurai' => array(
+'variants' => array('100', '200', '300', '400', '500', '700', '800', '900'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'tamil'),
+'category' => 'display'
+),
+'Miriam Libre' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin', 'hebrew'),
+'category' => 'sans-serif'
+),
+'Baloo Bhai' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'gujarati'),
+'category' => 'display'
+),
+'Berkshire Swash' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Grand Hotel' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'handwriting'
 ),
 'Radley' => array(
 'variants' => array('400', 'italic'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'serif'
 ),
-'Karma' => array(
-'variants' => array('300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'serif'
-),
-'Average' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Hind Guntur' => array(
-'variants' => array('300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'latin-ext', 'telugu'),
+'Martel Sans' => array(
+'variants' => array('200', '300', '400', '600', '700', '800', '900'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
 'category' => 'sans-serif'
 ),
-'Telex' => array(
+'Anonymous Pro' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('cyrillic', 'greek', 'latin-ext', 'latin'),
+'category' => 'monospace'
+),
+'Marcellus SC' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Share' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Noto Serif TC' => array(
+'variants' => array('200', '300', '400', '500', '600', '700', '900'),
+'subsets' => array('vietnamese', 'cyrillic', 'chinese-traditional', 'latin'),
+'category' => 'serif'
+),
+'Yesteryear' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Encode Sans Condensed' => array(
+'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'Mr Dafoe' => array(
+'Arsenal' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'sans-serif'
+),
+'Halant' => array(
+'variants' => array('300', '400', '500', '600', '700'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'serif'
+),
+'Coda Caption' => array(
+'variants' => array('800'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Copse' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Shrikhand' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin', 'gujarati'),
+'category' => 'display'
+),
+'Alegreya SC' => array(
+'variants' => array('400', 'italic', '500', '500italic', '700', '700italic', '800', '800italic', '900', '900italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
+'category' => 'serif'
+),
+'Racing Sans One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Baloo Bhaina' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'oriya'),
+'category' => 'display'
+),
+'Norican' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Pattaya' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'thai'),
+'category' => 'sans-serif'
+),
+'Jockey One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Hanuman' => array(
+'variants' => array('400', '700'),
+'subsets' => array('khmer'),
+'category' => 'serif'
+),
+'Arizonia' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'handwriting'
 ),
 'Carrois Gothic' => array(
@@ -1488,24 +1880,69 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'sans-serif'
 ),
-'Fauna One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'Coustard' => array(
+'variants' => array('400', '900'),
+'subsets' => array('latin'),
 'category' => 'serif'
 ),
-'Lalezar' => array(
+'Petit Formal Script' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext', 'arabic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'DM Serif Display' => array(
+'variants' => array('400', 'italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Lekton' => array(
+'variants' => array('400', 'italic', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Annie Use Your Telescope' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Prosto One' => array(
+'variants' => array('400'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Days One' => array(
+'Caudex' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('greek', 'latin-ext', 'latin', 'greek-ext'),
+'category' => 'serif'
+),
+'Buenard' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Aleo' => array(
+'variants' => array('300', '300italic', '400', 'italic', '700', '700italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Carme' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'sans-serif'
 ),
-'Freckle Face' => array(
+'Kosugi Maru' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('cyrillic', 'japanese', 'latin'),
+'category' => 'sans-serif'
+),
+'Londrina Solid' => array(
+'variants' => array('100', '300', '400', '900'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Lemonada' => array(
+'variants' => array('300', '400', '600', '700'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'arabic'),
 'category' => 'display'
 ),
 'Voltaire' => array(
@@ -1513,224 +1950,44 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'sans-serif'
 ),
-'Grand Hotel' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Bowlby One SC' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Archivo' => array(
-'variants' => array('400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Lateef' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'arabic'),
-'category' => 'handwriting'
-),
-'Baloo' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext', 'devanagari'),
-'category' => 'display'
-),
-'Pridi' => array(
-'variants' => array('200', '300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'vietnamese', 'thai', 'latin-ext'),
-'category' => 'serif'
-),
-'Alef' => array(
+'Allan' => array(
 'variants' => array('400', '700'),
-'subsets' => array('latin', 'hebrew'),
-'category' => 'sans-serif'
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
 ),
-'Fredericka the Great' => array(
+'Mali' => array(
+'variants' => array('200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
+'category' => 'handwriting'
+),
+'Contrail One' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Italianno' => array(
+'Suez One' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin', 'hebrew'),
+'category' => 'serif'
+),
+'Noto Serif SC' => array(
+'variants' => array('200', '300', '400', '500', '600', '700', '900'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin', 'chinese-simplified'),
+'category' => 'serif'
+),
+'Nanum Brush Script' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'korean'),
 'category' => 'handwriting'
-),
-'Taviraj' => array(
-'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'vietnamese', 'thai', 'latin-ext'),
-'category' => 'serif'
-),
-'Jockey One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Cormorant' => array(
-'variants' => array('300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
-'category' => 'serif'
-),
-'Candal' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'Allerta' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'Anonymous Pro' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext', 'greek'),
-'category' => 'monospace'
-),
-'Annie Use Your Telescope' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Rozha One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'serif'
-),
-'Rochester' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Antic' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'Changa One' => array(
-'variants' => array('400', 'italic'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Bubblegum Sans' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Nixie One' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Zilla Slab' => array(
-'variants' => array('300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Reem Kufi' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'arabic'),
-'category' => 'sans-serif'
-),
-'Halant' => array(
-'variants' => array('300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'serif'
-),
-'El Messiri' => array(
-'variants' => array('400', '500', '600', '700'),
-'subsets' => array('latin', 'cyrillic', 'arabic'),
-'category' => 'sans-serif'
-),
-'Martel Sans' => array(
-'variants' => array('200', '300', '400', '600', '700', '800', '900'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'sans-serif'
-),
-'Yesteryear' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Mitr' => array(
-'variants' => array('200', '300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'vietnamese', 'thai', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Alegreya SC' => array(
-'variants' => array('400', 'italic', '500', '500italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'greek-ext', 'vietnamese', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
-'category' => 'serif'
-),
-'Aclonica' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'Share Tech Mono' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'monospace'
-),
-'Saira' => array(
-'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'sans-serif'
 ),
 'Bungee Inline' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Nanum Gothic Coding' => array(
-'variants' => array('400', '700'),
-'subsets' => array('korean', 'latin'),
-'category' => 'monospace'
-),
-'Goudy Bookletter 1911' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Allerta Stencil' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'Palanquin' => array(
-'variants' => array('100', '200', '300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'sans-serif'
-),
-'Love Ya Like A Sister' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Homenaje' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'Tauri' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Fanwood Text' => array(
-'variants' => array('400', 'italic'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Space Mono' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'monospace'
-),
-'Tenor Sans' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext'),
+'Encode Sans Expanded' => array(
+'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
 'Graduate' => array(
@@ -1738,282 +1995,12 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Convergence' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'Rosario' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'Nanum Pen Script' => array(
-'variants' => array('400'),
-'subsets' => array('korean', 'latin'),
-'category' => 'handwriting'
-),
-'Londrina Solid' => array(
-'variants' => array('100', '300', '400', '900'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Metrophobic' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'Cutive' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Nanum Brush Script' => array(
-'variants' => array('400'),
-'subsets' => array('korean', 'latin'),
-'category' => 'handwriting'
-),
-'Cutive Mono' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'monospace'
-),
-'Judson' => array(
-'variants' => array('400', 'italic', '700'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'serif'
-),
 'Aladin' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'handwriting'
 ),
-'Cinzel Decorative' => array(
-'variants' => array('400', '700', '900'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Doppio One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Inder' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Mukta Vaani' => array(
-'variants' => array('200', '300', '400', '500', '600', '700', '800'),
-'subsets' => array('latin', 'gujarati', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Andada' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Biryani' => array(
-'variants' => array('200', '300', '400', '600', '700', '800', '900'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'sans-serif'
-),
-'Knewave' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Calligraffitti' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Kelly Slab' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext'),
-'category' => 'display'
-),
-'Abhaya Libre' => array(
-'variants' => array('400', '500', '600', '700', '800'),
-'subsets' => array('latin', 'sinhala', 'latin-ext'),
-'category' => 'serif'
-),
-'Caudex' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'greek-ext', 'latin-ext', 'greek'),
-'category' => 'serif'
-),
-'Average Sans' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Schoolbell' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Lilita One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Bungee' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'display'
-),
-'Six Caps' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'GFS Didot' => array(
-'variants' => array('400'),
-'subsets' => array('greek'),
-'category' => 'serif'
-),
-'Racing Sans One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Petit Formal Script' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Delius' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Scheherazade' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'arabic'),
-'category' => 'serif'
-),
-'Jaldi' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'sans-serif'
-),
-'Sue Ellen Francisco' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Quando' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Gilda Display' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Andika' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
-'category' => 'sans-serif'
-),
-'Montez' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Miriam Libre' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'hebrew', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Trocchi' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Mukta' => array(
-'variants' => array('200', '300', '400', '500', '600', '700', '800'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'sans-serif'
-),
-'Krona One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Belleza' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Merienda One' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Unna' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Pompiere' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Happy Monkey' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Herr Von Muellerhoff' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Puritan' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'Saira Semi Condensed' => array(
-'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Trirong' => array(
-'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'vietnamese', 'thai', 'latin-ext'),
-'category' => 'serif'
-),
-'Chelsea Market' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Give You Glory' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Yeseva One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
-'category' => 'display'
-),
-'Gravitas One' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Lekton' => array(
-'variants' => array('400', 'italic', '700'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Alike' => array(
+'Cambo' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'serif'
@@ -2023,204 +2010,249 @@ $googlefonts = array(
 'subsets' => array('latin', 'arabic'),
 'category' => 'sans-serif'
 ),
-'Titan One' => array(
+'Nixie One' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Cambo' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'The Girl Next Door' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'IM Fell Double Pica' => array(
+'Changa One' => array(
 'variants' => array('400', 'italic'),
 'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Balthazar' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Zeyada' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Arizonia' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Encode Sans Condensed' => array(
-'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Risque' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
 'category' => 'display'
 ),
-'Baloo Paaji' => array(
+'Herr Von Muellerhoff' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'gurmukhi', 'vietnamese', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Titan One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Mr De Haviland' => array(
+'Delius' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin'),
 'category' => 'handwriting'
+),
+'Suranna' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'telugu'),
+'category' => 'serif'
+),
+'Judson' => array(
+'variants' => array('400', 'italic', '700'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'serif'
 ),
 'Capriola' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'Oregano' => array(
-'variants' => array('400', 'italic'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Spectral' => array(
-'variants' => array('200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext'),
-'category' => 'serif'
-),
-'Cambay' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'sans-serif'
-),
-'Fontdiner Swanky' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Short Stack' => array(
+'Sue Ellen Francisco' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'handwriting'
 ),
-'Gruppo' => array(
+'GFS Didot' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
+'subsets' => array('greek'),
+'category' => 'serif'
 ),
-'Lemon' => array(
+'Metrophobic' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Calligraffitti' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Mr De Haviland' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Bubblegum Sans' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Amiko' => array(
-'variants' => array('400', '600', '700'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'sans-serif'
-),
-'Allan' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Wire One' => array(
+'Merienda One' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
-'category' => 'sans-serif'
+'category' => 'handwriting'
 ),
-'Mako' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'Duru Sans' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Poly' => array(
+'DM Serif Text' => array(
 'variants' => array('400', 'italic'),
-'subsets' => array('latin'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'serif'
 ),
-'Maitree' => array(
-'variants' => array('200', '300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'vietnamese', 'thai', 'latin-ext'),
-'category' => 'serif'
-),
-'Mate' => array(
-'variants' => array('400', 'italic'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Gafata' => array(
+'Ramabhadra' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin', 'telugu'),
 'category' => 'sans-serif'
 ),
-'Mouse Memoirs' => array(
+'Homenaje' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin'),
 'category' => 'sans-serif'
 ),
-'Bowlby One' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Vast Shadow' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Megrim' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Eczar' => array(
-'variants' => array('400', '500', '600', '700', '800'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'serif'
+'Overpass Mono' => array(
+'variants' => array('300', '400', '600', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'monospace'
 ),
 'Kristi' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'handwriting'
 ),
-'Secular One' => array(
+'Kelly Slab' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'hebrew', 'latin-ext'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin'),
+'category' => 'display'
+),
+'Belleza' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'Seaweed Script' => array(
+'Freckle Face' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Spectral SC' => array(
-'variants' => array('200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext'),
-'category' => 'serif'
-),
-'Gabriela' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic', 'cyrillic-ext'),
-'category' => 'serif'
-),
-'Faster One' => array(
+'Goudy Bookletter 1911' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Bungee' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Coda Caption' => array(
-'variants' => array('800'),
-'subsets' => array('latin', 'latin-ext'),
+'Oxygen Mono' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'monospace'
+),
+'Trirong' => array(
+'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
+'category' => 'serif'
+),
+'Rosario' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Mukta Vaani' => array(
+'variants' => array('200', '300', '400', '500', '600', '700', '800'),
+'subsets' => array('latin-ext', 'latin', 'gujarati'),
+'category' => 'sans-serif'
+),
+'Cutive Mono' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'monospace'
+),
+'Sriracha' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
+'category' => 'handwriting'
+),
+'Gilda Display' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Bai Jamjuree' => array(
+'variants' => array('200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
+'category' => 'sans-serif'
+),
+'Slabo 13px' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Andada' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Ceviche One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Eczar' => array(
+'variants' => array('400', '500', '600', '700', '800'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'serif'
+),
+'Cormorant Infant' => array(
+'variants' => array('300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'serif'
+),
+'IBM Plex Sans Condensed' => array(
+'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Cutive' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Amethysta' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Shojumaru' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'IM Fell English' => array(
+'variants' => array('400', 'italic'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Bentham' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Cambay' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'sans-serif'
+),
+'Palanquin Dark' => array(
+'variants' => array('400', '500', '600', '700'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'sans-serif'
+),
+'Faustina' => array(
+'variants' => array('400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Cedarville Cursive' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Niramit' => array(
+'variants' => array('200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
 'category' => 'sans-serif'
 ),
 'Averia Serif Libre' => array(
@@ -2228,194 +2260,269 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Belgrano' => array(
+'Ovo' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'serif'
 ),
-'Expletus Sans' => array(
-'variants' => array('400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Hanuman' => array(
-'variants' => array('400', '700'),
-'subsets' => array('khmer'),
+'Maitree' => array(
+'variants' => array('200', '300', '400', '500', '600', '700'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
 'category' => 'serif'
 ),
-'Geo' => array(
-'variants' => array('400', 'italic'),
-'subsets' => array('latin'),
+'Average Sans' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'sans-serif'
+),
+'Hepta Slab' => array(
+'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Patrick Hand SC' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Gabriela' => array(
+'variants' => array('400'),
+'subsets' => array('cyrillic', 'latin', 'cyrillic-ext'),
+'category' => 'serif'
+),
+'Amita' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'handwriting'
+),
+'Raleway Dots' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Chelsea Market' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Anaheim' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Pompiere' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
 ),
 'Baumans' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
 ),
+'Rye' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Trocchi' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Chonburi' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
+'category' => 'display'
+),
+'Vesper Libre' => array(
+'variants' => array('400', '500', '700', '900'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'serif'
+),
+'Kadwa' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin', 'devanagari'),
+'category' => 'serif'
+),
 'Athiti' => array(
 'variants' => array('200', '300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'vietnamese', 'thai', 'latin-ext'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
 'category' => 'sans-serif'
 ),
-'Brawler' => array(
+'Duru Sans' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Fira Mono' => array(
-'variants' => array('400', '500', '700'),
-'subsets' => array('latin', 'greek-ext', 'cyrillic', 'latin-ext', 'greek', 'cyrillic-ext'),
-'category' => 'monospace'
-),
-'Qwigley' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Fondamento' => array(
-'variants' => array('400', 'italic'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Carrois Gothic SC' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'La Belle Aurore' => array(
+'UnifrakturMaguntia' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Oxygen Mono' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'monospace'
-),
-'Walter Turncoat' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'IM Fell English' => array(
-'variants' => array('400', 'italic'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Dawning of a New Day' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Lily Script One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
 'category' => 'display'
+),
+'Mate' => array(
+'variants' => array('400', 'italic'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Convergence' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Krub' => array(
+'variants' => array('200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
+'category' => 'sans-serif'
+),
+'Poly' => array(
+'variants' => array('400', 'italic'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'IM Fell Double Pica' => array(
+'variants' => array('400', 'italic'),
+'subsets' => array('latin'),
+'category' => 'serif'
 ),
 'Federo' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'sans-serif'
 ),
-'Amita' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'handwriting'
-),
-'Buenard' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Strait' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'NTR' => array(
+'Gurajada' => array(
 'variants' => array('400'),
 'subsets' => array('latin', 'telugu'),
+'category' => 'serif'
+),
+'Doppio One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'Cherry Swash' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext'),
+'Black Han Sans' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'korean'),
+'category' => 'sans-serif'
+),
+'Faster One' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Anaheim' => array(
+'Montez' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Lemon' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Fresca' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
 'Emilys Candy' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Just Me Again Down Here' => array(
+'Inder' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
 ),
-'Bilbo Swash Caps' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Waiting for the Sunrise' => array(
+'Six Caps' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
-'category' => 'handwriting'
+'category' => 'sans-serif'
 ),
-'Port Lligat Slab' => array(
+'Fanwood Text' => array(
+'variants' => array('400', 'italic'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Mountains of Christmas' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Cantora One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Aref Ruqaa' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin', 'arabic'),
+'category' => 'serif'
+),
+'Gravitas One' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Lexend Deca' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Balthazar' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'serif'
 ),
-'Clicker Script' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Shojumaru' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'Battambang' => array(
+'variants' => array('400', '700'),
+'subsets' => array('khmer'),
 'category' => 'display'
-),
-'Palanquin Dark' => array(
-'variants' => array('400', '500', '600', '700'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'sans-serif'
-),
-'Text Me One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Voces' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Orienta' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
 ),
 'Rouge Script' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'handwriting'
 ),
-'Rye' => array(
+'Fondamento' => array(
+'variants' => array('400', 'italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Proza Libre' => array(
+'variants' => array('400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Alike' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Unkempt' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Imprima' => array(
+'Do Hyeon' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin', 'korean'),
+'category' => 'sans-serif'
+),
+'Carrois Gothic SC' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Bowlby One' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Amiko' => array(
+'variants' => array('400', '600', '700'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
 'category' => 'sans-serif'
 ),
 'Crafty Girls' => array(
@@ -2423,17 +2530,262 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'handwriting'
 ),
-'Iceland' => array(
+'Secular One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin', 'hebrew'),
+'category' => 'sans-serif'
+),
+'Oregano' => array(
+'variants' => array('400', 'italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Manuale' => array(
+'variants' => array('400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Noto Serif KR' => array(
+'variants' => array('200', '300', '400', '500', '600', '700', '900'),
+'subsets' => array('latin', 'korean'),
+'category' => 'serif'
+),
+'Vast Shadow' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Podkova' => array(
-'variants' => array('400', '500', '600', '700', '800'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
+'McLaren' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'IM Fell DW Pica' => array(
+'variants' => array('400', 'italic'),
+'subsets' => array('latin'),
 'category' => 'serif'
 ),
-'Cedarville Cursive' => array(
+'Corben' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Artifika' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'La Belle Aurore' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Spectral SC' => array(
+'variants' => array('200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Skranji' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Sofia' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Sarpanch' => array(
+'variants' => array('400', '500', '600', '700', '800', '900'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'sans-serif'
+),
+'Brawler' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Qwigley' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Seaweed Script' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Kurale' => array(
+'variants' => array('400'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin', 'devanagari', 'cyrillic-ext'),
+'category' => 'serif'
+),
+'Limelight' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Rozha One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'serif'
+),
+'Give You Glory' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Strait' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Wallpoet' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Stardos Stencil' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Waiting for the Sunrise' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Laila' => array(
+'variants' => array('300', '400', '500', '600', '700'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'serif'
+),
+'Galada' => array(
+'variants' => array('400'),
+'subsets' => array('bengali', 'latin'),
+'category' => 'display'
+),
+'Podkova' => array(
+'variants' => array('400', '500', '600', '700', '800'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'serif'
+),
+'Belgrano' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Sansita' => array(
+'variants' => array('400', 'italic', '700', '700italic', '800', '800italic', '900', '900italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Mirza' => array(
+'variants' => array('400', '500', '600', '700'),
+'subsets' => array('latin-ext', 'latin', 'arabic'),
+'category' => 'display'
+),
+'Montserrat Subrayada' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Sniglet' => array(
+'variants' => array('400', '800'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Gafata' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Denk One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Loved by the King' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Andika' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'sans-serif'
+),
+'Megrim' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Quando' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Just Me Again Down Here' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Clicker Script' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Harmattan' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'arabic'),
+'category' => 'sans-serif'
+),
+'Mako' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Expletus Sans' => array(
+'variants' => array('400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Zeyada' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Wendy One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Baloo Bhaijaan' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'arabic'),
+'category' => 'display'
+),
+'Scope One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Oleo Script Swash Caps' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Tauri' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Finger Paint' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Walter Turncoat' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'handwriting'
@@ -2443,205 +2795,200 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'handwriting'
 ),
-'UnifrakturMaguntia' => array(
-'variants' => array('400'),
+'Puritan' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
 'subsets' => array('latin'),
-'category' => 'display'
-),
-'Pattaya' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'thai', 'cyrillic', 'latin-ext'),
 'category' => 'sans-serif'
 ),
-'Frijole' => array(
+'Spicy Rice' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Pangolin' => array(
+'Happy Monkey' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
-'category' => 'handwriting'
-),
-'Unkempt' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Oleo Script Swash Caps' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Harmattan' => array(
+'Jua' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'arabic'),
+'subsets' => array('latin', 'korean'),
 'category' => 'sans-serif'
 ),
-'Londrina Outline' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Patrick Hand SC' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Stardos Stencil' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Lemonada' => array(
-'variants' => array('300', '400', '600', '700'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext', 'arabic'),
-'category' => 'display'
-),
-'Loved by the King' => array(
+'The Girl Next Door' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'handwriting'
-),
-'Stalemate' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Baloo Bhaina' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'oriya', 'vietnamese', 'latin-ext'),
-'category' => 'display'
-),
-'Gurajada' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'telugu'),
-'category' => 'serif'
-),
-'Creepster' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
 ),
 'Meddon' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'handwriting'
 ),
-'Rubik Mono One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Chau Philomene One' => array(
-'variants' => array('400', 'italic'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Artifika' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Euphoria Script' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'IM Fell English SC' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Italiana' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Finger Paint' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Amethysta' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Mirza' => array(
-'variants' => array('400', '500', '600', '700'),
-'subsets' => array('latin', 'latin-ext', 'arabic'),
-'category' => 'display'
-),
-'Sofia' => array(
+'Short Stack' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'handwriting'
 ),
-'Denk One' => array(
+'Orienta' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'Poller One' => array(
+'Esteban' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'NTR' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'telugu'),
+'category' => 'sans-serif'
 ),
 'Tienne' => array(
 'variants' => array('400', '700', '900'),
 'subsets' => array('latin'),
 'category' => 'serif'
 ),
-'Ranchers' => array(
+'Voces' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Condiment' => array(
+'Sedgwick Ave' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'handwriting'
 ),
-'Proza Libre' => array(
-'variants' => array('400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Raleway Dots' => array(
+'Katibeh' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin', 'arabic'),
 'category' => 'display'
 ),
-'IM Fell DW Pica' => array(
-'variants' => array('400', 'italic'),
+'Cormorant Upright' => array(
+'variants' => array('300', '400', '500', '600', '700'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Encode Sans Semi Condensed' => array(
+'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Euphoria Script' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Cormorant SC' => array(
+'variants' => array('300', '400', '500', '600', '700'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'serif'
+),
+'Fjord One' => array(
+'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'serif'
 ),
-'Suez One' => array(
+'Aguafina Script' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'hebrew', 'latin-ext'),
-'category' => 'serif'
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
 ),
-'Crushed' => array(
+'Mallanna' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'telugu'),
+'category' => 'sans-serif'
+),
+'Mouse Memoirs' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Cherry Swash' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Imprima' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Bungee Shade' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'display'
+),
+'Iceland' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Sniglet' => array(
-'variants' => array('400', '800'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Asap Condensed' => array(
-'variants' => array('400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
+'Wire One' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
 'category' => 'sans-serif'
 ),
-'Nova Mono' => array(
+'Rationale' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'greek'),
-'category' => 'monospace'
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Baloo Paaji' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'gurmukhi'),
+'category' => 'display'
+),
+'Bilbo Swash Caps' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Charm' => array(
+'variants' => array('400', '700'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
+'category' => 'handwriting'
+),
+'Dawning of a New Day' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Mrs Saint Delafield' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Creepster' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Alike Angular' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Share Tech' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Averia Sans Libre' => array(
+'variants' => array('300', '300italic', '400', 'italic', '700', '700italic'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Bellefair' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin', 'hebrew'),
+'category' => 'serif'
+),
+'IM Fell English SC' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'serif'
 ),
 'Holtwood One SC' => array(
 'variants' => array('400'),
@@ -2653,158 +3000,118 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'display'
 ),
+'Averia Libre' => array(
+'variants' => array('300', '300italic', '400', 'italic', '700', '700italic'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
 'Over the Rainbow' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'handwriting'
 ),
-'Bentham' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
+'Cormorant Unicase' => array(
+'variants' => array('300', '400', '500', '600', '700'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
 'category' => 'serif'
 ),
-'Sriracha' => array(
+'Kosugi' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'thai', 'latin-ext'),
-'category' => 'handwriting'
+'subsets' => array('cyrillic', 'japanese', 'latin'),
+'category' => 'sans-serif'
 ),
-'Vampiro One' => array(
+'Rammetto One' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Ledger' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext'),
-'category' => 'serif'
-),
-'Katibeh' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext', 'arabic'),
-'category' => 'display'
-),
-'Prociono' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Baloo Tamma' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'kannada', 'latin-ext'),
-'category' => 'display'
-),
-'Corben' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Kotta One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Wallpoet' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Aguafina Script' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Suranna' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'telugu'),
-'category' => 'serif'
-),
-'Cherry Cream Soda' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Life Savers' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Medula One' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Vesper Libre' => array(
-'variants' => array('400', '500', '700', '900'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'serif'
-),
-'Skranji' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
 'Headland One' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'serif'
 ),
-'Englebert' => array(
+'Baloo Chettan' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Shanti' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'Share Tech' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'Mallanna' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'telugu'),
-'category' => 'sans-serif'
-),
-'McLaren' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'malayalam'),
 'category' => 'display'
 ),
-'Fjord One' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Laila' => array(
+'Atma' => array(
 'variants' => array('300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'serif'
-),
-'Engagement' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Bungee Shade' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
+'subsets' => array('bengali', 'latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Encode Sans' => array(
-'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'sans-serif'
+'Ledger' => array(
+'variants' => array('400'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Vampiro One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Lily Script One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
 ),
 'Codystar' => array(
 'variants' => array('300', '400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Averia Sans Libre' => array(
-'variants' => array('300', '300italic', '400', 'italic', '700', '700italic'),
+'Geo' => array(
+'variants' => array('400', 'italic'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Port Lligat Sans' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Pavanam' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin', 'tamil'),
+'category' => 'sans-serif'
+),
+'Encode Sans Semi Expanded' => array(
+'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Princess Sofia' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Baloo Thambi' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'tamil'),
+'category' => 'display'
+),
+'Krona One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Dekko' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'handwriting'
+),
+'Dynalight' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Crushed' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Medula One' => array(
+'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
 ),
@@ -2813,129 +3120,49 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Slackey' => array(
+'Life Savers' => array(
+'variants' => array('400', '700', '800'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Fontdiner Swanky' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Aref Ruqaa' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'arabic'),
-'category' => 'serif'
-),
-'Dorsa' => array(
+'Libre Barcode 39' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'David Libre' => array(
-'variants' => array('400', '500', '700'),
-'subsets' => array('latin', 'vietnamese', 'hebrew', 'latin-ext'),
-'category' => 'serif'
-),
-'Mystery Quest' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
 'category' => 'display'
 ),
-'Ramabhadra' => array(
+'Timmana' => array(
 'variants' => array('400'),
 'subsets' => array('latin', 'telugu'),
 'category' => 'sans-serif'
 ),
-'Rakkas' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext', 'arabic'),
-'category' => 'display'
-),
-'Simonetta' => array(
-'variants' => array('400', 'italic', '900', '900italic'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Sarpanch' => array(
-'variants' => array('400', '500', '600', '700', '800', '900'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'sans-serif'
-),
-'Cormorant Infant' => array(
-'variants' => array('300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
-'category' => 'serif'
-),
-'Fenix' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Chonburi' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'thai', 'latin-ext'),
-'category' => 'display'
-),
-'Baloo Chettan' => array(
-'variants' => array('400'),
-'subsets' => array('malayalam', 'latin', 'vietnamese', 'latin-ext'),
-'category' => 'display'
-),
-'Milonga' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Amarante' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Nova Slim' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Metamorphous' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
 'Habibi' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'serif'
 ),
-'Sumana' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'serif'
-),
-'Alike Angular' => array(
+'Shanti' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Mate SC' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Tulpen One' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Flamenco' => array(
-'variants' => array('300', '400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Asul' => array(
-'variants' => array('400', '700'),
 'subsets' => array('latin'),
 'category' => 'sans-serif'
 ),
-'Stint Ultra Expanded' => array(
+'Prociono' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'BioRhyme' => array(
+'variants' => array('200', '300', '400', '700', '800'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Rakkas' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin', 'arabic'),
 'category' => 'display'
 ),
 'Numans' => array(
@@ -2943,24 +3170,39 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'sans-serif'
 ),
-'League Script' => array(
+'Bubbler One' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Cantora One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'Kite One' => array(
+'B612 Mono' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('latin'),
+'category' => 'monospace'
+),
+'Nova Round' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
-'category' => 'sans-serif'
+'category' => 'display'
 ),
-'Dynalight' => array(
+'Port Lligat Slab' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Nova Mono' => array(
+'variants' => array('400'),
+'subsets' => array('greek', 'latin'),
+'category' => 'monospace'
+),
+'Slackey' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Eater' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
 'Vibur' => array(
@@ -2968,8 +3210,38 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'handwriting'
 ),
-'Averia Libre' => array(
-'variants' => array('300', '300italic', '400', 'italic', '700', '700italic'),
+'Mandali' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'telugu'),
+'category' => 'sans-serif'
+),
+'Modak' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'display'
+),
+'Poller One' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Rum Raisin' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Englebert' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Antic Didone' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Frijole' => array(
+'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
 ),
@@ -2978,169 +3250,229 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Mogra' => array(
+'Underdog' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'gujarati', 'latin-ext'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Rosarivo' => array(
-'variants' => array('400', 'italic'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Wendy One' => array(
+'Bilbo' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
 ),
-'Cormorant SC' => array(
-'variants' => array('300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
+'IM Fell French Canon SC' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
 'category' => 'serif'
 ),
 'Quintessential' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'handwriting'
 ),
-'Maiden Orange' => array(
+'Engagement' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Cute Font' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'korean'),
+'category' => 'display'
+),
+'Asul' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Ranchers' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'K2D' => array(
+'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
+'category' => 'sans-serif'
+),
+'Spirax' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Princess Sofia' => array(
+'ZCOOL XiaoWei' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
+'subsets' => array('latin', 'chinese-simplified'),
+'category' => 'serif'
 ),
-'Sail' => array(
+'Milonga' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Khmer' => array(
+'Cherry Cream Soda' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Overlock SC' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Koulen' => array(
 'variants' => array('400'),
 'subsets' => array('khmer'),
 'category' => 'display'
 ),
-'Nosifer' => array(
+'Metamorphous' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Miniver' => array(
+'Coiny' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'tamil'),
 'category' => 'display'
 ),
-'Sancreek' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Donegal One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Mountains of Christmas' => array(
+'Padauk' => array(
 'variants' => array('400', '700'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Port Lligat Sans' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
+'subsets' => array('myanmar', 'latin'),
 'category' => 'sans-serif'
+),
+'Noto Sans HK' => array(
+'variants' => array('100', '300', '400', '500', '700', '900'),
+'subsets' => array('chinese-hongkong', 'latin'),
+'category' => 'sans-serif'
+),
+'Chau Philomene One' => array(
+'variants' => array('400', 'italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'David Libre' => array(
+'variants' => array('400', '500', '700'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'hebrew'),
+'category' => 'serif'
 ),
 'Mukta Mahee' => array(
 'variants' => array('200', '300', '400', '500', '600', '700', '800'),
-'subsets' => array('latin', 'gurmukhi', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin', 'gurmukhi'),
+'category' => 'sans-serif'
+),
+'Arya' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
 'category' => 'sans-serif'
 ),
 'Elsie' => array(
 'variants' => array('400', '900'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
+),
+'Tulpen One' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Mate SC' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Notable' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Kotta One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Almendra' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
 ),
 'Ruslan Display' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Antic Didone' => array(
+'Mystery Quest' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Bilbo' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Bellefair' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'hebrew', 'latin-ext'),
-'category' => 'serif'
-),
-'Sansita' => array(
-'variants' => array('400', 'italic', '700', '700italic', '800', '800italic', '900', '900italic'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Rhodium Libre' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'serif'
-),
-'Inika' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Mrs Saint Delafield' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Scope One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Stoke' => array(
-'variants' => array('300', '400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Glass Antiqua' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Germania One' => array(
+'Vollkorn SC' => array(
+'variants' => array('400', '600', '700', '900'),
+'subsets' => array('vietnamese', 'cyrillic', 'latin-ext', 'latin', 'cyrillic-ext'),
+'category' => 'serif'
+),
+'Sail' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Delius Unicase' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Montserrat Subrayada' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'Cagliostro' => array(
+'Kite One' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'sans-serif'
 ),
-'Offside' => array(
+'Farsan' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'gujarati'),
+'category' => 'display'
+),
+'Amarante' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Meera Inimai' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'tamil'),
+'category' => 'sans-serif'
+),
+'Gugi' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'korean'),
+'category' => 'display'
+),
+'Ruluko' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Condiment' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Donegal One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Nosifer' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Hanalei Fill' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Dokdo' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'korean'),
+'category' => 'handwriting'
+),
+'Mogra' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin', 'gujarati'),
 'category' => 'display'
 ),
 'Buda' => array(
@@ -3148,147 +3480,72 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Esteban' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Kadwa' => array(
+'Sumana' => array(
 'variants' => array('400', '700'),
-'subsets' => array('latin', 'devanagari'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
 'category' => 'serif'
 ),
-'Rationale' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
+'Manjari' => array(
+'variants' => array('100', '400', '700'),
+'subsets' => array('latin', 'malayalam'),
 'category' => 'sans-serif'
 ),
-'Junge' => array(
+'Chicle' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Arya' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'sans-serif'
-),
-'Battambang' => array(
-'variants' => array('400', '700'),
-'subsets' => array('khmer'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
-),
-'Swanky and Moo Moo' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Sarina' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Fresca' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Encode Sans Semi Condensed' => array(
-'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Kavoon' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Mandali' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'telugu'),
-'category' => 'sans-serif'
-),
-'Ribeye' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Nova Flat' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Dekko' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'handwriting'
-),
-'IM Fell French Canon' => array(
-'variants' => array('400', 'italic'),
-'subsets' => array('latin'),
-'category' => 'serif'
 ),
 'Peralta' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Ruluko' => array(
+'Baloo Tamma' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'kannada'),
+'category' => 'display'
 ),
-'IM Fell DW Pica SC' => array(
+'Gaegu' => array(
+'variants' => array('300', '400', '700'),
+'subsets' => array('latin', 'korean'),
+'category' => 'handwriting'
+),
+'Ramaraja' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
+'subsets' => array('latin', 'telugu'),
 'category' => 'serif'
 ),
-'Pirata One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Henny Penny' => array(
+'Fascinate Inline' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Croissant One' => array(
+'Fenix' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Yatra One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
 'category' => 'display'
 ),
-'Bubbler One' => array(
+'Mansalva' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Livvic' => array(
+'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '900', '900italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'UnifrakturCook' => array(
-'variants' => array('700'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Baloo Thambi' => array(
+'Sarina' => array(
 'variants' => array('400'),
-'subsets' => array('tamil', 'latin', 'vietnamese', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
 'Paprika' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Linden Hill' => array(
-'variants' => array('400', 'italic'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Trade Winds' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Spirax' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
@@ -3298,184 +3555,194 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'serif'
 ),
-'Nova Round' => array(
+'Rosarivo' => array(
+'variants' => array('400', 'italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Inknut Antiqua' => array(
+'variants' => array('300', '400', '500', '600', '700', '800', '900'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'serif'
+),
+'League Script' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Akronim' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Baloo Da' => array(
+'variants' => array('400'),
+'subsets' => array('bengali', 'vietnamese', 'latin-ext', 'latin'),
+'category' => 'display'
+),
+'Flamenco' => array(
+'variants' => array('300', '400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Khmer' => array(
+'variants' => array('400'),
+'subsets' => array('khmer'),
+'category' => 'display'
+),
+'Sancreek' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Dorsa' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Moul' => array(
+'variants' => array('400'),
+'subsets' => array('khmer'),
+'category' => 'display'
+),
+'Maiden Orange' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Sonsie One' => array(
+'Miniver' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Yatra One' => array(
+'Londrina Outline' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'display'
-),
-'Stint Ultra Condensed' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin'),
 'category' => 'display'
 ),
 'Plaster' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Overlock SC' => array(
+'Lovers Quarrel' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Baloo Bhai' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'gujarati', 'vietnamese', 'latin-ext'),
-'category' => 'display'
-),
-'Piedra' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Joti One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Almendra' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Meie Script' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'handwriting'
 ),
-'Farsan' => array(
+'Sonsie One' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'gujarati', 'vietnamese', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Asset' => array(
+'Simonetta' => array(
+'variants' => array('400', 'italic', '900', '900italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Junge' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
-'category' => 'display'
-),
-'BioRhyme' => array(
-'variants' => array('200', '300', '400', '700', '800'),
-'subsets' => array('latin', 'latin-ext'),
 'category' => 'serif'
 ),
-'Julee' => array(
+'Stint Ultra Condensed' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
 ),
 'Redressed' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'handwriting'
 ),
-'Monsieur La Doulaise' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
+'Stoke' => array(
+'variants' => array('300', '400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
 ),
-'Pavanam' => array(
+'Baloo Tammudu' => array(
 'variants' => array('400'),
-'subsets' => array('tamil', 'latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Griffy' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'telugu'),
 'category' => 'display'
 ),
-'Timmana' => array(
+'Germania One' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'telugu'),
-'category' => 'sans-serif'
-),
-'Autour One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Mukta Malar' => array(
-'variants' => array('200', '300', '400', '500', '600', '700', '800'),
-'subsets' => array('tamil', 'latin', 'latin-ext'),
+'IM Fell DW Pica SC' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Cagliostro' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
 'category' => 'sans-serif'
 ),
-'Eagle Lake' => array(
+'Italiana' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Thasadith' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
+'category' => 'sans-serif'
+),
+'Averia Gruesa Libre' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Kumar One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin', 'gujarati'),
+'category' => 'display'
+),
+'ZCOOL QingKe HuangYou' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'chinese-simplified'),
+'category' => 'display'
+),
+'IM Fell French Canon' => array(
+'variants' => array('400', 'italic'),
+'subsets' => array('latin'),
+'category' => 'serif'
 ),
 'Angkor' => array(
 'variants' => array('400'),
 'subsets' => array('khmer'),
 'category' => 'display'
 ),
-'Fascinate Inline' => array(
+'Ewert' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Sedgwick Ave' => array(
+'Pirata One' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Akronim' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'MedievalSharp' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Lovers Quarrel' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Revalia' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Galindo' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Encode Sans Expanded' => array(
-'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Wellfleet' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Monofett' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Petrona' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
+'Sura' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
 'category' => 'serif'
 ),
-'Butcherman' => array(
+'Stalemate' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Nova Slim' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Offside' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
 'category' => 'display'
 ),
 'Uncial Antiqua' => array(
@@ -3483,44 +3750,169 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Sunshiney' => array(
+'Croissant One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Swanky and Moo Moo' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'handwriting'
 ),
-'Ruthie' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Snippet' => array(
+'Trade Winds' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
+'category' => 'display'
+),
+'Ribeye' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Text Me One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'Content' => array(
+'Kavoon' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Delius Unicase' => array(
 'variants' => array('400', '700'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Mina' => array(
+'variants' => array('400', '700'),
+'subsets' => array('bengali', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'New Rocker' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Bokor' => array(
+'variants' => array('400'),
 'subsets' => array('khmer'),
 'category' => 'display'
 ),
-'Baloo Bhaijaan' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext', 'arabic'),
-'category' => 'display'
-),
-'Jim Nightshade' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Original Surfer' => array(
+'Macondo Swash Caps' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Snowburst One' => array(
+'Revalia' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Julee' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Red Hat Text' => array(
+'variants' => array('400', 'italic', '500', '500italic', '700', '700italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Libre Caslon Text' => array(
+'variants' => array('400', 'italic', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Marko One' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Bahiana' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Jacques Francois Shadow' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Literata' => array(
+'variants' => array('400', '500', '600', '700', 'italic', '500italic', '600italic', '700italic'),
+'subsets' => array('vietnamese', 'cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext'),
+'category' => 'serif'
+),
+'Inika' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Chela One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'UnifrakturCook' => array(
+'variants' => array('700'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Griffy' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Glass Antiqua' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Linden Hill' => array(
+'variants' => array('400', 'italic'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Nova Flat' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Stint Ultra Expanded' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Ribeye Marrow' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Petrona' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Saira Stencil One' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'display'
+),
+'Henny Penny' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Chango' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Margarine' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
 'Della Respira' => array(
@@ -3528,94 +3920,74 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'serif'
 ),
-'Montaga' => array(
+'Jim Nightshade' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Averia Gruesa Libre' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'IM Fell Double Pica SC' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Koulen' => array(
-'variants' => array('400'),
-'subsets' => array('khmer'),
-'category' => 'display'
-),
-'Iceberg' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Ramaraja' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'telugu'),
-'category' => 'serif'
-),
-'Cormorant Upright' => array(
-'variants' => array('300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'serif'
-),
-'Underdog' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext'),
-'category' => 'display'
-),
-'Purple Purse' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Molle' => array(
-'variants' => array('italic'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'handwriting'
 ),
-'Caesar Dressing' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
+'Be Vietnam' => array(
+'variants' => array('100', '100italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
 ),
-'Macondo' => array(
+'Trykker' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Sahitya' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'devanagari'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'serif'
+),
+'Monsieur La Doulaise' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Ranga' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'display'
+),
+'Tillana' => array(
+'variants' => array('400', '500', '600', '700', '800'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'handwriting'
+),
+'Eagle Lake' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Monofett' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Darker Grotesque' => array(
+'variants' => array('300', '400', '500', '600', '700', '800', '900'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
 ),
 'Bigshot One' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Inknut Antiqua' => array(
-'variants' => array('300', '400', '500', '600', '700', '800', '900'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'serif'
-),
-'Sirin Stencil' => array(
+'Diplomata' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Goblin One' => array(
+'Autour One' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Ewert' => array(
+'Ruthie' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Smythe' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
 'category' => 'display'
 ),
 'Irish Grover' => array(
@@ -3623,187 +3995,312 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Spicy Rice' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Oldenburg' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Chango' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Ravi Prakash' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'telugu'),
-'category' => 'display'
-),
-'Lancelot' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Arbutus' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Trykker' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'Ranga' => array(
+'Nokora' => array(
 'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'display'
-),
-'Flavors' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
+'subsets' => array('khmer'),
+'category' => 'serif'
 ),
 'Elsie Swash Caps' => array(
 'variants' => array('400', '900'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Atomic Age' => array(
+'Metal Mania' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'IM Fell Double Pica SC' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Seymour One' => array(
+'variants' => array('400'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Sree Krushnadevaraya' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'telugu'),
+'category' => 'serif'
+),
+'Red Hat Display' => array(
+'variants' => array('400', 'italic', '500', '500italic', '700', '700italic', '900', '900italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Charmonman' => array(
+'variants' => array('400', '700'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
+'category' => 'handwriting'
+),
+'Galdeano' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Wellfleet' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Smythe' => array(
+'Blinker' => array(
+'variants' => array('100', '200', '300', '400', '600', '700', '800', '900'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Montaga' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Dangrek' => array(
+'variants' => array('400'),
+'subsets' => array('khmer'),
+'category' => 'display'
+),
+'Joti One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Barrio' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Libre Barcode 39 Extended Text' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
 ),
 'Dr Sugiyama' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'handwriting'
 ),
-'Almendra SC' => array(
+'Trochut' => array(
+'variants' => array('400', 'italic', '700'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'IM Fell Great Primer SC' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'serif'
 ),
-'Metal Mania' => array(
+'Song Myung' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin', 'korean'),
+'category' => 'serif'
+),
+'Oldenburg' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Jolly Lodger' => array(
+'Modern Antiqua' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Chilanka' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'malayalam'),
+'category' => 'handwriting'
+),
+'Felipa' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Ravi Prakash' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'telugu'),
+'category' => 'display'
+),
+'Kodchasan' => array(
+'variants' => array('200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
+'category' => 'sans-serif'
+),
+'Almarai' => array(
+'variants' => array('300', '400', '700', '800'),
+'subsets' => array('arabic'),
+'category' => 'sans-serif'
+),
+'Barriecito' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'display'
+),
+'Sirin Stencil' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'KoHo' => array(
+'variants' => array('200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
+'category' => 'sans-serif'
+),
+'Asset' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'ZCOOL KuaiLe' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'chinese-simplified'),
+'category' => 'display'
+),
+'Zilla Slab Highlight' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'MedievalSharp' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Rhodium Libre' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'serif'
+),
+'Snowburst One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'B612' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Unlock' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Iceberg' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Asar' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin', 'devanagari'),
+'category' => 'serif'
+),
+'Keania One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Major Mono Display' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'monospace'
+),
+'Arbutus' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
 'Mrs Sheppards' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'handwriting'
 ),
-'Lakki Reddy' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'telugu'),
-'category' => 'handwriting'
-),
-'Rum Raisin' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Manuale' => array(
-'variants' => array('400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'serif'
-),
-'Galada' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'bengali'),
-'category' => 'display'
-),
-'Padauk' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'myanmar'),
-'category' => 'sans-serif'
-),
-'Atma' => array(
-'variants' => array('300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'bengali', 'latin-ext'),
-'category' => 'display'
-),
-'Marko One' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'New Rocker' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Coiny' => array(
-'variants' => array('400'),
-'subsets' => array('tamil', 'latin', 'vietnamese', 'latin-ext'),
-'category' => 'display'
-),
-'Fascinate' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Seymour One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Modak' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'display'
-),
-'Tillana' => array(
-'variants' => array('400', '500', '600', '700', '800'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'handwriting'
-),
-'Overpass Mono' => array(
-'variants' => array('300', '400', '600', '700'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'monospace'
-),
-'Modern Antiqua' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Jomhuria' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext', 'arabic'),
-'category' => 'display'
-),
-'Londrina Shadow' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Romanesco' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Nokora' => array(
+'Content' => array(
 'variants' => array('400', '700'),
 'subsets' => array('khmer'),
+'category' => 'display'
+),
+'Chathura' => array(
+'variants' => array('100', '300', '400', '700', '800'),
+'subsets' => array('latin', 'telugu'),
+'category' => 'sans-serif'
+),
+'Smokum' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Molle' => array(
+'variants' => array('italic'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Sahitya' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin', 'devanagari'),
 'category' => 'serif'
 ),
-'Miltonian Tattoo' => array(
+'Farro' => array(
+'variants' => array('300', '400', '500', '700'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Meie Script' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Lancelot' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Libre Barcode 128' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Devonshire' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Bayon' => array(
+'variants' => array('400'),
+'subsets' => array('khmer'),
+'category' => 'display'
+),
+'Grenze' => array(
+'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic', '800', '800italic', '900', '900italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Atomic Age' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Poor Story' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'korean'),
+'category' => 'display'
+),
+'Diplomata SC' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Astloch' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Purple Purse' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Goblin One' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
@@ -3813,112 +4310,12 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'serif'
 ),
-'Devonshire' => array(
+'Miss Fajardose' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'handwriting'
 ),
-'Margarine' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Faustina' => array(
-'variants' => array('400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'serif'
-),
-'Ruge Boogie' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'IM Fell French Canon SC' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Jacques Francois Shadow' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Diplomata' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Diplomata SC' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Sree Krushnadevaraya' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'telugu'),
-'category' => 'serif'
-),
-'Sedgwick Ave Display' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Galdeano' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'sans-serif'
-),
-'Keania One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Astloch' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Sura' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'serif'
-),
-'IM Fell Great Primer SC' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'serif'
-),
-'Ribeye Marrow' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Smokum' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Eater' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Bonbon' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'handwriting'
-),
-'Geostar Fill' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Londrina Sketch' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Nova Oval' => array(
+'Libre Barcode 39 Text' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
@@ -3928,89 +4325,54 @@ $googlefonts = array(
 'subsets' => array('khmer'),
 'category' => 'display'
 ),
-'Miltonian' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Asar' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext', 'devanagari'),
-'category' => 'serif'
-),
 'Freehand' => array(
 'variants' => array('400'),
 'subsets' => array('khmer'),
 'category' => 'display'
 ),
-'Felipa' => array(
+'Original Surfer' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Jolly Lodger' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
 ),
 'Kenia' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'GFS Neohellenic' => array(
-'variants' => array('400', 'italic', '700', '700italic'),
-'subsets' => array('greek'),
-'category' => 'sans-serif'
-),
-'Warnes' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Passero One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Chicle' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Bayon' => array(
+'Siemreap' => array(
 'variants' => array('400'),
 'subsets' => array('khmer'),
 'category' => 'display'
 ),
-'Barrio' => array(
+'Miltonian Tattoo' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Meera Inimai' => array(
-'variants' => array('400'),
-'subsets' => array('tamil', 'latin'),
-'category' => 'sans-serif'
-),
-'Stalinist One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'cyrillic', 'latin-ext'),
-'category' => 'display'
-),
-'Bokor' => array(
-'variants' => array('400'),
-'subsets' => array('khmer'),
-'category' => 'display'
-),
-'Zilla Slab Highlight' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Mina' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin', 'bengali', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Trochut' => array(
-'variants' => array('400', 'italic', '700'),
 'subsets' => array('latin'),
+'category' => 'display'
+),
+'Flavors' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Caesar Dressing' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Snippet' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'sans-serif'
+),
+'Almendra Display' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
 'Kantumruy' => array(
@@ -4018,19 +4380,24 @@ $googlefonts = array(
 'subsets' => array('khmer'),
 'category' => 'sans-serif'
 ),
-'Suwannaphum' => array(
+'Sunshiney' => array(
 'variants' => array('400'),
-'subsets' => array('khmer'),
-'category' => 'display'
-),
-'Miss Fajardose' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin'),
 'category' => 'handwriting'
 ),
-'Fruktur' => array(
+'Jomhuria' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin', 'arabic'),
+'category' => 'display'
+),
+'Hi Melody' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'korean'),
+'category' => 'handwriting'
+),
+'Libre Barcode 39 Extended' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
 'category' => 'display'
 ),
 'Nova Cut' => array(
@@ -4038,27 +4405,37 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Combo' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'Gorditas' => array(
+'variants' => array('400', '700'),
+'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Almendra Display' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Moul' => array(
-'variants' => array('400'),
-'subsets' => array('khmer'),
-'category' => 'display'
-),
-'Supermercado One' => array(
+'Nova Oval' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Metal' => array(
+'Londrina Shadow' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Fasthand' => array(
+'variants' => array('400'),
+'subsets' => array('khmer'),
+'category' => 'serif'
+),
+'Piedra' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Stylish' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'korean'),
+'category' => 'sans-serif'
+),
+'Suwannaphum' => array(
 'variants' => array('400'),
 'subsets' => array('khmer'),
 'category' => 'display'
@@ -4068,67 +4445,252 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Kumar One' => array(
+'Taprom' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'gujarati', 'latin-ext'),
+'subsets' => array('khmer'),
+'category' => 'display'
+),
+'Lakki Reddy' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'telugu'),
+'category' => 'handwriting'
+),
+'Fahkwang' => array(
+'variants' => array('200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
+'category' => 'sans-serif'
+),
+'Miltonian' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Romanesco' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'GFS Neohellenic' => array(
+'variants' => array('400', 'italic', '700', '700italic'),
+'subsets' => array('greek'),
+'category' => 'sans-serif'
+),
+'Almendra SC' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'serif'
+),
+'Kavivanar' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin', 'tamil'),
+'category' => 'handwriting'
+),
+'Kirang Haerang' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'korean'),
+'category' => 'display'
+),
+'Macondo' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Londrina Sketch' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Bungee Outline' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'display'
+),
+'Ruge Boogie' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'East Sea Dokdo' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'korean'),
+'category' => 'handwriting'
+),
+'Zhi Mang Xing' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'chinese-simplified'),
+'category' => 'handwriting'
+),
+'Gamja Flower' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'korean'),
+'category' => 'handwriting'
+),
+'Galindo' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Long Cang' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'chinese-simplified'),
+'category' => 'handwriting'
+),
+'Liu Jian Mao Cao' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'chinese-simplified'),
+'category' => 'handwriting'
+),
+'Hanalei' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Gayathri' => array(
+'variants' => array('100', '400', '700'),
+'subsets' => array('latin', 'malayalam'),
+'category' => 'sans-serif'
+),
+'Geostar Fill' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Srisakdi' => array(
+'variants' => array('400', '700'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin', 'thai'),
+'category' => 'display'
+),
+'Butcherman' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Tenali Ramakrishna' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'telugu'),
+'category' => 'sans-serif'
+),
+'Risque' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Big Shoulders Display' => array(
+'variants' => array('100', '300', '400', '500', '600', '700', '800', '900'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'display'
+),
+'Supermercado One' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Combo' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Butterfly Kids' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Crimson Pro' => array(
+'variants' => array('200', '300', '400', '500', '600', '700', '800', '900', '200italic', '300italic', 'italic', '500italic', '600italic', '700italic', '800italic', '900italic'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'serif'
+),
+'Sedgwick Ave Display' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Gidugu' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'telugu'),
+'category' => 'sans-serif'
+),
+'Metal' => array(
+'variants' => array('400'),
+'subsets' => array('khmer'),
+'category' => 'display'
+),
+'Libre Barcode 128 Text' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Fruktur' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Fascinate' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Passero One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Sevillana' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Erica One' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Preahvihear' => array(
+'variants' => array('400'),
+'subsets' => array('khmer'),
 'category' => 'display'
 ),
 'Emblema One' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'display'
+),
+'Bungee Hairline' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'display'
+),
+'Black And White Picture' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'korean'),
+'category' => 'sans-serif'
+),
+'Bonbon' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Kumar One Outline' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin', 'gujarati'),
 'category' => 'display'
 ),
 'Bigelow Rules' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Bahiana' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Dangrek' => array(
-'variants' => array('400'),
-'subsets' => array('khmer'),
-'category' => 'display'
-),
-'Cormorant Unicase' => array(
-'variants' => array('300', '400', '500', '600', '700'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
-'category' => 'serif'
-),
-'Siemreap' => array(
-'variants' => array('400'),
-'subsets' => array('khmer'),
-'category' => 'display'
-),
-'Kavivanar' => array(
-'variants' => array('400'),
-'subsets' => array('tamil', 'latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Macondo Swash Caps' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Chathura' => array(
-'variants' => array('100', '300', '400', '700', '800'),
-'subsets' => array('latin', 'telugu'),
-'category' => 'sans-serif'
-),
-'Butterfly Kids' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
-),
-'Gorditas' => array(
-'variants' => array('400', '700'),
-'subsets' => array('latin'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
 'Sofadi One' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'display'
+),
+'Mr Bedfort' => array(
+'variants' => array('400'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'handwriting'
+),
+'Aubrey' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
@@ -4138,99 +4700,34 @@ $googlefonts = array(
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Sevillana' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Aubrey' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Baloo Da' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'bengali', 'latin-ext'),
-'category' => 'display'
-),
-'Federant' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'Hanalei' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Bungee Outline' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'display'
-),
-'Erica One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Vollkorn SC' => array(
-'variants' => array('400', '600', '700', '900'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
-'category' => 'serif'
-),
-'IBM Plex Sans' => array(
-'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
-'category' => 'sans-serif'
-),
-'Tenali Ramakrishna' => array(
+'Suravaram' => array(
 'variants' => array('400'),
 'subsets' => array('latin', 'telugu'),
-'category' => 'sans-serif'
+'category' => 'serif'
 ),
-'Hanalei Fill' => array(
+'Libre Caslon Display' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
 ),
-'Taprom' => array(
+'Chenla' => array(
 'variants' => array('400'),
 'subsets' => array('khmer'),
 'category' => 'display'
-),
-'Baloo Tammudu' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext', 'telugu'),
-'category' => 'display'
-),
-'Bungee Hairline' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'display'
-),
-'Chela One' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'display'
-),
-'Mr Bedfort' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'handwriting'
 ),
 'Peddana' => array(
 'variants' => array('400'),
 'subsets' => array('latin', 'telugu'),
 'category' => 'serif'
 ),
-'Libre Barcode 39 Text' => array(
+'Federant' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
 'category' => 'display'
 ),
-'Kumar One Outline' => array(
+'Yeon Sung' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'gujarati', 'latin-ext'),
+'subsets' => array('latin', 'korean'),
 'category' => 'display'
 ),
 'Kdam Thmor' => array(
@@ -4238,29 +4735,24 @@ $googlefonts = array(
 'subsets' => array('khmer'),
 'category' => 'display'
 ),
-'Preahvihear' => array(
+'Moulpali' => array(
 'variants' => array('400'),
 'subsets' => array('khmer'),
 'category' => 'display'
 ),
-'Chenla' => array(
+'Stalinist One' => array(
 'variants' => array('400'),
-'subsets' => array('khmer'),
+'subsets' => array('cyrillic', 'latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Gidugu' => array(
-'variants' => array('400'),
-'subsets' => array('latin', 'telugu'),
-'category' => 'sans-serif'
+'BioRhyme Expanded' => array(
+'variants' => array('200', '300', '400', '700', '800'),
+'subsets' => array('latin-ext', 'latin'),
+'category' => 'serif'
 ),
-'Encode Sans Semi Expanded' => array(
-'variants' => array('100', '200', '300', '400', '500', '600', '700', '800', '900'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
-'category' => 'sans-serif'
-),
-'Unlock' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
+'Turret Road' => array(
+'variants' => array('200', '300', '400', '500', '700', '800'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
 'Dhurjati' => array(
@@ -4268,65 +4760,80 @@ $googlefonts = array(
 'subsets' => array('latin', 'telugu'),
 'category' => 'sans-serif'
 ),
-'Fasthand' => array(
-'variants' => array('400'),
-'subsets' => array('khmer'),
-'category' => 'serif'
-),
-'Libre Barcode 39 Extended' => array(
-'variants' => array('400'),
-'subsets' => array('latin'),
+'Big Shoulders Text' => array(
+'variants' => array('100', '300', '400', '500', '600', '700', '800', '900'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'display'
 ),
-'IBM Plex Mono' => array(
-'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
+'Beth Ellen' => array(
+'variants' => array('400'),
+'subsets' => array('latin'),
+'category' => 'handwriting'
+),
+'Fira Code' => array(
+'variants' => array('300', '400', '500', '600', '700'),
+'subsets' => array('cyrillic', 'greek', 'latin-ext', 'latin', 'greek-ext', 'cyrillic-ext'),
 'category' => 'monospace'
 ),
-'Suravaram' => array(
+'Warnes' => array(
 'variants' => array('400'),
-'subsets' => array('latin', 'telugu'),
-'category' => 'serif'
-),
-'Moulpali' => array(
-'variants' => array('400'),
-'subsets' => array('khmer'),
+'subsets' => array('latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Libre Barcode 39 Extended Text' => array(
+'Lexend Exa' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
-'category' => 'display'
-),
-'IBM Plex Serif' => array(
-'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700italic'),
-'subsets' => array('latin', 'vietnamese', 'cyrillic', 'latin-ext', 'cyrillic-ext'),
-'category' => 'serif'
-),
-'BioRhyme Expanded' => array(
-'variants' => array('200', '300', '400', '700', '800'),
-'subsets' => array('latin', 'latin-ext'),
-'category' => 'serif'
-),
-'IBM Plex Sans Condensed' => array(
-'variants' => array('100', '100italic', '200', '200italic', '300', '300italic', '400', 'italic', '500', '500italic', '600', '600italic', '700', '700italic'),
-'subsets' => array('latin', 'vietnamese', 'latin-ext'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'sans-serif'
 ),
-'Libre Barcode 39' => array(
+'Vibes' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
+'subsets' => array('latin', 'arabic'),
 'category' => 'display'
 ),
-'Libre Barcode 128 Text' => array(
+'Lexend Giga' => array(
 'variants' => array('400'),
-'subsets' => array('latin'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Lexend Zetta' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Bahianita' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
 'category' => 'display'
 ),
-'Libre Barcode 128' => array(
+'Lexend Tera' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Single Day' => array(
+'variants' => array('400'),
+'subsets' => array('korean'),
+'category' => 'display'
+),
+'Lacquer' => array(
 'variants' => array('400'),
 'subsets' => array('latin'),
-'category' => 'display'
+'category' => 'sans-serif'
+),
+'Lexend Mega' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Lexend Peta' => array(
+'variants' => array('400'),
+'subsets' => array('vietnamese', 'latin-ext', 'latin'),
+'category' => 'sans-serif'
+),
+'Ma Shan Zheng' => array(
+'variants' => array('400'),
+'subsets' => array('latin', 'chinese-simplified'),
+'category' => 'handwriting'
 )
 );
 

@@ -1,8 +1,8 @@
 <?php
 /**
  * @author    ThemePunch <info@themepunch.com>
- * @link      http://www.themepunch.com/
- * @copyright 2016 ThemePunch
+ * @link      https://www.themepunch.com/
+ * @copyright 2019 ThemePunch
  */
 
 if( !defined( 'ABSPATH') ) exit();
@@ -27,8 +27,8 @@ class RevSliderPageTemplate {
 
 		if( null == self::$instance ) {
 			self::$instance = new RevSliderPageTemplate();
-		} 
-
+		}
+		
 		return self::$instance;
 
 	} 
@@ -77,7 +77,7 @@ class RevSliderPageTemplate {
 	// Adds our template to the new post templates setting (WP >= 4.7)
 	public function register_project_templates_new( $post_templates ) {
 	    
-	    $post_templates = array_merge( $post_templates, $this->templates );
+		$post_templates = array_merge( $post_templates, $this->templates );
 	 
 	    return $post_templates;
 	}
@@ -148,4 +148,5 @@ class RevSliderPageTemplate {
 
 	}
 }
+
 ?>
