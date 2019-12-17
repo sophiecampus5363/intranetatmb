@@ -782,7 +782,7 @@ if( ! class_exists( 'Woffice_Register' ) ) {
                 'password-strength-meter',
             ) );
 
-            wp_enqueue_script( 'bp-legacy-password-verify', $asset, $dependencies);
+            wp_enqueue_script( 'bp-legacy-password-verify', $asset, $dependencies, WOFFICE_THEME_VERSION);
 
         }
 

@@ -12,7 +12,7 @@ if (is_admin()) {
 **
 ----------------------------------------------------------*/
 if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-    wp_enqueue_script( 'comment-reply' );
+    wp_enqueue_script( 'comment-reply', '', array(), WOFFICE_THEME_VERSION );
 }
 /*---------------------------------------------------------
 **
@@ -20,7 +20,7 @@ if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 **
 ----------------------------------------------------------*/
 if (function_exists('woffice_get_fonts_url') && woffice_get_fonts_url() ) {
-	wp_enqueue_style('theme-fonts', woffice_get_fonts_url(), array(), null);
+	wp_enqueue_style('theme-fonts', woffice_get_fonts_url(), array(), WOFFICE_THEME_VERSION);
 }
 
 // Assets
@@ -28,14 +28,15 @@ wp_enqueue_style(
 	'assets-css',
 	get_template_directory_uri() . '/css/assets.min.css',
 	array(),
-	'1.0'
+    WOFFICE_THEME_VERSION
 );
 
 // Load our main stylesheet.
 wp_enqueue_style(
     'woffice-theme-style',
     get_template_directory_uri() . '/style.css',
-    '1.0'
+    array(),
+    WOFFICE_THEME_VERSION
 );
 
 // Load printed stylesheet.
@@ -43,7 +44,7 @@ wp_enqueue_style(
     'woffice-printed-style',
     get_template_directory_uri() . '/css/print.min.css',
     array(),
-    '1.0',
+    WOFFICE_THEME_VERSION,
     'print'
 );
 /*---------------------------------------------------------
@@ -57,7 +58,7 @@ wp_enqueue_script(
 	'woffice-theme-script',
 	get_template_directory_uri() . '/js/woffice.min.js',
 	array( 'jquery', 'underscore' ),
-	'1.0',
+    WOFFICE_THEME_VERSION,
 	true
 );
 
@@ -68,7 +69,7 @@ if( $header_fixed == "yep" ) :
         'woffice-fixed-navigation',
         get_template_directory_uri() . '/js/fixed-nav.js',
         array( 'jquery' ),
-        '1.0',
+        WOFFICE_THEME_VERSION,
         true
     );
 endif;
@@ -82,11 +83,11 @@ if(Woffice_AlkaChat::isChatEnabled()) {
     $has_emojis = woffice_get_settings_option('alka_pro_chat_emojis_enabled');
     if ($has_emojis) {
         // Emojis CSS
-        wp_enqueue_style('woffice-css-emojis-picker', get_template_directory_uri() . '/css/emojis/jquery.emojipicker.css', '1.0');
-        wp_enqueue_style('woffice-css-emojis-twitter', get_template_directory_uri() . '/css/emojis/jquery.emojipicker.tw.css', '1.0');
+        wp_enqueue_style('woffice-css-emojis-picker', get_template_directory_uri() . '/css/emojis/jquery.emojipicker.css', array(), WOFFICE_THEME_VERSION);
+        wp_enqueue_style('woffice-css-emojis-twitter', get_template_directory_uri() . '/css/emojis/jquery.emojipicker.tw.css', array(), WOFFICE_THEME_VERSION);
         // Emojis JS
-        wp_enqueue_script('woffice-js-emojis-picker', get_template_directory_uri() . '/js/emojis/jquery.emojipicker.js', array('jquery'), '1.0', true);
-        wp_enqueue_script('woffice-js-emojis', get_template_directory_uri() . '/js/emojis/jquery.emojis.js', array('jquery'), '1.0', true);
+        wp_enqueue_script('woffice-js-emojis-picker', get_template_directory_uri() . '/js/emojis/jquery.emojipicker.js', array('jquery'), WOFFICE_THEME_VERSION, true);
+        wp_enqueue_script('woffice-js-emojis', get_template_directory_uri() . '/js/emojis/jquery.emojis.js', array('jquery'), WOFFICE_THEME_VERSION, true);
     }
 
     // Main JS
@@ -94,7 +95,7 @@ if(Woffice_AlkaChat::isChatEnabled()) {
         'woffice-alka-chat-script',
         get_template_directory_uri() . '/js/alkaChat.vue.js',
         array( 'jquery', 'woffice-theme-script' ),
-        '1.0',
+        WOFFICE_THEME_VERSION,
         true
     );
 
@@ -111,13 +112,8 @@ wp_enqueue_media();
         'user_id' => get_current_user_id()
     );
 
-    /**
-     * We give the possibility to hook new data for the Theme Script JS
-     * It's basically used for all things related to the Ajax calls
-     *
-     * @param array $data
-     */
-    $data = apply_filters('woffice_js_exchanged_data', $data);
+    // Masonry Refresh Delay in MS
+	$data['masonry_refresh_delay'] = 2000;
 
     // Mobile menu threshold
     $data['menu_threshold'] = woffice_get_settings_option('menu_threshold');
@@ -140,6 +136,14 @@ wp_enqueue_media();
      * @param int $timeout
      */
     $data['alert_timeout'] = apply_filters( 'woffice_alert_timeout', 4000 );
+
+	/**
+	 * We give the possibility to hook new data for the Theme Script JS
+	 * It's basically used for all things related to the Ajax calls
+	 *
+	 * @param array $data
+	 */
+	$data = apply_filters('woffice_js_exchanged_data', $data);
 
     wp_localize_script('woffice-theme-script', 'WOFFICE', $data);
 

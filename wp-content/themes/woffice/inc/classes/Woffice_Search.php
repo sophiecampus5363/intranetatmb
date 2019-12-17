@@ -42,8 +42,8 @@ if( ! class_exists( 'Woffice_Search' ) ) {
             add_filter( 'woffice_js_exchanged_data', array($this, 'exchanger'));
 
             add_action( 'wp_enqueue_scripts', function () {
-				wp_enqueue_script( 'jquery' );
-				wp_enqueue_script( 'jquery-ui-autocomplete' );
+				wp_enqueue_script( 'jquery', '', array(), WOFFICE_THEME_VERSION );
+				wp_enqueue_script( 'jquery-ui-autocomplete', '', array(), WOFFICE_THEME_VERSION );
 			});
 		}
 

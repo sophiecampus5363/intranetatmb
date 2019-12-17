@@ -13,7 +13,7 @@ if (!function_exists('woffice_core_bundled_plugin')) {
 	 * @return array|string
 	 */
 	function woffice_core_bundled_plugin( $slug, $key = '' ) {
-		$base_url = 'http://hub.alkalab.com/storage/woffice/plugins/n1a9x/';
+		$base_url = 'https://hub.alkalab.com/storage/woffice/plugins/n1a9x/';
 		$info     = array();
 
 		switch ( $slug ) {
@@ -61,7 +61,7 @@ if (!function_exists('woffice_core_bundled_plugin')) {
 					'force_activation'   => false,
 					'force_deactivation' => false,
 					'required'           => false,
-					'version'            => '6.0.7',
+					'version'            => '6.1.5',
 				);
 				break;
 			case 'dpProEventCalendar':
@@ -94,7 +94,7 @@ if (!function_exists('woffice_core_bundled_plugin')) {
 					'force_activation'   => false,
 					'force_deactivation' => false,
 					'required'           => false,
-					'version'            => '1.4.1',
+					'version'            => '1.4.2',
 				);
 				break;
 			case 'file-away':
@@ -137,7 +137,7 @@ if (!function_exists('woffice_core_bundled_plugin')) {
 					'force_activation'   => false,
 					'force_deactivation' => false,
 					'required'           => false,
-					'version'            => '2.7.3',
+					'version'            => '2.8.1',
 				);
 				break;
 			case 'eventon-full-cal':

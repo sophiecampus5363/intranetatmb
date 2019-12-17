@@ -21,7 +21,6 @@ if( ! class_exists( 'Woffice_Setup' ) ) {
             if (!function_exists('_wp_render_title_tag')) {
                 add_action('wp_head', array($this, 'theme_slug_render_title'));
             }
-            add_action('admin_bar_menu', array($this, 'toolbar_admin_menu'), 999);
             add_filter('update_footer', array($this, 'filter_footer_version'), 12);
             add_action('admin_enqueue_scripts', array($this, 'settings_wp_admin_style'), 99);
             add_action('admin_print_scripts', array($this, 'backend_style_patch'));
@@ -136,138 +135,6 @@ if( ! class_exists( 'Woffice_Setup' ) ) {
         }
 
         /**
-         * Creates the Woffice admin menu in the top bar
-         *
-         * @param $wp_admin_bar
-         */
-        public function toolbar_admin_menu($wp_admin_bar)
-        {
-
-            /*DOC LINK*/
-            $topbar_woffice = woffice_get_settings_option('topbar_woffice');
-
-            if (current_user_can('administrator') && $topbar_woffice == "yep") {
-                // Main Link
-                $wp_admin_bar->add_node(array(
-	                'id' => 'woffice',
-	                'title' => 'Woffice',
-	                'href' => admin_url('themes.php?page=fw-settings'),
-	                'meta' => array('class' => 'woffice_page')
-                ));
-
-	            $wp_admin_bar->add_node(array(
-		            'id' => 'woffice_settings',
-		            'title' => 'Theme Settings',
-		            'parent' => 'woffice',
-		            'href' => admin_url('themes.php?page=fw-settings'),
-		            'meta' => array('class' => 'woffice-theme-settings')
-	            ));
-
-                $settings = array(
-                    'general' => __('General', 'woffice'),
-                    'chat' => __('Live chat', 'woffice'),
-                    'permissions' => __('Permissions', 'woffice'),
-                    'login' => __('Login/Register', 'woffice'),
-                    'dashboard' => __('Dashboard', 'woffice'),
-                    'buddypress' => __('BuddyPress', 'woffice'),
-                    'posts' => __('Posts/Wiki/Projects', 'woffice'),
-                    'news' => __('Blog', 'woffice'),
-                    'menu' => __('Menu', 'woffice'),
-                    'header' => __('Header bar', 'woffice'),
-                    'page-title' => __('Page title', 'woffice'),
-                    'sidebar' => __('Sidebar', 'woffice'),
-                    'footer' => __('Footer & Extrafooter', 'woffice'),
-                    'styling' => __('Styling', 'woffice'),
-                    'custom' => __('Custom code', 'woffice'),
-                    'settings' => __('System status', 'woffice'),
-                );
-
-	            foreach ($settings as $tab_key=>$tab_label) {
-		            $wp_admin_bar->add_node(array(
-			            'id' => 'woffice_settings_'. $tab_key,
-			            'title' => $tab_label,
-			            'parent' => 'woffice_settings',
-			            'href' => admin_url('themes.php?page=fw-settings#fw-options-tab-'. $tab_key),
-			            'meta' => array('class' => 'woffice-theme-settings-'. $tab_key)
-		            ));
-                }
-
-                $wp_admin_bar->add_node(array(
-	                'id' => 'woffice_doc',
-	                'title' => 'Online Documentation',
-	                'parent' => 'woffice',
-	                'href' => 'https://alkaweb.atlassian.net/wiki/spaces/WOF/overview',
-	                'meta' => array('class' => 'woffice-documentation-page')
-                ));
-                $wp_admin_bar->add_node(array(
-	                'id' => 'woffice_extensions',
-	                'title' => 'Extensions',
-	                'parent' => 'woffice',
-	                'href' => admin_url('index.php?page=fw-extensions'),
-	                'meta' => array('class' => 'woffice-extension-page')
-                ));
-                $wp_admin_bar->add_node(array(
-	                'id' => 'woffice_welcome',
-	                'title' => 'Getting Started',
-	                'parent' => 'woffice',
-	                'href' => admin_url('index.php?page=woffice-welcome'),
-	                'meta' => array('class' => 'woffice-welcome-page')
-                ));
-                $wp_admin_bar->add_node(array(
-	                'id' => 'woffice_support',
-	                'title' => 'Support',
-	                'parent' => 'woffice',
-	                'href' => 'https://alkaweb.ticksy.com/',
-	                'meta' => array('class' => 'woffice-support-page')
-                ));
-	            $wp_admin_bar->add_node(array(
-		            'id' => 'woffice_plugins',
-		            'title' => 'Download bundled plugins',
-		            'parent' => 'woffice',
-		            'href' => '#',
-		            'meta' => array('class' => 'woffice-plugin-page')
-	            ));
-
-	            $bundled = array(
-		            'revslider',
-//		            'dpProEventCalendar',
-		            'js_composer',
-		            'vc-super-bundle',
-		            'eventON',
-		            'eventon-full-cal',
-		            'multiverso',
-	            );
-
-	            foreach ($bundled as $slug) {
-	                $plugin_info = woffice_core_bundled_plugin($slug);
-
-		            $wp_admin_bar->add_node(array(
-			            'id' => 'woffice_plugins_'. $slug,
-			            'title' => $plugin_info['name'],
-			            'parent' => 'woffice_plugins',
-			            'href' => $plugin_info['source'],
-			            'meta' => array('class' => 'woffice-theme-plugins-'. $slug)
-		            ));
-	            }
-
-                $wp_admin_bar->add_node(array(
-	                'id' => 'woffice_changelog',
-	                'title' => 'Changelog',
-	                'parent' => 'woffice',
-	                'href' => 'https://hub.alkalab.com/woffice/changelog/',
-	                'meta' => array('class' => 'woffice-changelog-page')
-                ));
-	            $wp_admin_bar->add_node(array(
-		            'id' => 'woffice_pro',
-		            'title' => 'Pro account (feature request, videos...)',
-		            'parent' => 'woffice',
-		            'href' => 'https://hub.alkalab.com/pro',
-		            'meta' => array('class' => 'woffice-pro-page')
-	            ));
-            }
-        }
-
-        /**
          * Adding the version number to the footer
          *
          * @param $html
@@ -288,11 +155,11 @@ if( ! class_exists( 'Woffice_Setup' ) ) {
          */
         public function settings_wp_admin_style()
         {
-            wp_register_style('woffice_wp_admin_css', get_template_directory_uri() . '/css/backend.min.css', false, '1.0.0');
-            wp_enqueue_style('woffice_wp_admin_css');
+            wp_register_style('woffice_wp_admin_css', get_template_directory_uri() . '/css/backend.min.css', false, WOFFICE_THEME_VERSION);
+            wp_enqueue_style('woffice_wp_admin_css', '', array(), WOFFICE_THEME_VERSION);
 
-	        wp_register_style('woffice_theme_fonts', woffice_get_fonts_url(), false, '1.0.0');
-	        wp_enqueue_style('woffice_theme_fonts');
+	        wp_register_style('woffice_theme_fonts', woffice_get_fonts_url(), false, WOFFICE_THEME_VERSION);
+	        wp_enqueue_style('woffice_theme_fonts', '', array(), WOFFICE_THEME_VERSION);
         }
 
         /**

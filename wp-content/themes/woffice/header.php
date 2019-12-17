@@ -163,7 +163,7 @@
                                         <a href="javascript:void(0);" id="user-thumb">
                                             <?php
                                             $name_to_display = woffice_get_name_to_display();
-                                            printf( _x( 'Hi <strong class="font-weight-bold">%s</strong>!', "Hi USERNAME - It's the welcome message in the header", 'woffice' ), $name_to_display );
+                                            printf( _x( 'Hi <strong class="font-weight-bold">%s</strong>!', 'woffice' ), $name_to_display );
                                             ?>
                                             <?php // GET CURRENT USER ID
                                             $user_ID = get_current_user_id();

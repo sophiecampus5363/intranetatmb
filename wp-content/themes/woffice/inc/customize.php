@@ -214,15 +214,11 @@ function woffice_get_custom_css()
 	** HEADER SETTINGS
 	**
 	----------------------------------------------------------*/
-	$header_height = woffice_get_settings_option('header_height');
-	$header_logo_bg = woffice_get_settings_option('header_logo_bg');
-	$header_width = woffice_get_settings_option('header_width');
+	$header_height = (int) woffice_get_settings_option('header_height');
+	$header_width = (int) woffice_get_settings_option('header_width');
 	$header_color = woffice_get_settings_option('header_color');
 	$header_link = woffice_get_settings_option('header_link');
 	$header_background = woffice_get_settings_option('header_background');
-	$header_link_hover = woffice_get_settings_option('header_link_hover');
-	$header_bold = woffice_get_settings_option('header_bold');
-	$header_user = woffice_get_settings_option('header_user');
 	$css .= '#nav-logo{width: ' . esc_html($header_width) . 'px;}';
 	/*Horizontal Menu*/
 	$css .= 'body.menu-is-horizontal #navigation{top: ' . ($header_height + 2) . 'px ;}';
@@ -254,18 +250,18 @@ function woffice_get_custom_css()
 	** PAGE TITLE SETTINGS
 	**
 	----------------------------------------------------------*/
-	$main_featured_image = woffice_get_settings_option('main_featured_image');
-	$main_featured_height = woffice_get_settings_option('main_featured_height');
-	$main_featured_font_size = woffice_get_settings_option('main_featured_font_size');
-	$main_featured_uppercase = woffice_get_settings_option('main_featured_uppercase');
-	$main_featured_color = woffice_get_settings_option('main_featured_color');
-	$main_featured_opacity = woffice_get_settings_option('main_featured_opacity');
-	$main_featured_bg = woffice_get_settings_option('main_featured_bg');
-	$main_featured_border = woffice_get_settings_option('main_featured_border');
+	$main_featured_height       = (int) woffice_get_settings_option('main_featured_height');
+	$main_featured_font_size    = woffice_get_settings_option('main_featured_font_size');
+	$main_featured_uppercase    = woffice_get_settings_option('main_featured_uppercase');
+	$main_featured_color        = woffice_get_settings_option('main_featured_color');
+	$main_featured_opacity      = woffice_get_settings_option('main_featured_opacity');
+	$main_featured_bg           = woffice_get_settings_option('main_featured_bg');
+	$main_featured_border       = woffice_get_settings_option('main_featured_border');
 	$main_featured_border_color = woffice_get_settings_option('main_featured_border_color');
-	$main_featured_alignment = woffice_get_settings_option('main_featured_alignment');
-	$main_featured_bold = woffice_get_settings_option('main_featured_bold');
-	$main_featured_height = (int) esc_html($main_featured_height);
+	$main_featured_alignment    = woffice_get_settings_option('main_featured_alignment');
+	$main_featured_bold         = woffice_get_settings_option('main_featured_bold');
+	$main_featured_height       = (int) esc_html($main_featured_height);
+
 	if ($main_featured_border == "yep") :
 		$css .= '#featuredbox{';
 		$css .= 'border-color: ' . esc_html($main_featured_border_color) . ' !important;';

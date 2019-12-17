@@ -425,7 +425,7 @@ if( ! class_exists( 'Woffice_Frontend' ) && ! defined( 'WOFFICE_DEACTIVATE_FRONT
             /**
              * Wiki Post fields
              */
-            if ( $type == 'wiki' ) {
+            if ($type === 'wiki') {
 
                 /**
                  * Wiki category search
@@ -437,7 +437,7 @@ if( ! class_exists( 'Woffice_Frontend' ) && ! defined( 'WOFFICE_DEACTIVATE_FRONT
             /**
              * Project Post fields
              */
-            if ( $type == 'project' ) {
+            if ($type === 'project') {
 
                 global $post;
 
@@ -446,7 +446,7 @@ if( ! class_exists( 'Woffice_Frontend' ) && ! defined( 'WOFFICE_DEACTIVATE_FRONT
                  *
                  * @param bool
                  */
-                if(apply_filters('woffice_frontend_project_status_enabled', true)) {
+                if (apply_filters('woffice_frontend_project_status_enabled', true)) {
                     
                     $project_status = (function_exists('fw_get_db_post_option')) ? fw_get_db_post_option(get_the_ID(), 'project_current_status') : '';
                     
@@ -474,7 +474,7 @@ if( ! class_exists( 'Woffice_Frontend' ) && ! defined( 'WOFFICE_DEACTIVATE_FRONT
                  *
                  * @param bool
                  */
-                if(apply_filters('woffice_frontend_project_dates_enabled', true)) {
+                if (apply_filters('woffice_frontend_project_dates_enabled', true)) {
                     $project_date_start = (!empty($post_id) && function_exists('fw_get_db_post_option')) ? fw_get_db_post_option($post_id, 'project_date_start') : date('d-m-Y');
                     $project_date_end = (!empty($post_id) && function_exists('fw_get_db_post_option')) ? fw_get_db_post_option($post_id, 'project_date_end') : date('d-m-Y');
                     $html .= '<div class="row">';
@@ -498,7 +498,7 @@ if( ! class_exists( 'Woffice_Frontend' ) && ! defined( 'WOFFICE_DEACTIVATE_FRONT
                  *
                  * @param bool
                  */
-                if(apply_filters('woffice_frontend_project_tracking_enabled', true)) {
+                if (apply_filters('woffice_frontend_project_tracking_enabled', true)) {
                   $project_progress = ( function_exists( 'fw_get_db_post_option' ) ) ? fw_get_db_post_option(get_the_ID(), 'project_progress') : '';
                   $time_selected = ($project_progress == "time" || empty($project_progress)) ? 'selected' : '';
                   $tasks_selected = (empty($time_selected) && $project_progress == "tasks") ? 'selected' : '';
@@ -517,7 +517,7 @@ if( ! class_exists( 'Woffice_Frontend' ) && ! defined( 'WOFFICE_DEACTIVATE_FRONT
                  *
                  * @param bool
                  */
-                if(apply_filters('woffice_frontend_project_taxonomy_enabled', true)) {
+                if (apply_filters('woffice_frontend_project_taxonomy_enabled', true)) {
                     $html .= self::taxonomy_field('project_category', 'project-category', __('Project', 'woffice'), $post_id);
                 }
 
@@ -526,7 +526,7 @@ if( ! class_exists( 'Woffice_Frontend' ) && ! defined( 'WOFFICE_DEACTIVATE_FRONT
                  *
                  * @param bool
                  */
-                if(apply_filters('woffice_frontend_project_members_enabled', true)) {
+                if (apply_filters('woffice_frontend_project_members_enabled', true)) {
                     $project_members = ( !empty($post_id) ) ? woffice_get_project_members($post_id) : array();
 
 	                $disable_members_suggestion = ( is_multisite() && wp_is_large_network( 'users' ) );
@@ -591,7 +591,7 @@ if( ! class_exists( 'Woffice_Frontend' ) && ! defined( 'WOFFICE_DEACTIVATE_FRONT
                 /**
                  * Who can edit field
                  */
-                if( woffice_current_user_can_see_only_author_checkbox( $post_id  ) ) {
+                if (woffice_current_user_can_see_only_author_checkbox( $post_id  ) ) {
                     $only_author_can_edit_val = (!empty($post_id) && function_exists( 'fw_get_db_post_option' ) ) ? fw_get_db_post_option($post_id, 'only_author_can_edit') : true;
                     $only_author_can_edit_checked = ($only_author_can_edit_val) ? 'checked="checked"' : '';
                     $only_author_can_edit_class = ($only_author_can_edit_val) ? 'checked' : '';
@@ -916,14 +916,12 @@ if( ! class_exists( 'Woffice_Frontend' ) && ! defined( 'WOFFICE_DEACTIVATE_FRONT
          * @return string
          */
         static function taxonomy_field($field_name, $taxonomy, $label, $post_id) {
-
             $html = '';
 
             $terms = get_terms( $taxonomy, array( 'hide_empty' => false, 'parent' => 0) );
 
-            if ( $terms ) {
-
-                $post_terms = (!empty($post_id)) ? wp_get_post_terms( $post_id, $taxonomy, array("fields" => "slugs") ) : array();
+            if ($terms) {
+                $post_terms = (!empty($post_id)) ? wp_get_post_terms($post_id, $taxonomy, array('fields' => 'slugs')) : array();
 
                 $html .= '<p>';
 
@@ -932,20 +930,19 @@ if( ! class_exists( 'Woffice_Frontend' ) && ! defined( 'WOFFICE_DEACTIVATE_FRONT
                 $html .= '<select multiple="multiple" name="'.$field_name.'[]" class="postform form-control">';
                 $html .= '<option value="no-category">' . __( "No category", "woffice" ) . '</option>';
 
-                foreach ( $terms as $term ) {
+                foreach ($terms as $term) {
                     $selected = (in_array($term->slug, $post_terms)) ? 'selected' : '';
                     $html .= '<option value="'.esc_attr( $term->slug ).'" '.$selected.'>'.esc_html( $term->name ).'</option>';
 
 	                $html .= static::get_taxonomy_options( $taxonomy, $post_terms, $term->term_id, '> ');
                 }
+
                 $html .= '</select>';
 
                 $html .= '</p>';
-
             }
 
             return $html;
-
         }
 
 	    /**

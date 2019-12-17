@@ -239,6 +239,15 @@ if (! function_exists('woffice_login_render_register')) {
         $register_message = woffice_get_settings_option('register_message');
         $register_pmp = woffice_get_settings_option('register_pmp');
 
+        $custom_url = (function_exists('pmpro_getOption')) ? get_permalink(pmpro_getOption("levels_page_id")) : '';
+
+	    /**
+	     * Filters to apply a custom URL
+	     *
+	     * @param $custom_url string - the default custom URL
+	     */
+        $custom_url = apply_filters('woffice_register_custom_url', $custom_url);
+
         ?>
 
         <div id="register-wrapper">
@@ -249,9 +258,9 @@ if (! function_exists('woffice_login_render_register')) {
 
 	            <?php
 	            // For Paid Membership Pro
-	            if ($register_pmp == "yep" && function_exists("pmpro_getOption")) : ?>
+	            if ($register_pmp == 'yep') : ?>
 
-                    <a href="<?php echo get_permalink(pmpro_getOption("levels_page_id")); ?>" class="btn btn-info"
+                    <a href="<?php echo $custom_url; ?>" class="btn btn-info"
                        id="register-trigger">
                         <i class="fa fa-sign-in-alt"></i> <?php _e('Sign Up', 'woffice'); ?>
                     </a>
@@ -462,7 +471,7 @@ if (! function_exists('woffice_login_render_script')) {
             }
 
             function show_login( loader = null ) {
-                jQuery("#loginform, .social-login-btns, #register-wrapper,a.password-lost").show();
+                jQuery("#loginform, .social-login-btns, #register-wrapper, a.password-lost, #login-text").show();
                 if( loader != null ) {
                     loader.remove();
                     loader = null;
@@ -470,7 +479,7 @@ if (! function_exists('woffice_login_render_script')) {
             }
             function show_register( ) {
                 loader = new Woffice.loader(jQuery('.login-tabs-wrapper'));
-                jQuery("#loginform, .social-login-btns, #register-wrapper,a.password-lost").hide();
+                jQuery("#loginform, .social-login-btns, #register-wrapper, a.password-lost, #login-text").hide();
                 setTimeout(function() {
                     jQuery("#register-form, #goback-trigger").show();
                     loader.remove();

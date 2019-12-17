@@ -131,8 +131,8 @@ if (bp_is_active( 'xprofile' )) {
 						<?php bp_member_avatar('type=full&width=40&height=40&class=rounded-circle'); ?>
 						<?php
 						// USERNAME OR NAME DISPLAYED
-						$user_ID = bp_get_member_user_id();
-						$ready_display = woffice_get_name_to_display($user_ID);
+						$user_id = bp_get_member_user_id();
+						$ready_display = woffice_get_name_to_display($user_id);
 						echo '<span class="font-weight-bold">'. $ready_display .'</span>';
 						?>
 					</a>
@@ -156,9 +156,9 @@ if (bp_is_active( 'xprofile' )) {
 					$field_type = $field['field_type'];
 
 					if ($field_name != 'wordpress_email') {
-						$field_value = bp_get_profile_field_data('field=' . $field_name . '&user_id=' . $user_ID);
+						$field_value = bp_get_profile_field_data('field=' . $field_name . '&user_id=' . $user_id);
 					} else {
-						$user_info = get_userdata($user_ID);
+						$user_info = get_userdata($user_id);
 						$field_value = "<a href='mailto:" . $user_info->user_email . "' rel='nofollow'>$user_info->user_email</a>";
 					}
 

@@ -643,7 +643,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
                 // Needed for install_plugin_information().
                 require_once ABSPATH . 'wp-admin/includes/plugin-install.php';
 
-                wp_enqueue_style( 'plugin-install' );
+                wp_enqueue_style( 'plugin-install', '', array(), WOFFICE_THEME_VERSION );
 
                 global $tab, $body_id;
                 $body_id = 'plugin-information';

@@ -69,12 +69,18 @@ $repeat_options = array(
 );
 
 $color_options = array(
-    'default' => __('default', 'woffice'),
-    'blue'    => __('blue', 'woffice'),
-    'orange'  => __('orange', 'woffice'),
-    'red'     => __('red', 'woffice'),
-    'green'   => __('green', 'woffice'),
-    'grey'    => __('grey', 'woffice')
+    'default'       => __('default', 'woffice'),
+    'blue'          => __('blue', 'woffice'),
+    'orange'        => __('orange', 'woffice'),
+    'red'           => __('red', 'woffice'),
+    'green'         => __('green', 'woffice'),
+    'grey'          => __('grey', 'woffice'),
+    'light-blue'    => __('light blue', 'woffice'),
+    'dark-blue'     => __('dark blue', 'woffice'),
+    'fushia'        => __('fushia', 'woffice'),
+    'brown'         => __('brown', 'woffice'),
+    'black'         => __('black', 'woffice'),
+    'light-grey'    => __('light grey', 'woffice'),
 );
 
 
@@ -98,8 +104,10 @@ $options = array(
                 'desc'       => __('Will be used to display this event in the calendar.', 'woffice'),
                 'min-date'   => date('1-0-2000'),
                 'datetime-picker' => array(
-                    'format'        => 'Y-m-d H:i',
-                    'minDate'       => 0,
+                    'format'        => 'Y-m-d H:i:s',
+                    'timepicker'    => true,
+                    'datepicker'    => true,
+                    'minDate'       => date('Y-m-d'),
                 ),
                 'fw-storage' => array(
                     'type'      => 'post-meta',
@@ -111,8 +119,10 @@ $options = array(
                 'label'      => __('Event Ending Date', 'woffice'),
                 'desc'       => __('Will be used to display this event in the calendar.', 'woffice'),
                 'datetime-picker' => array(
-                    'format'        => 'Y-m-d H:i',
-                    'minDate'       => 0,
+                    'format'        => 'Y-m-d H:i:s',
+                    'timepicker'    => true,
+                    'datepicker'    => true,
+                    'minDate'       => date('Y-m-d')
                 ),
                 'fw-storage' => array(
                     'type'      => 'post-meta',
@@ -128,6 +138,21 @@ $options = array(
                 'fw-storage' => array(
                     'type'      => 'post-meta',
                     'post-meta' => 'fw_option:woffice_event_repeat',
+                )
+            ),
+            'woffice_event_repeat_date_end'    => array(
+                'type'       => 'datetime-picker',
+                'label'      => __('Repeat Ending Date', 'woffice'),
+                'desc'       => __('Will be used to display this event in the calendar.', 'woffice'),
+                'datetime-picker' => array(
+                    'format'        => 'Y-m-d H:i:s',
+                    'timepicker'    => true,
+                    'datepicker'    => true,
+                    'minDate'       => date('Y-m-d')
+                ),
+                'fw-storage' => array(
+                    'type'      => 'post-meta',
+                    'post-meta' => 'fw_option:woffice_event_repeat_date_end',
                 )
             ),
             'woffice_event_color'       => array(

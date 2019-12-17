@@ -32,13 +32,7 @@
                                 'posts_per_page' => 10,
                                 'meta_key'       => 'fw_option:woffice_event_date_end',
                                 'orderby'        => 'meta_value',
-                                'order'          => 'DESC',
-                                'meta_query'     => array(
-                                    'key'     => 'fw_option:woffice_event_date_end',
-                                    'value'   => date('Y-m-d 00:00:00'),
-                                    'type'    => 'DATE',
-                                    'compare' => '<'
-                                )
+                                'order'          => 'DESC'
                             );
                             
                             /**

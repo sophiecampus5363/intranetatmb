@@ -270,7 +270,7 @@ if( ! class_exists( 'Woffice_Dashboard' ) ) {
 		        'dashboard-js',
 		        get_template_directory_uri() . '/js/dashboard.min.js',
 		        array('jquery'),
-		        '1.0',
+                WOFFICE_THEME_VERSION,
 		        true
 	        );
         }

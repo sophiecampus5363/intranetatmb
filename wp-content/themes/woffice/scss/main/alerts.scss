@@ -1,12 +1,18 @@
 #woffice-alerts-wrapper {
+  @media only screen and (max-width: 782px) {
+    margin-top: 50px;
+  }
+
   .container{
     position: relative;
     max-width: 100%
   }
+
   .woffice-main-alert{
     padding: 30px;
     color: #ffffff;
     position: relative;
+
     &.woffice-alert-success{
       background: $brand-success;
       border: 1px solid darken($brand-success, 0%);

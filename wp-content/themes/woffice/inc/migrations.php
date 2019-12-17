@@ -27,9 +27,10 @@ function woffice_handle_migrations(){
 	if($migration_flag < 3) {
 		woffice_migration_to_v210_permission_changes();
 	}
-
 }
+
 add_action('after_setup_theme', 'woffice_handle_migrations');
+add_action('fw_settings_form_saved', 'woffice_handle_migrations');
 
 /**
 * Handle the migration to Woffice 1.9, many settings about permission are changed and this function handle the old settings

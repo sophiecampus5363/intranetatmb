@@ -50,12 +50,12 @@ var Woffice = {
 		 * When the page is starting
          */
         self.$(window).load(function(){
-
             self.userSidebar.start();
             self.alerts.start();
             self.customScrollbars.start();
             self.wooCommerce.start();
             self.tooltips.start();
+            self.wiki.start();
             self.frontend.start();
             self.sliders.start();
             self.animatedNumbers.start();
@@ -65,7 +65,6 @@ var Woffice = {
             self.navigation.start();
             self.sidebar.start();
             self.buddyPress.responsiveMenu();
-
 		});
 
         /*
@@ -172,6 +171,19 @@ var Woffice = {
 
         return self;
 
+    },
+
+    /*
+     * Wiki links bundle
+     */
+    wiki: {
+        start: function () {
+            var $ = Woffice.$;
+
+            $('[data-toggle="collapse"]').on('click', function(e) {
+                $(e.target).parent().find('.collapse').collapse('toggle');
+            });
+        }
     },
 
     /**
@@ -536,12 +548,15 @@ var Woffice = {
             var $ = Woffice.$;
             var $dropdownItems = $('#woffice-roles-filter a.dropdown-item');
 
+            var $orderBy = $('#members-order-by');
+            var order     = ($orderBy.length) ? $orderBy.find('option').first().val() : 'active';
+
             $dropdownItems.on('click', function(e){
                 e.preventDefault();
 
                 var requestObj = {
                     scope:  'roles',
-                    filter: 'active',
+                    filter:  order,
                     action: 'members_filter',
                     object: 'members'
                 };
@@ -551,8 +566,20 @@ var Woffice = {
 
                 requestObj['role'] = $(e.target).data('role');
 
+                Cookies.set('woffice_role', requestObj['role'], { expires : 1, path: '/' });
+
                 window.bp.Nouveau.objectRequest(requestObj);
             });
+
+            var url = new URL(location.href);
+            var roleUrl = url.searchParams.get('filterRole');
+
+            if (roleUrl) {
+                var $button = $('#woffice-roles-filter a.dropdown-item[data-role="'+ roleUrl +'"]');
+                if ($button) {
+                    $button.trigger('click');
+                }
+            }
         }
     },
 
@@ -566,13 +593,15 @@ var Woffice = {
          */
         watch: function() {
             var $ = Woffice.$;
+            var $orderBy = $('#members-order-by');
+            var order     = ($orderBy.length) ? $orderBy.val() : 'active';
 
             $('#advanced-search-submit').on("click", function(e){
                 e.preventDefault();
 
                 var requestObj = {
                     scope:  'advanced-search',
-                    filter: 'active',
+                    filter: order,
                     action: 'members_filter',
                     object: 'members'
                 };
@@ -584,11 +613,11 @@ var Woffice = {
                 var $inputs = $wrapper.find('input, select');
 
                 $inputs.each(function() {
-                    formObj[$(this).attr('name')] = $(this).val();
+                    formObj[$(this).attr('name').replace('[]', '')] = $(this).val();
                 });
 
-                $wrapper.find(':checkbox:checked').each(function(i){
-                    formObj[$(this).attr('id')] = $(this).val();
+                $wrapper.find(':checkbox:checked').each(function(){
+                    formObj[$(this).attr('id').replace('[]', '')] = $(this).val();
                 });
 
                 $.extend(requestObj, { extras: formObj });
@@ -997,8 +1026,8 @@ var Woffice = {
                 return;
             }
 
-            var $selector = $('#members-order-by');
-            var order     = ($selector.length) ? $selector.find('option').first().val() : 'active';
+            var $orderBy = $('#members-order-by');
+            var order     = ($orderBy.length) ? $orderBy.find('option').first().val() : 'active';
 
             var requestObj = {
                 scope:  'advanced-search',
@@ -1554,8 +1583,14 @@ var Woffice = {
                 $list = null,
                 $wrapper = $('#buddypress [data-bp-list]');
 
+            if (window.location.search.indexOf('members_search') !== -1) {
+                $('#dir-members-search-submit').trigger('click');
+            }
+
             $wrapper.bind('bp_ajax_request', function () {
                 var loader = new Woffice.loader($wrapper);
+
+                $wrapper.find('.item-list').css({ opacity: 0 });
 
                 setTimeout(function () {
                    $list = $('#groups-list, #members-list').isotope({
@@ -1564,7 +1599,9 @@ var Woffice = {
                    });
 
                     loader.remove();
-                }, 2000);
+
+                    $wrapper.find('.item-list').css({ opacity: 1 });
+                }, parseInt(Woffice.data.masonry_refresh_delay));
             });
 
             $("#nav-trigger, #nav-sidebar-trigger, #item-nav a").on('click',function(){
@@ -1573,7 +1610,7 @@ var Woffice = {
                         itemSelector: 'li.item-entry',
                         layoutMode: 'fitRows'
                     });
-                }, 2000);
+                }, Woffice.data.masonry_refresh_delay);
             });
 
             setTimeout(function () {
@@ -1583,7 +1620,7 @@ var Woffice = {
             setInterval(function(){
                 Woffice.masonryLayout.build();
                 Woffice.masonryLayout.refresh();
-            }, 2000);
+            }, Woffice.data.masonry_refresh_delay);
 
         }
 
@@ -1740,7 +1777,9 @@ var Woffice = {
         },
 
         resize: function () {
-            var self = this;
+            var self = this,
+                $ = Woffice.$;
+
             var newWidth = $(window).width();
 
             if (newWidth !== Woffice.navigation.cachedWidth) {

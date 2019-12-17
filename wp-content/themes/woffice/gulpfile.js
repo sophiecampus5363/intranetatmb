@@ -6,8 +6,9 @@ var concat      = require('gulp-concat');
 var del         = require('del');
 var uglify      = require('gulp-uglify');
 var replace     = require('gulp-replace');
+var gulpUtil    = require('gulp-util');
 
-var version = '2.8.5';
+var version = '2.8.8.1';
 
 gulp.task('default', [
     'main-css',
@@ -24,7 +25,7 @@ gulp.task('main-css', function () {
     return gulp.src('./scss/style.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(cleanCSS({ advanced : true }))
-        .pipe(replace('2.8.5', version, {skipBinary : true}))
+        .pipe(replace('2.8.8.1', version, {skipBinary : true}))
         .pipe(gulp.dest('./'));
 });
 
@@ -96,7 +97,7 @@ gulp.task('compress', function () {
         'js/scripts.js',
         'js/addableItems.vue.js'
     ])
-        .pipe(uglify())
+        .pipe(uglify().on('error', gulpUtil.log))
         .pipe(concat('woffice.min.js'))
         .pipe(gulp.dest('js/'));
 });
@@ -134,7 +135,7 @@ gulp.task('deploy', ['default'], function() {
         './!*/**/.gitmodules',
         './!(*.log)'
     ], { base : "." })
-        .pipe(replace('2.8.5', version, {skipBinary : true}))
+        .pipe(replace('2.8.8.1', version, {skipBinary : true}))
         .pipe(gulp.dest('../dist/'+version+'/woffice'))
 });
 

@@ -79,7 +79,7 @@ if(!function_exists('woffice_members_filter')) {
             <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
                 <?php _e('Role filter', 'woffice'); ?>
             </button>
-
+            
             <div class="dropdown-menu" role="menu">
 
                 <a href="javascript:void(0)" data-role="0" class="dropdown-item font-weight-bold text-body"><?php esc_html_e('All members', 'woffice'); ?></a>
@@ -1342,7 +1342,6 @@ if(!function_exists('woffice_list_xprofile_fields')) {
      */
     function woffice_list_xprofile_fields($user_ID, $is_printable = true)
     {
-
         if (!woffice_bp_is_active('xprofile')) {
             return;
         }
@@ -1358,7 +1357,7 @@ if(!function_exists('woffice_list_xprofile_fields')) {
         bp_get_member_profile_data(array('user_id' => $user_ID));
 	    
         $fields_values = array();
-        if ($members_template->member->profile_data) {
+        if (isset($members_template->member) && $members_template->member->profile_data) {
             $fields_values = $members_template->member->profile_data;
         }
 
@@ -2082,7 +2081,7 @@ if (!function_exists('woffice_members_filter_query')) {
         }
 
 		$buddy_excluded_directory = woffice_get_settings_option('buddy_excluded_directory');
-
+  
 		if (isset($_POST['role']) || !empty($buddy_excluded_directory)) {
 			$exclude_members_role_filter = 0;
 			$exclude_members_role_option = 0;
@@ -2102,7 +2101,31 @@ if (!function_exists('woffice_members_filter_query')) {
 			    $query_array['exclude'] = $exclude_members_role_filter . ',' . $exclude_members_role_option;
             }
 		}
+	
+        if (isset($_POST['scope']) && $_POST['scope'] ==='roles' && (isset($_COOKIE['woffice_role']) || !empty($buddy_excluded_directory))) {
+            $exclude_members_role_filter = 0;
+            $exclude_members_role_option = 0;
 
+            if (isset($_COOKIE['woffice_role'])) {
+                $the_role = sanitize_text_field($_COOKIE['woffice_role']);
+                
+                // We set a role and we want the list of all the  other users not in the role
+                $exclude_members_role_filter = woffice_exclude_members($the_role, 'exclude_all');
+            }
+
+            if (!empty($buddy_excluded_directory)) {
+                // We set a role and we want to exclude it so all its users
+                $exclude_members_role_option = woffice_exclude_members($buddy_excluded_directory, 'exclude_role');
+            }
+
+            if ($exclude_members_role_filter || $exclude_members_role_option) {
+                $query_array['exclude'] = $exclude_members_role_filter . ',' . $exclude_members_role_option;
+            }
+
+        }
+        
+		
+		
 		// Get the request to filter members by xProfile fields
 		if (woffice_bp_is_active('xprofile') && (!empty($_POST['advanced-search-submit']) || (!empty($_POST['extras'])))) {
 			$advanced_fields = woffice_get_advanced_search_fields_from_post_request();

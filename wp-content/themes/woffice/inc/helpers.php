@@ -151,7 +151,7 @@ if(!function_exists('woffice_is_user_allowed')) {
 	        if ( ! empty( $exclude_roles ) ) :
 		        $user = wp_get_current_user();
 		        /* Thanks to BuddyPress we only keep the main role */
-		        $the_user_role = ( is_array( $user->roles ) ) ? $user->roles[0] : $user->roles;
+		        $the_user_role = (is_array($user->roles) && isset($user->roles[0])) ? $user->roles[0] : $user->roles;
 
 		        /* We check if it's in the array, OR if it's the administrator  */
 		        if ( in_array( $the_user_role, $exclude_roles ) && $the_user_role != "administrator" ) {
@@ -367,8 +367,12 @@ if(!function_exists('woffice_title')) {
 
 	        echo '<div class="pagetitle animate-me fadeIn">';
 
-	        if (function_exists('woffice_upload_cover_btn')) {
-		        echo ( $displayed_user_id !== 0 && $displayed_user_id === get_current_user_id() ) ? woffice_upload_cover_btn() : '';
+	        if (
+	                function_exists('woffice_upload_cover_btn') &&
+	                $displayed_user_id !== 0 &&
+	                ($displayed_user_id === get_current_user_id() || current_user_can('administrator'))
+            ) {
+		       echo woffice_upload_cover_btn();
 	        }
 
 	        $has_title = woffice_get_post_option( get_the_ID(), 'hastitle' );
@@ -2189,4 +2193,65 @@ if (!function_exists('woffice_convert_fa4_to_fa5')) {
 
         return $prefix .' '. $icon;
     }
+}
+
+if (! function_exists('woffice_date_php_to_moment_js')) {
+	/**
+     * Convert a PHP date to Moment js
+     *
+     * @link https://stackoverflow.com/questions/30186611/php-dateformat-to-moment-js-format
+     *
+	 * @param string $php_format
+	 *
+	 * @return string
+	 */
+	function woffice_date_php_to_moment_js($php_format) {
+		$replacements = array(
+			'A' => 'A',      // for the sake of escaping below
+			'a' => 'a',      // for the sake of escaping below
+			'B' => '',       // Swatch internet time (.beats), no equivalent
+			'c' => 'YYYY-MM-DD[T]HH:mm:ssZ', // ISO 8601
+			'D' => 'ddd',
+			'd' => 'DD',
+			'e' => 'zz',     // deprecated since version 1.6.0 of moment.js
+			'F' => 'MMMM',
+			'G' => 'H',
+			'g' => 'h',
+			'H' => 'HH',
+			'h' => 'hh',
+			'I' => '',       // Daylight Saving Time? => moment().isDST();
+			'i' => 'mm',
+			'j' => 'D',
+			'L' => '',       // Leap year? => moment().isLeapYear();
+			'l' => 'dddd',
+			'M' => 'MMM',
+			'm' => 'MM',
+			'N' => 'E',
+			'n' => 'M',
+			'O' => 'ZZ',
+			'o' => 'YYYY',
+			'P' => 'Z',
+			'r' => 'ddd, DD MMM YYYY HH:mm:ss ZZ', // RFC 2822
+			'S' => 'o',
+			's' => 'ss',
+			'T' => 'z',      // deprecated since version 1.6.0 of moment.js
+			't' => '',       // days in the month => moment().daysInMonth();
+			'U' => 'X',
+			'u' => 'SSSSSS', // microseconds
+			'v' => 'SSS',    // milliseconds (from PHP 7.0.0)
+			'W' => 'W',      // for the sake of escaping below
+			'w' => 'e',
+			'Y' => 'YYYY',
+			'y' => 'YY',
+			'Z' => '',       // time zone offset in minutes => moment().zone();
+			'z' => 'DDD',
+        );
+
+		// Converts escaped characters.
+		foreach ($replacements as $from => $to) {
+			$replacements['\\' . $from] = '[' . $from . ']';
+		}
+
+		return strtr($php_format, $replacements);
+	}
 }

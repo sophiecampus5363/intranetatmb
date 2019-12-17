@@ -20,7 +20,7 @@ if ($project_status == 'archived') {
 
 ?>
 
-<li class="box content <?php echo $archived_class; ?>">
+<li class="box content <?php echo (isset($archived_class)) ? $archived_class : ''; ?>">
 	<div class="intern-padding">
 		
 		<a href="<?php the_permalink(); ?>" rel="bookmark" class="project-head">

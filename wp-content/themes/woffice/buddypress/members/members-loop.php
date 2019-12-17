@@ -32,7 +32,7 @@ bp_nouveau_before_loop(); ?>
 	<p class="current-member-type"><?php bp_current_member_type_message(); ?></p>
 <?php endif; ?>
 
-<?php if ( bp_has_members( bp_ajax_querystring( 'members' ) ) ) : ?>
+<?php if ( bp_has_members( bp_ajax_querystring( 'members' )) ) : ?>
 
 	<?php bp_nouveau_pagination( 'top' ); ?>
 

@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Woffice\n"
-"POT-Creation-Date: 2019-07-19 20:38+0200\n"
+"POT-Creation-Date: 2019-12-03 07:44+0100\n"
 "PO-Revision-Date: 2016-03-31 18:16+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.2.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -216,7 +216,7 @@ msgstr ""
 #: inc/plugins/woffice-core/extensions/woffice-projects/helpers.php:173
 #: page-templates/page-directory.php:48 page-templates/projects.php:51
 #: page-templates/wiki.php:56 single-wiki.php:51 taxonomy-wiki-category.php:59
-#: template-parts/content-single-event.php:51
+#: template-parts/content-single-event.php:50
 #: woocommerce/myaccount/my-address.php:37
 msgid "Edit"
 msgstr ""
@@ -274,7 +274,7 @@ msgid "Email"
 msgstr ""
 
 #: buddypress/members/layout/table.php:63
-#: framework-customizations/theme/options/buddypress.php:291
+#: framework-customizations/theme/options/buddypress.php:295
 #: framework-customizations/theme/options/posts/project.php:124
 #: framework-customizations/theme/options/posts/project.php:141
 #: inc/plugins/woffice-core/extensions/woffice-directory/settings-options.php:64
@@ -288,13 +288,13 @@ msgid "Role"
 msgstr ""
 
 #: buddypress/members/layout/table.php:68
-#: framework-customizations/theme/options/buddypress.php:215
+#: framework-customizations/theme/options/buddypress.php:219
 #: inc/buddypress.php:789 inc/buddypress.php:792
 msgid "Activity"
 msgstr ""
 
 #: buddypress/members/layout/table.php:118 inc/buddypress.php:984
-#: inc/classes/Woffice_Register.php:91 inc/login.php:323
+#: inc/classes/Woffice_Register.php:91 inc/login.php:332
 msgid "Email"
 msgstr ""
 
@@ -371,7 +371,7 @@ msgstr ""
 msgid "Post Comment"
 msgstr ""
 
-#: content-masonry.php:38 inc/helpers.php:763 inc/helpers.php:766
+#: content-masonry.php:38 inc/helpers.php:767 inc/helpers.php:770
 msgid ", "
 msgstr ""
 
@@ -434,12 +434,12 @@ msgstr ""
 msgid "Another awesome WordPress theme"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:46
-#: framework-customizations/theme/options/buddypress.php:133
-#: framework-customizations/theme/options/buddypress.php:147
-#: framework-customizations/theme/options/buddypress.php:161
-#: framework-customizations/theme/options/buddypress.php:189
-#: framework-customizations/theme/options/buddypress.php:203
+#: framework-customizations/theme/options/buddypress.php:50
+#: framework-customizations/theme/options/buddypress.php:137
+#: framework-customizations/theme/options/buddypress.php:151
+#: framework-customizations/theme/options/buddypress.php:165
+#: framework-customizations/theme/options/buddypress.php:193
+#: framework-customizations/theme/options/buddypress.php:207
 #: framework-customizations/theme/options/footer.php:19
 #: framework-customizations/theme/options/footer.php:113
 #: framework-customizations/theme/options/general.php:20
@@ -447,47 +447,47 @@ msgstr ""
 msgid "Show"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:48
+#: framework-customizations/theme/options/buddypress.php:52
 msgid "If checked the field will be displayed on the members page."
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:54
+#: framework-customizations/theme/options/buddypress.php:58
 #, php-format
 msgid "Add %s to advanced search?"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:56
-#: framework-customizations/theme/options/buddypress.php:88
+#: framework-customizations/theme/options/buddypress.php:60
+#: framework-customizations/theme/options/buddypress.php:92
 msgid ""
 "If checked the field will be aded to the advanced search form in the members "
 "page."
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:63
-#: framework-customizations/theme/options/buddypress.php:93
+#: framework-customizations/theme/options/buddypress.php:67
+#: framework-customizations/theme/options/buddypress.php:97
 msgid "Field's icon"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:80
+#: framework-customizations/theme/options/buddypress.php:84
 msgid "Show the WordPress email"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:82
+#: framework-customizations/theme/options/buddypress.php:86
 msgid ""
 "If checked the standard WordPress email (the email used to login) will be "
 "displayed on the members page."
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:86
+#: framework-customizations/theme/options/buddypress.php:90
 msgid "Add WordPress email to advanced search?"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:101
-#: inc/classes/Woffice_Setup.php:172
+#: framework-customizations/theme/options/buddypress.php:105
+#: inc/plugins/woffice-core/woffice-core.php:74
 msgid "BuddyPress"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:105
+#: framework-customizations/theme/options/buddypress.php:109
 #: framework-customizations/theme/options/dashboard.php:11
 #: framework-customizations/theme/options/general.php:11
 #: framework-customizations/theme/options/header.php:11
@@ -498,48 +498,48 @@ msgstr ""
 msgid "Main options"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:109
+#: framework-customizations/theme/options/buddypress.php:113
 msgid "Profile/Group layout"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:110
+#: framework-customizations/theme/options/buddypress.php:114
 msgid ""
 "Choose the profile layout whether there is a left sidebar and the content on "
 "the right side or the sidebar is displayed horizontally."
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:114
+#: framework-customizations/theme/options/buddypress.php:118
 msgid "Horizontal"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:118
+#: framework-customizations/theme/options/buddypress.php:122
 msgid "Vertical"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:123
+#: framework-customizations/theme/options/buddypress.php:127
 msgid "New Member Types"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:125
+#: framework-customizations/theme/options/buddypress.php:129
 msgid ""
 "This option is not longer available within Woffice Theme Settings, now you "
 "need to use this external plugin to manage user roles: "
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:128
-#: inc/buddypress.php:1650
+#: framework-customizations/theme/options/buddypress.php:132
+#: inc/buddypress.php:1649
 msgid "Personal Calendar"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:129
+#: framework-customizations/theme/options/buddypress.php:133
 msgid "Show the personal calendar tab on user's profile."
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:137
-#: framework-customizations/theme/options/buddypress.php:151
-#: framework-customizations/theme/options/buddypress.php:165
-#: framework-customizations/theme/options/buddypress.php:193
-#: framework-customizations/theme/options/buddypress.php:207
+#: framework-customizations/theme/options/buddypress.php:141
+#: framework-customizations/theme/options/buddypress.php:155
+#: framework-customizations/theme/options/buddypress.php:169
+#: framework-customizations/theme/options/buddypress.php:197
+#: framework-customizations/theme/options/buddypress.php:211
 #: framework-customizations/theme/options/footer.php:23
 #: framework-customizations/theme/options/footer.php:117
 #: framework-customizations/theme/options/general.php:24
@@ -547,124 +547,124 @@ msgstr ""
 msgid "Hide"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:142
+#: framework-customizations/theme/options/buddypress.php:146
 msgid "Personal Note"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:143
+#: framework-customizations/theme/options/buddypress.php:147
 msgid "Show the personal note tab on user's profile."
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:156
+#: framework-customizations/theme/options/buddypress.php:160
 msgid "Social Fields"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:157
+#: framework-customizations/theme/options/buddypress.php:161
 msgid "Show the social fields in the profile."
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:170
+#: framework-customizations/theme/options/buddypress.php:174
 msgid "User member title"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:171
+#: framework-customizations/theme/options/buddypress.php:175
 msgid "This is what will be displayed for each user in the members directory."
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:175
+#: framework-customizations/theme/options/buddypress.php:179
 msgid "First & Last Names"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:179
+#: framework-customizations/theme/options/buddypress.php:183
 #: inc/classes/Woffice_Register.php:84
 msgid "Username"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:184
+#: framework-customizations/theme/options/buddypress.php:188
 msgid "Roles filter"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:185
+#: framework-customizations/theme/options/buddypress.php:189
 msgid "Show the dropdown filter on the BuddyPress members directory."
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:198
+#: framework-customizations/theme/options/buddypress.php:202
 msgid "Members advanced search"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:199
+#: framework-customizations/theme/options/buddypress.php:203
 msgid ""
 "Show the extra fields to filter members (Fields have to be enabled below)."
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:212
+#: framework-customizations/theme/options/buddypress.php:216
 msgid "Sort Members by"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:216
+#: framework-customizations/theme/options/buddypress.php:220
 msgid "Alphabetically"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:217
+#: framework-customizations/theme/options/buddypress.php:221
 msgid "Newest"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:218
+#: framework-customizations/theme/options/buddypress.php:222
 msgid "Online"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:219
+#: framework-customizations/theme/options/buddypress.php:223
 msgid "Popular"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:220
+#: framework-customizations/theme/options/buddypress.php:224
 msgid "Random"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:225
+#: framework-customizations/theme/options/buddypress.php:229
 msgid "Members layout"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:226
+#: framework-customizations/theme/options/buddypress.php:230
 msgid "Layout of your members directory."
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:230
+#: framework-customizations/theme/options/buddypress.php:234
 #: inc/visual_composer/configs/vc_trello.php:22
 msgid "Cards"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:234
+#: framework-customizations/theme/options/buddypress.php:238
 msgid "Table"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:239
+#: framework-customizations/theme/options/buddypress.php:243
 msgid "Members per page"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:244
+#: framework-customizations/theme/options/buddypress.php:248
 msgid "Members Excluded (Directory)"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:245
+#: framework-customizations/theme/options/buddypress.php:249
 msgid ""
 "Do you want to exclude a role from the Members directory, they won't be "
 "displayed on the page."
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:250
+#: framework-customizations/theme/options/buddypress.php:254
 msgid "Members Directory autolinks"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:251
+#: framework-customizations/theme/options/buddypress.php:255
 msgid "Auto search for BuddyPress fields displayed in the directory."
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:255
+#: framework-customizations/theme/options/buddypress.php:259
 msgid "Yup"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:259
+#: framework-customizations/theme/options/buddypress.php:263
 #: framework-customizations/theme/options/chat.php:28
 #: framework-customizations/theme/options/chat.php:52
 #: framework-customizations/theme/options/chat.php:65
@@ -684,12 +684,12 @@ msgstr ""
 #: framework-customizations/theme/options/news.php:102
 #: framework-customizations/theme/options/news.php:116
 #: framework-customizations/theme/options/page-title.php:83
-#: framework-customizations/theme/options/permissions.php:32
-#: framework-customizations/theme/options/permissions.php:54
-#: framework-customizations/theme/options/permissions.php:68
-#: framework-customizations/theme/options/permissions.php:226
-#: framework-customizations/theme/options/permissions.php:253
-#: framework-customizations/theme/options/permissions.php:287
+#: framework-customizations/theme/options/permissions.php:33
+#: framework-customizations/theme/options/permissions.php:55
+#: framework-customizations/theme/options/permissions.php:69
+#: framework-customizations/theme/options/permissions.php:227
+#: framework-customizations/theme/options/permissions.php:254
+#: framework-customizations/theme/options/permissions.php:288
 #: framework-customizations/theme/options/posts.php:37
 #: framework-customizations/theme/options/posts.php:51
 #: framework-customizations/theme/options/posts.php:65
@@ -721,11 +721,11 @@ msgstr ""
 msgid "Nope"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:264
+#: framework-customizations/theme/options/buddypress.php:268
 msgid "Member Matching Field"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:265
+#: framework-customizations/theme/options/buddypress.php:269
 msgid ""
 "If a field is selected, the current member will only see members having the "
 "same choice. Example, if there are two choices: A & B. If the current "
@@ -733,25 +733,25 @@ msgid ""
 "B."
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:272
+#: framework-customizations/theme/options/buddypress.php:276
 msgid "Display fields in BuddyPress members directory"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:277
+#: framework-customizations/theme/options/buddypress.php:281
 msgid "BuddyPress tab creator"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:285
+#: framework-customizations/theme/options/buddypress.php:289
 #: framework-customizations/theme/options/login.php:389
 #: inc/classes/Woffice_Frontend.php:843
 msgid "Add"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:286
+#: framework-customizations/theme/options/buddypress.php:290
 msgid "Tabs"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:296
+#: framework-customizations/theme/options/buddypress.php:300
 #: framework-customizations/theme/options/news.php:74
 #: framework-customizations/theme/options/posts/directory.php:48
 #: framework-customizations/theme/options/widgets.php:32
@@ -765,7 +765,7 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:304
+#: framework-customizations/theme/options/buddypress.php:308
 #: framework-customizations/theme/options/posts/directory.php:49
 #: framework-customizations/theme/options/posts/project.php:126
 #: framework-customizations/theme/options/widgets.php:36
@@ -777,17 +777,17 @@ msgstr ""
 msgid "Icon"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:308
+#: framework-customizations/theme/options/buddypress.php:312
 msgid "PHP Action"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:312
+#: framework-customizations/theme/options/buddypress.php:316
 msgid ""
 "Like: <b>woffice_bp_tab_my_tab</b>. Must be unique. This advanced option let "
 "you attach any PHP function to the tab content by calling:"
 msgstr ""
 
-#: framework-customizations/theme/options/buddypress.php:314
+#: framework-customizations/theme/options/buddypress.php:318
 msgid "Please see the official WordPress documentation for more details here:"
 msgstr ""
 
@@ -840,12 +840,12 @@ msgstr ""
 #: framework-customizations/theme/options/news.php:98
 #: framework-customizations/theme/options/news.php:112
 #: framework-customizations/theme/options/page-title.php:79
-#: framework-customizations/theme/options/permissions.php:28
-#: framework-customizations/theme/options/permissions.php:50
-#: framework-customizations/theme/options/permissions.php:64
-#: framework-customizations/theme/options/permissions.php:222
-#: framework-customizations/theme/options/permissions.php:249
-#: framework-customizations/theme/options/permissions.php:283
+#: framework-customizations/theme/options/permissions.php:29
+#: framework-customizations/theme/options/permissions.php:51
+#: framework-customizations/theme/options/permissions.php:65
+#: framework-customizations/theme/options/permissions.php:223
+#: framework-customizations/theme/options/permissions.php:250
+#: framework-customizations/theme/options/permissions.php:284
 #: framework-customizations/theme/options/posts.php:33
 #: framework-customizations/theme/options/posts.php:47
 #: framework-customizations/theme/options/posts.php:61
@@ -1015,7 +1015,7 @@ msgid "This is an option for the titles of the widgets in the dashboard page."
 msgstr ""
 
 #: framework-customizations/theme/options/footer.php:7
-#: inc/classes/Woffice_Setup.php:179
+#: inc/plugins/woffice-core/woffice-core.php:81
 msgid "Footer & Extrafooter"
 msgstr ""
 
@@ -1145,7 +1145,7 @@ msgid "Allow to display more times the same user."
 msgstr ""
 
 #: framework-customizations/theme/options/general.php:7
-#: framework-customizations/theme/options/permissions.php:19
+#: framework-customizations/theme/options/permissions.php:20
 msgid "General Options"
 msgstr ""
 
@@ -1228,7 +1228,7 @@ msgid "Upload an image (PNG 144px x 144px)"
 msgstr ""
 
 #: framework-customizations/theme/options/header.php:7
-#: inc/classes/Woffice_Setup.php:176
+#: inc/plugins/woffice-core/woffice-core.php:78
 msgid "Header bar"
 msgstr ""
 
@@ -1772,7 +1772,7 @@ msgid "Your Facebook APP Secret goes here."
 msgstr ""
 
 #: framework-customizations/theme/options/menu.php:7
-#: inc/classes/Woffice_Setup.php:175
+#: inc/plugins/woffice-core/woffice-core.php:77
 msgid "Menu"
 msgstr ""
 
@@ -1857,7 +1857,7 @@ msgid ""
 msgstr ""
 
 #: framework-customizations/theme/options/news.php:7
-#: inc/classes/Woffice_Setup.php:174
+#: inc/plugins/woffice-core/woffice-core.php:76
 msgid "Blog"
 msgstr ""
 
@@ -2063,35 +2063,27 @@ msgstr ""
 msgid "Color of the border below the the box title."
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:10
-#: framework-customizations/theme/options/posts.php:10
-#: framework-customizations/theme/options/posts/project.php:15
-#: framework-customizations/theme/options/posts/wiki.php:15
-#: inc/plugins/woffice-core/extensions/woffice-projects/static.php:84
-msgid "No one"
-msgstr ""
-
-#: framework-customizations/theme/options/permissions.php:15
-#: inc/classes/Woffice_Setup.php:169
+#: framework-customizations/theme/options/permissions.php:16
+#: inc/plugins/woffice-core/woffice-core.php:71
 msgid "Permissions"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:23
+#: framework-customizations/theme/options/permissions.php:24
 msgid "Do you want to make this website public ?"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:24
+#: framework-customizations/theme/options/permissions.php:25
 msgid ""
 "As an Intranet, every visitor have to login to access to the content and the "
 "wbesite, with this option your Website will be free to be reached by "
 "everyone..."
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:37
+#: framework-customizations/theme/options/permissions.php:38
 msgid "Excluded pages"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:38
+#: framework-customizations/theme/options/permissions.php:39
 msgid ""
 "If the website is private you can still make some pages public with this "
 "option. That means that the pages selected will not be affected by the "
@@ -2099,280 +2091,302 @@ msgid ""
 "sections"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:45
+#: framework-customizations/theme/options/permissions.php:46
 msgid "Woocomerce products excluded ?"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:46
+#: framework-customizations/theme/options/permissions.php:47
 msgid ""
 "IF your website is private and you want your WooCommerce products to be "
 "public, select YEP."
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:59
+#: framework-customizations/theme/options/permissions.php:60
 msgid "Do you want to make the feeds private?"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:60
+#: framework-customizations/theme/options/permissions.php:61
 msgid ""
 "Some feeds of your site make still be available also if you make your site "
 "or some pages private. If you enable this option, all feeds will be turned "
 "off."
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:73
+#: framework-customizations/theme/options/permissions.php:74
 msgid "Post Status on frontend creation"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:74
+#: framework-customizations/theme/options/permissions.php:75
 msgid ""
 "When the post is submitted, you can choose if it is directly published or "
 "need you approval first."
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:77
+#: framework-customizations/theme/options/permissions.php:78
 #: inc/multiverso.php:208 inc/multiverso.php:304
 #: inc/plugins/woffice-core/extensions/woffice-event/settings-options.php:40
 msgid "Draft"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:78
+#: framework-customizations/theme/options/permissions.php:79
 #: inc/plugins/woffice-core/extensions/woffice-event/settings-options.php:39
 msgid "Publish"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:79
+#: framework-customizations/theme/options/permissions.php:80
 #: inc/plugins/woffice-core/extensions/woffice-event/settings-options.php:41
 msgid "Pending"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:84
+#: framework-customizations/theme/options/permissions.php:85
 msgid "Posts Privacy"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:85
-#: framework-customizations/theme/options/permissions.php:96
-#: framework-customizations/theme/options/permissions.php:107
-#: framework-customizations/theme/options/permissions.php:118
+#: framework-customizations/theme/options/permissions.php:86
+#: framework-customizations/theme/options/permissions.php:97
+#: framework-customizations/theme/options/permissions.php:108
+#: framework-customizations/theme/options/permissions.php:119
 msgid ""
 "The default value is the one set above for the whole site. Regarding single "
 "items."
-msgstr ""
-
-#: framework-customizations/theme/options/permissions.php:88
-#: framework-customizations/theme/options/permissions.php:99
-#: framework-customizations/theme/options/permissions.php:110
-#: framework-customizations/theme/options/permissions.php:121
-#: framework-customizations/theme/options/posts/project.php:112
-#: inc/classes/Woffice_Register.php:152
-#: inc/plugins/woffice-core/extensions/shortcodes/shortcodes/woffice_button/options.php:44
-msgid "Default"
 msgstr ""
 
 #: framework-customizations/theme/options/permissions.php:89
 #: framework-customizations/theme/options/permissions.php:100
 #: framework-customizations/theme/options/permissions.php:111
 #: framework-customizations/theme/options/permissions.php:122
-#: framework-customizations/theme/options/permissions.php:143
-#: framework-customizations/theme/options/permissions.php:157
-#: framework-customizations/theme/options/permissions.php:171
-#: framework-customizations/theme/options/posts/project.php:113
-msgid "Public"
+#: framework-customizations/theme/options/posts/project.php:112
+#: inc/classes/Woffice_Register.php:152
+#: inc/plugins/woffice-core/extensions/shortcodes/shortcodes/woffice_button/options.php:44
+msgid "Default"
 msgstr ""
 
 #: framework-customizations/theme/options/permissions.php:90
 #: framework-customizations/theme/options/permissions.php:101
 #: framework-customizations/theme/options/permissions.php:112
 #: framework-customizations/theme/options/permissions.php:123
-#: framework-customizations/theme/options/permissions.php:139
-#: framework-customizations/theme/options/permissions.php:153
-#: framework-customizations/theme/options/permissions.php:167
+#: framework-customizations/theme/options/permissions.php:144
+#: framework-customizations/theme/options/permissions.php:158
+#: framework-customizations/theme/options/permissions.php:172
+#: framework-customizations/theme/options/posts/project.php:113
+msgid "Public"
+msgstr ""
+
+#: framework-customizations/theme/options/permissions.php:91
+#: framework-customizations/theme/options/permissions.php:102
+#: framework-customizations/theme/options/permissions.php:113
+#: framework-customizations/theme/options/permissions.php:124
+#: framework-customizations/theme/options/permissions.php:140
+#: framework-customizations/theme/options/permissions.php:154
+#: framework-customizations/theme/options/permissions.php:168
 #: framework-customizations/theme/options/posts/project.php:114
 msgid "Private"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:95
+#: framework-customizations/theme/options/permissions.php:96
 msgid "Projects Privacy"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:106
+#: framework-customizations/theme/options/permissions.php:107
 msgid "Wiki articles Privacy"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:117
+#: framework-customizations/theme/options/permissions.php:118
 msgid "Directory items Privacy"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:130
+#: framework-customizations/theme/options/permissions.php:131
 msgid "Buddypress Pages Options"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:134
+#: framework-customizations/theme/options/permissions.php:135
 msgid "Members restriction (redirection)"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:135
+#: framework-customizations/theme/options/permissions.php:136
 msgid ""
 "Members directory & profile pages. If it is set as \"private\", the non-"
 "logged users will be redirected to the login page."
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:148
+#: framework-customizations/theme/options/permissions.php:149
 msgid "Groups restriction (redirection)"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:149
+#: framework-customizations/theme/options/permissions.php:150
 msgid ""
 "Groups directory & single group pages. If it is set as \"private\", the non-"
 "logged users will be redirected to the login page."
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:162
+#: framework-customizations/theme/options/permissions.php:163
 msgid "Activity restriction (redirection)"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:163
+#: framework-customizations/theme/options/permissions.php:164
 msgid ""
 "Activity page. If it is set as \"private\", the non-logged users will be "
 "redirected to the login page."
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:176
+#: framework-customizations/theme/options/permissions.php:177
 msgid "Members restriction (excluded roles)"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:177
+#: framework-customizations/theme/options/permissions.php:178
 msgid ""
 "Do you want to exclude some roles from the members pages (directory & "
 "profiles) ?"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:183
+#: framework-customizations/theme/options/permissions.php:184
 msgid "Groups restriction (excluded roles)"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:184
+#: framework-customizations/theme/options/permissions.php:185
 msgid ""
 "Do you want to exclude some roles from the groups pages (directory & "
 "single) ?"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:190
+#: framework-customizations/theme/options/permissions.php:191
 msgid "Activity restriction (excluded roles)"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:191
+#: framework-customizations/theme/options/permissions.php:192
 msgid "Do you want to exclude some roles from the Activity pages ?"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:199
+#: framework-customizations/theme/options/permissions.php:200
 #: framework-customizations/theme/options/posts.php:24
 msgid "Wiki Options"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:203
+#: framework-customizations/theme/options/permissions.php:204
 msgid "Who can create a Wiki article ?"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:204
+#: framework-customizations/theme/options/permissions.php:205
 msgid ""
 "It is only affecting a front end button on the main wiki page. The roles "
 "with post edit capabilities will still be able to create Wiki from the "
 "backend."
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:210
+#: framework-customizations/theme/options/permissions.php:211
 msgid "Who can edit a Wiki article ?"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:211
+#: framework-customizations/theme/options/permissions.php:212
 msgid ""
 "The roles selected here will be able to edit and delete all wiki posts, also "
 "if they are not the author of that post (This only affect the frontend)."
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:217
-#: framework-customizations/theme/options/permissions.php:278
+#: framework-customizations/theme/options/permissions.php:218
+#: framework-customizations/theme/options/permissions.php:279
 msgid "Use meta capabilities by frontend"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:218
-#: framework-customizations/theme/options/permissions.php:279
+#: framework-customizations/theme/options/permissions.php:219
+#: framework-customizations/theme/options/permissions.php:280
 msgid ""
 "If you enable this option, the settings above will be overrided by more "
 "specific meta capabilities of the post. You have to use the plugin User Role "
 "Editor (or others) to change them."
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:233
+#: framework-customizations/theme/options/permissions.php:234
 #: framework-customizations/theme/options/posts.php:79
 msgid "Projects Options"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:237
+#: framework-customizations/theme/options/permissions.php:238
 msgid "Who can create a project article ?"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:238
+#: framework-customizations/theme/options/permissions.php:239
 msgid ""
 "It is only affecting a front end button on the main projects page. The roles "
 "with post edit capabilities will still be able to create Projects from the "
 "backend."
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:244
+#: framework-customizations/theme/options/permissions.php:245
 msgid "Are the projects public by default?"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:245
+#: framework-customizations/theme/options/permissions.php:246
 msgid ""
 "If enabled, every users can view the projects but only the members assigned "
 "to the projects can edit them (this option can be overrided in every single "
 "project)."
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:260
+#: framework-customizations/theme/options/permissions.php:261
 msgid "Blog Posts Options"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:264
+#: framework-customizations/theme/options/permissions.php:265
 msgid "Who can create a Blog article ?"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:265
+#: framework-customizations/theme/options/permissions.php:266
 msgid ""
 "It is only affecting a front end button on the main Blog page. The roles "
 "with post edit capabilities will still be able to create Blog article from "
 "the backend."
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:271
+#: framework-customizations/theme/options/permissions.php:272
 msgid "Who can edit a Blog article ?"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:272
+#: framework-customizations/theme/options/permissions.php:273
 msgid ""
 "The roles selected here will be able to edit and delete all blog posts, also "
 "if they are not the author of that post (This only affect the frontend)."
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:294
+#: framework-customizations/theme/options/permissions.php:295
 msgid "Directory Options"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:298
+#: framework-customizations/theme/options/permissions.php:299
 msgid "Who can create a directory item ?"
 msgstr ""
 
-#: framework-customizations/theme/options/permissions.php:299
+#: framework-customizations/theme/options/permissions.php:300
 msgid ""
 "It is only affecting a front end button on the main directory page. The "
 "roles with post edit capabilities will still be able to create an item from "
 "the backend."
 msgstr ""
 
+#: framework-customizations/theme/options/permissions.php:308
+msgid "Event Options"
+msgstr ""
+
+#: framework-customizations/theme/options/permissions.php:312
+msgid "Who can create an event ?"
+msgstr ""
+
+#: framework-customizations/theme/options/permissions.php:313
+msgid ""
+"It is only affecting a front end button on the main event page. The roles "
+"with post edit capabilities will still be able to create an item from the "
+"backend."
+msgstr ""
+
+#: framework-customizations/theme/options/posts.php:10
+#: framework-customizations/theme/options/posts/project.php:15
+#: framework-customizations/theme/options/posts/wiki.php:15
+#: inc/plugins/woffice-core/extensions/woffice-projects/static.php:84
+msgid "No one"
+msgstr ""
+
 #: framework-customizations/theme/options/posts.php:20
-#: inc/classes/Woffice_Setup.php:173
+#: inc/plugins/woffice-core/woffice-core.php:75
 msgid "Posts/Wiki/Projects"
 msgstr ""
 
@@ -2549,7 +2563,7 @@ msgid "Item settings "
 msgstr ""
 
 #: framework-customizations/theme/options/posts/directory.php:62
-#: framework-customizations/theme/options/posts/woffice-event.php:151
+#: framework-customizations/theme/options/posts/woffice-event.php:190
 msgid "Location"
 msgstr ""
 
@@ -2960,64 +2974,111 @@ msgstr ""
 msgid "This will display a star before the wiki name, in the listing."
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:39
+#: framework-customizations/theme/options/posts/woffice-event.php:45
+#: framework-customizations/theme/options/posts/woffice-event.php:59
+msgid "Personal"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/woffice-event.php:46
+#: inc/buddypress.php:981 inc/buddypress.php:1008
+#: inc/plugins/woffice-core/woffice-core.php:69
+msgid "General"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/woffice-event.php:48
+#: inc/classes/Woffice_Frontend.php:521
+#: inc/plugins/woffice-core/extensions/woffice-projects/class-fw-extension-woffice-projects.php:25
+#: inc/plugins/woffice-core/extensions/woffice-projects/class-fw-extension-woffice-projects.php:27
+#: inc/plugins/woffice-core/extensions/woffice-projects/class-fw-extension-woffice-projects.php:29
+msgid "Project"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/woffice-event.php:52
+msgid "Group"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/woffice-event.php:64
 #: inc/plugins/woffice-core/extensions/shortcodes/shortcodes/woffice_button/options.php:28
 msgid "No"
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:40
+#: framework-customizations/theme/options/posts/woffice-event.php:65
 msgid "Daily"
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:41
+#: framework-customizations/theme/options/posts/woffice-event.php:66
 #: inc/plugins/woffice-core/extensions/woffice-birthdays/settings-options.php:41
 msgid "Weekly"
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:42
+#: framework-customizations/theme/options/posts/woffice-event.php:67
 #: inc/plugins/woffice-core/extensions/woffice-birthdays/settings-options.php:42
 msgid "Monthly"
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:43
+#: framework-customizations/theme/options/posts/woffice-event.php:68
 msgid "Yearly"
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:47
+#: framework-customizations/theme/options/posts/woffice-event.php:72
 msgid "default"
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:48
+#: framework-customizations/theme/options/posts/woffice-event.php:73
 msgid "blue"
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:49
+#: framework-customizations/theme/options/posts/woffice-event.php:74
 msgid "orange"
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:50
+#: framework-customizations/theme/options/posts/woffice-event.php:75
 msgid "red"
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:51
+#: framework-customizations/theme/options/posts/woffice-event.php:76
 msgid "green"
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:52
+#: framework-customizations/theme/options/posts/woffice-event.php:77
 msgid "grey"
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:58
+#: framework-customizations/theme/options/posts/woffice-event.php:78
+msgid "light blue"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/woffice-event.php:79
+msgid "dark blue"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/woffice-event.php:80
+msgid "fushia"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/woffice-event.php:81
+msgid "brown"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/woffice-event.php:82
+msgid "black"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/woffice-event.php:83
+msgid "light grey"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/woffice-event.php:89
 msgid "Event settings "
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:63
+#: framework-customizations/theme/options/posts/woffice-event.php:94
 #: inc/multiverso.php:99 inc/multiverso.php:166 inc/multiverso.php:252
 #: inc/plugins/woffice-core/extensions/shortcodes/shortcodes/alert/options.php:5
 #: inc/plugins/woffice-core/extensions/shortcodes/shortcodes/woffice_headlines/config.php:6
 #: inc/plugins/woffice-core/extensions/shortcodes/shortcodes/woffice_headlines/options.php:8
 #: inc/plugins/woffice-core/extensions/shortcodes/shortcodes/woocommerce/options.php:30
-#: inc/plugins/woffice-core/extensions/woffice-event/includes/class-fw-widget-woffice-event.php:91
+#: inc/plugins/woffice-core/extensions/woffice-event/includes/class-fw-widget-woffice-event.php:92
 #: inc/plugins/woffice-core/extensions/woffice-funfacts/includes/class-fw-widget-woffice-funfacts.php:49
 #: inc/plugins/woffice-core/extensions/woffice-map/includes/class-fw-widget-woffice-map.php:55
 #: inc/plugins/woffice-core/extensions/woffice-poll/includes/class-fw-widget-woffice-poll.php:56
@@ -3030,88 +3091,71 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:64
+#: framework-customizations/theme/options/posts/woffice-event.php:95
 msgid "Set event name."
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:72
+#: framework-customizations/theme/options/posts/woffice-event.php:103
 msgid "Event Starting Date"
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:73
-#: framework-customizations/theme/options/posts/woffice-event.php:87
+#: framework-customizations/theme/options/posts/woffice-event.php:104
+#: framework-customizations/theme/options/posts/woffice-event.php:120
+#: framework-customizations/theme/options/posts/woffice-event.php:146
 msgid "Will be used to display this event in the calendar."
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:86
+#: framework-customizations/theme/options/posts/woffice-event.php:119
 msgid "Event Ending Date"
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:99
+#: framework-customizations/theme/options/posts/woffice-event.php:134
 msgid "Repeat"
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:100
+#: framework-customizations/theme/options/posts/woffice-event.php:135
 msgid "Select repeat type, Choose no if not repeatable event."
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:110
+#: framework-customizations/theme/options/posts/woffice-event.php:145
+msgid "Repeat Ending Date"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/woffice-event.php:160
 msgid "Event Color"
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:111
+#: framework-customizations/theme/options/posts/woffice-event.php:161
 msgid "Event color in calendar."
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:121
+#: framework-customizations/theme/options/posts/woffice-event.php:171
 msgid "Event Visibility"
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:122
+#: framework-customizations/theme/options/posts/woffice-event.php:172
 msgid "Set Event Visibility."
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:124
-#: inc/buddypress.php:981 inc/buddypress.php:1008
-#: inc/classes/Woffice_Setup.php:167
-msgid "General"
-msgstr ""
-
-#: framework-customizations/theme/options/posts/woffice-event.php:125
-msgid "Personal"
-msgstr ""
-
-#: framework-customizations/theme/options/posts/woffice-event.php:127
-#: inc/classes/Woffice_Frontend.php:521
-#: inc/plugins/woffice-core/extensions/woffice-projects/class-fw-extension-woffice-projects.php:25
-#: inc/plugins/woffice-core/extensions/woffice-projects/class-fw-extension-woffice-projects.php:27
-#: inc/plugins/woffice-core/extensions/woffice-projects/class-fw-extension-woffice-projects.php:29
-msgid "Project"
-msgstr ""
-
-#: framework-customizations/theme/options/posts/woffice-event.php:131
-msgid "Group"
-msgstr ""
-
-#: framework-customizations/theme/options/posts/woffice-event.php:143
+#: framework-customizations/theme/options/posts/woffice-event.php:182
 #: inc/multiverso.php:168 inc/multiverso.php:259
 msgid "Description"
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:152
+#: framework-customizations/theme/options/posts/woffice-event.php:191
 msgid "Location of the event."
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:160
+#: framework-customizations/theme/options/posts/woffice-event.php:199
 msgid "Event URL"
 msgstr ""
 
-#: framework-customizations/theme/options/posts/woffice-event.php:161
+#: framework-customizations/theme/options/posts/woffice-event.php:200
 msgid "URL of the event."
 msgstr ""
 
 #: framework-customizations/theme/options/sidebar.php:7
-#: inc/classes/Woffice_Setup.php:178
+#: inc/plugins/woffice-core/woffice-core.php:80
 msgid "Sidebar"
 msgstr ""
 
@@ -3201,7 +3245,7 @@ msgid ""
 msgstr ""
 
 #: framework-customizations/theme/options/styling.php:7
-#: inc/classes/Woffice_Setup.php:180
+#: inc/plugins/woffice-core/woffice-core.php:82
 msgid "Styling"
 msgstr ""
 
@@ -3487,17 +3531,17 @@ msgstr ""
 msgid "Right"
 msgstr ""
 
-#: geodirectory/geodir-search.php:16 inc/helpers.php:441
+#: geodirectory/geodir-search.php:16 inc/helpers.php:445
 msgid "Search"
 msgstr ""
 
 #: header.php:166
 #, php-format
-msgctxt "Hi USERNAME - It's the welcome message in the header"
+msgctxt "woffice"
 msgid "Hi <strong class=\"font-weight-bold\">%s</strong>!"
 msgstr ""
 
-#: header.php:234 inc/classes/Woffice_WooCommerce.php:125
+#: header.php:234 inc/classes/Woffice_WooCommerce.php:148
 msgid "View your shopping cart"
 msgstr ""
 
@@ -3617,7 +3661,7 @@ msgstr ""
 #: inc/plugins/woffice-core/extensions/shortcodes/shortcodes/pro_event_calendar/options.php:53
 #: inc/plugins/woffice-core/extensions/woffice-projects/helpers.php:160
 #: inc/visual_composer/configs/vc_dp_pro_event_calendar.php:52
-#: single-wiki.php:47 template-parts/content-single-event.php:47
+#: single-wiki.php:47 template-parts/content-single-event.php:46
 msgid "View"
 msgstr ""
 
@@ -3661,10 +3705,10 @@ msgstr ""
 msgid "Notices"
 msgstr ""
 
-#: inc/buddypress.php:914 inc/buddypress.php:1615
+#: inc/buddypress.php:914 inc/buddypress.php:1614
 #: inc/plugins/woffice-core/extensions/shortcodes/shortcodes/pro_event_calendar/options.php:29
 #: inc/plugins/woffice-core/extensions/woffice-event/includes/class-buddypress-group-calendar.php:17
-#: inc/plugins/woffice-core/extensions/woffice-event/includes/woffice-personal-calendar.php:17
+#: inc/plugins/woffice-core/extensions/woffice-event/includes/woffice-personal-calendar.php:21
 #: inc/plugins/woffice-core/extensions/woffice-event/settings-options.php:18
 #: inc/plugins/woffice-core/extensions/woffice-projects/helpers.php:192
 #: inc/visual_composer/configs/vc_dp_pro_event_calendar.php:26
@@ -3743,15 +3787,15 @@ msgstr ""
 msgid "Instagram URL"
 msgstr ""
 
-#: inc/buddypress.php:1696
+#: inc/buddypress.php:1695
 msgid "Notes"
 msgstr ""
 
-#: inc/buddypress.php:1732
+#: inc/buddypress.php:1731
 msgid "Personal Notes"
 msgstr ""
 
-#: inc/buddypress.php:1784
+#: inc/buddypress.php:1783
 msgid "Save my notes"
 msgstr ""
 
@@ -3794,12 +3838,12 @@ msgid "Facebook SDK returned an error: "
 msgstr ""
 
 #: inc/classes/Woffice_Facebook_Signing.php:266
-#: inc/classes/Woffice_Google_Signing.php:186
+#: inc/classes/Woffice_Google_Signing.php:189
 msgid "Welcome back"
 msgstr ""
 
 #: inc/classes/Woffice_Facebook_Signing.php:322
-#: inc/classes/Woffice_Google_Signing.php:247
+#: inc/classes/Woffice_Google_Signing.php:250
 msgid "Welcome"
 msgstr ""
 
@@ -4027,45 +4071,45 @@ msgstr ""
 msgid "Go Back"
 msgstr ""
 
-#: inc/classes/Woffice_Frontend.php:930
+#: inc/classes/Woffice_Frontend.php:928
 #: inc/plugins/woffice-core/extensions/woffice-projects/includes/class-fw-widget-woffice-projects.php:72
 #: inc/plugins/woffice-core/extensions/woffice-wiki/includes/class-fw-widget-woffice-wiki.php:61
 msgid "Category:"
 msgstr ""
 
-#: inc/classes/Woffice_Frontend.php:933
+#: inc/classes/Woffice_Frontend.php:931
 msgid "No category"
 msgstr ""
 
-#: inc/classes/Woffice_Frontend.php:1325
+#: inc/classes/Woffice_Frontend.php:1322
 msgid "No icon available."
 msgstr ""
 
-#: inc/classes/Woffice_Frontend.php:1335
+#: inc/classes/Woffice_Frontend.php:1332
 msgid "Add a box"
 msgstr ""
 
-#: inc/classes/Woffice_Frontend.php:1447
+#: inc/classes/Woffice_Frontend.php:1444
 msgid "Choose a taxonomy"
 msgstr ""
 
-#: inc/classes/Woffice_Frontend.php:1456
+#: inc/classes/Woffice_Frontend.php:1453
 msgid "No Taxonomy.."
 msgstr ""
 
-#: inc/classes/Woffice_Frontend.php:1473
+#: inc/classes/Woffice_Frontend.php:1470
 msgid "You need to choose a taxonomy to add your new category."
 msgstr ""
 
-#: inc/classes/Woffice_Frontend.php:1476
+#: inc/classes/Woffice_Frontend.php:1473
 msgid "You need to enter a new category."
 msgstr ""
 
-#: inc/classes/Woffice_Frontend.php:1488
+#: inc/classes/Woffice_Frontend.php:1485
 msgid "Successfully Added."
 msgstr ""
 
-#: inc/classes/Woffice_Google_Signing.php:100
+#: inc/classes/Woffice_Google_Signing.php:103
 msgid "Woffice Google Login"
 msgstr ""
 
@@ -4238,10 +4282,10 @@ msgid "Wiki articles"
 msgstr ""
 
 #: inc/classes/Woffice_Search.php:360 inc/classes/Woffice_Search.php:372
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:78
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:80
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:81
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:1106
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:118
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:120
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:121
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:1223
 msgid "Events"
 msgstr ""
 
@@ -4276,80 +4320,56 @@ msgstr ""
 msgid "You are not allowed to see the get this information from the REST API"
 msgstr ""
 
-#: inc/classes/Woffice_Setup.php:49
+#: inc/classes/Woffice_Setup.php:48
 #, php-format
 msgid ""
 "You are using Woffice without the <b>Woffice Core</b> plugin. <a href=\"%s"
 "\">Please activate it to enjoy Woffice's features</a>."
 msgstr ""
 
-#: inc/classes/Woffice_Setup.php:168
-msgid "Live chat"
-msgstr ""
-
-#: inc/classes/Woffice_Setup.php:170
-msgid "Login/Register"
-msgstr ""
-
-#: inc/classes/Woffice_Setup.php:171
-msgid "Dashboard"
-msgstr ""
-
-#: inc/classes/Woffice_Setup.php:177
-msgid "Page title"
-msgstr ""
-
-#: inc/classes/Woffice_Setup.php:181
-msgid "Custom code"
-msgstr ""
-
-#: inc/classes/Woffice_Setup.php:182
-msgid "System status"
-msgstr ""
-
-#: inc/classes/Woffice_Setup.php:339
+#: inc/classes/Woffice_Setup.php:206
 msgid "All In One Demo"
 msgstr ""
 
-#: inc/classes/Woffice_Setup.php:344
+#: inc/classes/Woffice_Setup.php:211
 msgid "Business Demo"
 msgstr ""
 
-#: inc/classes/Woffice_Setup.php:349
+#: inc/classes/Woffice_Setup.php:216
 msgid "Community Demo"
 msgstr ""
 
-#: inc/classes/Woffice_Setup.php:354
+#: inc/classes/Woffice_Setup.php:221
 msgid "School Demo"
 msgstr ""
 
-#: inc/classes/Woffice_Setup.php:451
+#: inc/classes/Woffice_Setup.php:318
 msgid "Search..."
 msgstr ""
 
-#: inc/classes/Woffice_Setup.php:465
+#: inc/classes/Woffice_Setup.php:332
 msgid "Right Sidebar"
 msgstr ""
 
-#: inc/classes/Woffice_Setup.php:467
+#: inc/classes/Woffice_Setup.php:334
 msgid ""
 "Appears in the main content, left or right as you like see theme settings. "
 "Every widget need a title."
 msgstr ""
 
-#: inc/classes/Woffice_Setup.php:475
+#: inc/classes/Woffice_Setup.php:342
 msgid "Dashboard Widgets (Page content)"
 msgstr ""
 
-#: inc/classes/Woffice_Setup.php:477
+#: inc/classes/Woffice_Setup.php:344
 msgid "Appears in the dashboard page."
 msgstr ""
 
-#: inc/classes/Woffice_Setup.php:485
+#: inc/classes/Woffice_Setup.php:352
 msgid "Footer Widgets"
 msgstr ""
 
-#: inc/classes/Woffice_Setup.php:487
+#: inc/classes/Woffice_Setup.php:354
 msgid "Appears in the footer section of the site."
 msgstr ""
 
@@ -4387,27 +4407,27 @@ msgstr ""
 msgid "Dismiss this notice"
 msgstr ""
 
-#: inc/classes/Woffice_WooCommerce.php:92
+#: inc/classes/Woffice_WooCommerce.php:96
 msgid "Unit Price"
 msgstr ""
 
-#: inc/classes/Woffice_WooCommerce.php:93
+#: inc/classes/Woffice_WooCommerce.php:100
 msgid "Quantity"
 msgstr ""
 
-#: inc/classes/Woffice_WooCommerce.php:99
+#: inc/classes/Woffice_WooCommerce.php:108
 msgid "No products in the cart."
 msgstr ""
 
-#: inc/classes/Woffice_WooCommerce.php:102
+#: inc/classes/Woffice_WooCommerce.php:111
 msgid "Cart Subtotal"
 msgstr ""
 
-#: inc/classes/Woffice_WooCommerce.php:105
+#: inc/classes/Woffice_WooCommerce.php:115
 msgid "Cart"
 msgstr ""
 
-#: inc/classes/Woffice_WooCommerce.php:108
+#: inc/classes/Woffice_WooCommerce.php:118
 msgid "Checkout"
 msgstr ""
 
@@ -4497,47 +4517,47 @@ msgstr ""
 msgid "Never active"
 msgstr ""
 
-#: inc/helpers.php:388
+#: inc/helpers.php:392
 msgid "Events Calendar"
 msgstr ""
 
-#: inc/helpers.php:674
+#: inc/helpers.php:678
 msgid "Previous Posts"
 msgstr ""
 
-#: inc/helpers.php:706
+#: inc/helpers.php:710
 msgid "Next Posts"
 msgstr ""
 
-#: inc/helpers.php:734
+#: inc/helpers.php:738
 msgid "<i class=\"fa fa-hand-point-left\"></i> %title"
 msgstr ""
 
-#: inc/helpers.php:736
+#: inc/helpers.php:740
 msgid "%title <i class=\"fa fa-hand-point-right\"></i>"
 msgstr ""
 
-#: inc/helpers.php:1485
+#: inc/helpers.php:1490
 msgid "Almost here, you need to active the Woffice framework (Unyson)."
 msgstr ""
 
-#: inc/helpers.php:1487
+#: inc/helpers.php:1492
 msgid "You can enable Unyson"
 msgstr ""
 
-#: inc/helpers.php:1488 inc/helpers.php:1490
+#: inc/helpers.php:1493 inc/helpers.php:1495
 msgid "here"
 msgstr ""
 
-#: inc/helpers.php:1489
+#: inc/helpers.php:1494
 msgid "or follow the documentation"
 msgstr ""
 
-#: inc/helpers.php:1491
+#: inc/helpers.php:1496
 msgid "where all is explained with details."
 msgstr ""
 
-#: inc/helpers.php:1494
+#: inc/helpers.php:1499
 msgid ""
 "Why ? Woffice is based on Unyson framework to enhance Wordpress features and "
 "to provide a much better interface as well as better performances. We use it "
@@ -4545,7 +4565,7 @@ msgid ""
 "you like. Feel free to get in touch with us if you've any question."
 msgstr ""
 
-#: inc/helpers.php:1497
+#: inc/helpers.php:1502
 msgid "Site is under construction, thanks for your patience..."
 msgstr ""
 
@@ -4661,11 +4681,11 @@ msgstr ""
 msgid "Repeat new password"
 msgstr ""
 
-#: inc/login.php:174 inc/login.php:328
+#: inc/login.php:174 inc/login.php:337
 msgid "Reset Password"
 msgstr ""
 
-#: inc/login.php:182 inc/login.php:337
+#: inc/login.php:182 inc/login.php:346
 msgid "Login"
 msgstr ""
 
@@ -4677,31 +4697,31 @@ msgstr ""
 msgid "Success:"
 msgstr ""
 
-#: inc/login.php:256 inc/login.php:262
+#: inc/login.php:265 inc/login.php:271
 msgid "Sign Up"
 msgstr ""
 
-#: inc/login.php:276
+#: inc/login.php:285
 msgid "Go back"
 msgstr ""
 
-#: inc/login.php:304
+#: inc/login.php:313
 msgid "Lost Password"
 msgstr ""
 
-#: inc/login.php:357
+#: inc/login.php:366
 msgid "Proudly powered by"
 msgstr ""
 
-#: inc/login.php:386
+#: inc/login.php:395
 msgid "Log in with Facebook!"
 msgstr ""
 
-#: inc/login.php:393
+#: inc/login.php:402
 msgid "Log in with Google!"
 msgstr ""
 
-#: inc/login.php:399
+#: inc/login.php:408
 msgid "Or"
 msgstr ""
 
@@ -6122,20 +6142,20 @@ msgstr ""
 msgid "Disable"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-birthdays/class-fw-extension-woffice-birthdays.php:164
+#: inc/plugins/woffice-core/extensions/woffice-birthdays/class-fw-extension-woffice-birthdays.php:169
 msgid "Upcoming Birthdays"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-birthdays/class-fw-extension-woffice-birthdays.php:167
+#: inc/plugins/woffice-core/extensions/woffice-birthdays/class-fw-extension-woffice-birthdays.php:172
 msgid "No birthdays found"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-birthdays/class-fw-extension-woffice-birthdays.php:220
+#: inc/plugins/woffice-core/extensions/woffice-birthdays/class-fw-extension-woffice-birthdays.php:225
 msgctxt "happy birthday ON 25-06"
 msgid "on"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-birthdays/class-fw-extension-woffice-birthdays.php:226
+#: inc/plugins/woffice-core/extensions/woffice-birthdays/class-fw-extension-woffice-birthdays.php:231
 msgid "Happy Birthday!"
 msgstr ""
 
@@ -6280,7 +6300,7 @@ msgid "Item"
 msgstr ""
 
 #: inc/plugins/woffice-core/extensions/woffice-directory/class-fw-extension-woffice-directory.php:36
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:82
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:122
 #: inc/plugins/woffice-core/extensions/woffice-projects/class-fw-extension-woffice-projects.php:28
 #: inc/plugins/woffice-core/extensions/woffice-wiki/class-fw-extension-woffice-wiki.php:28
 msgid "Add New"
@@ -6402,59 +6422,63 @@ msgstr ""
 msgid "Default value"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:79
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:83
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:119
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:123
 msgid "Event"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:84
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:124
 msgid "Edit Event"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:85
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:125
 msgid "View Event"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:86
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:126
 msgid "All Events"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:87
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:127
 msgid "Search Events"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:88
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:128
 msgid "No Event found."
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:89
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:129
 msgid "No Event found in Trash."
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:667
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:732
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:716
+msgid "Insufficient permission for creating events."
+msgstr ""
+
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:725
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:787
 msgid "Invalid request"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:676
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:741
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:734
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:796
 msgid "You need logging to create event."
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:684
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:749
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:742
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:804
 msgid "Insufficient data for events"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:700
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:755
 msgid "Total "
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:717
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:772
 msgid "Calendar event added into calendar successfully"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:790
+#: inc/plugins/woffice-core/extensions/woffice-event/class-fw-extension-woffice-event.php:845
 msgid "Calendar event updated successfully"
 msgstr ""
 
@@ -6462,7 +6486,7 @@ msgstr ""
 msgid "(Woffice) Calendar Events"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/includes/woffice-personal-calendar.php:33
+#: inc/plugins/woffice-core/extensions/woffice-event/includes/woffice-personal-calendar.php:37
 msgid "My Calendar"
 msgstr ""
 
@@ -6476,36 +6500,43 @@ msgstr ""
 
 #: inc/plugins/woffice-core/extensions/woffice-event/settings-options.php:6
 #: inc/plugins/woffice-core/extensions/woffice-event/static.php:77
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:86
 msgid "Monday"
 msgstr ""
 
 #: inc/plugins/woffice-core/extensions/woffice-event/settings-options.php:7
 #: inc/plugins/woffice-core/extensions/woffice-event/static.php:78
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:87
 msgid "Tuesday"
 msgstr ""
 
 #: inc/plugins/woffice-core/extensions/woffice-event/settings-options.php:8
 #: inc/plugins/woffice-core/extensions/woffice-event/static.php:79
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:88
 msgid "Wednesday"
 msgstr ""
 
 #: inc/plugins/woffice-core/extensions/woffice-event/settings-options.php:9
 #: inc/plugins/woffice-core/extensions/woffice-event/static.php:80
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:89
 msgid "Thursday"
 msgstr ""
 
 #: inc/plugins/woffice-core/extensions/woffice-event/settings-options.php:10
 #: inc/plugins/woffice-core/extensions/woffice-event/static.php:81
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:90
 msgid "Friday"
 msgstr ""
 
 #: inc/plugins/woffice-core/extensions/woffice-event/settings-options.php:11
 #: inc/plugins/woffice-core/extensions/woffice-event/static.php:82
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:91
 msgid "Saturday"
 msgstr ""
 
 #: inc/plugins/woffice-core/extensions/woffice-event/settings-options.php:12
 #: inc/plugins/woffice-core/extensions/woffice-event/static.php:76
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:85
 msgid "Sunday"
 msgstr ""
 
@@ -6593,79 +6624,79 @@ msgstr ""
 msgid "Full day"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/static.php:85
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:94
 msgid "Sun"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/static.php:86
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:95
 msgid "Mon"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/static.php:87
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:96
 msgid "Tue"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/static.php:88
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:97
 msgid "Wed"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/static.php:89
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:98
 msgid "Thu"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/static.php:90
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:99
 msgid "Fri"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/static.php:91
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:100
 msgid "Sat"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/static.php:94
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:103
 msgid "January"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/static.php:95
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:104
 msgid "February"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/static.php:96
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:105
 msgid "March"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/static.php:97
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:106
 msgid "April"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/static.php:98
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:107
 msgid "May"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/static.php:99
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:108
 msgid "June"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/static.php:100
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:109
 msgid "July"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/static.php:101
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:110
 msgid "August"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/static.php:102
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:111
 msgid "September"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/static.php:103
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:112
 msgid "October"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/static.php:104
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:113
 msgid "November"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-event/static.php:105
+#: inc/plugins/woffice-core/extensions/woffice-event/static.php:114
 msgid "December"
 msgstr ""
 
@@ -6930,11 +6961,11 @@ msgstr ""
 msgid "This is an extra icon so it looks better."
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-map/class-fw-extension-woffice-map.php:263
+#: inc/plugins/woffice-core/extensions/woffice-map/class-fw-extension-woffice-map.php:260
 msgid "You are here!"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-map/class-fw-extension-woffice-map.php:440
+#: inc/plugins/woffice-core/extensions/woffice-map/class-fw-extension-woffice-map.php:437
 msgid "Refresh coordinates for all members"
 msgstr ""
 
@@ -7035,18 +7066,18 @@ msgstr ""
 msgid "Export results"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-poll/hooks.php:60
+#: inc/plugins/woffice-core/extensions/woffice-poll/hooks.php:55
 msgid ""
 "Error, something is wrong please refresh this page. Note that you can not "
 "vote twice."
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-poll/hooks.php:68
+#: inc/plugins/woffice-core/extensions/woffice-poll/hooks.php:63
 #: inc/plugins/woffice-core/extensions/woffice-poll/views/view.php:74
 msgid "Thanks ! Here are the results for"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-poll/hooks.php:125
+#: inc/plugins/woffice-core/extensions/woffice-poll/hooks.php:120
 msgid "Results are in percentage"
 msgstr ""
 
@@ -7194,13 +7225,13 @@ msgid "Comments"
 msgstr ""
 
 #: inc/plugins/woffice-core/extensions/woffice-projects/helpers.php:231
-#: single-wiki.php:79 single.php:60 template-parts/content-single-event.php:59
+#: single-wiki.php:79 single.php:60 template-parts/content-single-event.php:58
 msgid "Are you sure you wish to delete article :"
 msgstr ""
 
 #: inc/plugins/woffice-core/extensions/woffice-projects/helpers.php:232
 #: single-wiki.php:80 single.php:61 template-parts/chat.php:80
-#: template-parts/content-single-event.php:63
+#: template-parts/content-single-event.php:61
 msgid "Delete"
 msgstr ""
 
@@ -7798,7 +7829,7 @@ msgstr ""
 msgid "Your wiki \"%1$s\" received a new comment"
 msgstr ""
 
-#: inc/plugins/woffice-core/extensions/woffice-wiki/includes/Woffice_Wiki_Display_Manager.php:202
+#: inc/plugins/woffice-core/extensions/woffice-wiki/includes/Woffice_Wiki_Display_Manager.php:208
 msgid "See All"
 msgstr ""
 
@@ -7818,6 +7849,30 @@ msgstr ""
 
 #: inc/plugins/woffice-core/extensions/woffice-wiki/manifest.php:8
 msgid "Enables the possibility to add a wiki management to your site."
+msgstr ""
+
+#: inc/plugins/woffice-core/woffice-core.php:70
+msgid "Live chat"
+msgstr ""
+
+#: inc/plugins/woffice-core/woffice-core.php:72
+msgid "Login/Register"
+msgstr ""
+
+#: inc/plugins/woffice-core/woffice-core.php:73
+msgid "Dashboard"
+msgstr ""
+
+#: inc/plugins/woffice-core/woffice-core.php:79
+msgid "Page title"
+msgstr ""
+
+#: inc/plugins/woffice-core/woffice-core.php:83
+msgid "Custom code"
+msgstr ""
+
+#: inc/plugins/woffice-core/woffice-core.php:84
+msgid "System status"
 msgstr ""
 
 #: inc/plugins/woffice-core/woffice-functions.php:39

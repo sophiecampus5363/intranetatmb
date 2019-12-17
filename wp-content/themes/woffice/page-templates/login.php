@@ -86,7 +86,7 @@ array_push($classes, $design_update_class);
 							$login_text = woffice_get_settings_option('login_text'); 
 							if (!empty($login_text)): ?>
 
-								<p><?php echo $login_text; ?></p>
+								<p id="login-text"><?php echo $login_text; ?></p>
 
 							<?php endif; ?>
 
