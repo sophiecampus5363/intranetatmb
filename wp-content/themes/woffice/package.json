@@ -10,7 +10,7 @@
     "del": "^2.2.1",
     "draggabilly": "~2.1.1",
     "@fortawesome/fontawesome-free": "^5.5.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-clean-css": "^2.0.10",
     "gulp-concat": "^2.6.0",
     "gulp-rename": "^1.2.2",
